@@ -56,18 +56,6 @@ switch (_this) do {
 			["fix","WH","Automatically fixed; exchanged items."] call RLNT_wh_postDebug;
 		};
 
-		if ((isNil "rlnt_wh_item2") && (rlnt_wh_itemAmount > 1)) then {
-			rlnt_wh_itemAmount = 1;
-			["fix","WH","Detected that Item 2 is not used but item amount is too high!"] call RLNT_wh_postDebug;
-			["fix","WH","Automatically fixed; set item amount to 1."] call RLNT_wh_postDebug;
-		};
-
-		if ((isNil "rlnt_wh_item1") && (rlnt_wh_itemAmount > 0)) then {
-			rlnt_wh_itemAmount = 0;
-			["fix","WH","Detected that no items are used but item amount is too high!"] call RLNT_wh_postDebug;
-			["fix","WH","Automatically fixed; set item amount to 0."] call RLNT_wh_postDebug;
-		};
-
 		if (rlnt_wh_bloodSettings select 1 == -1) then {
 			rlnt_wh_bloodSettings set[1, DZE_selfTransfuse_Values select 0];
 			["fix","WH","Detected that no custom blood injection amount is set!"] call RLNT_wh_postDebug;
