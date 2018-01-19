@@ -49,6 +49,26 @@ switch (_this) do {
 			["error","WH","You have to turn on the dayz_classicBloodBagSystem to use blood bags as quick-slot-items."] call RLNT_wh_postDebug;
 		};
 
+		if (!isNil "rlnt_wh_item1") then {
+			{
+				if ((toLower rlnt_wh_item1) != (toLower _x)) then {
+					rlnt_wh_errorsFound = true;
+					["error","WH","Detected that item 1 isn't a supported item!"] call RLNT_wh_postDebug;
+					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+				}
+			} forEach rlnt_wh_itemList;
+		};
+
+		if (!isNil "rlnt_wh_item2") then {
+			{
+				if ((toLower rlnt_wh_item2) != (toLower _x)) then {
+					rlnt_wh_errorsFound = true;
+					["error","WH","Detected that item 2 isn't a supported item!"] call RLNT_wh_postDebug;
+					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+				}
+			} forEach rlnt_wh_itemList;
+		};
+
 		if ((isNil "rlnt_wh_item1") && !(isNil "rlnt_wh_item2")) then {
 			rlnt_wh_item1 = rlnt_wh_item2;
 			rlnt_wh_item1 = nil;
