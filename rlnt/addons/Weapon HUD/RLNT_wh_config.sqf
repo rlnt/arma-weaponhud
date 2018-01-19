@@ -178,25 +178,14 @@ rlnt_whup_bgColor = [0,0.2,0,0.7];  /* default: 0,0.2,0,0.7 (dark green) */
 rlnt_wh_showWeaponNames = true;  /* default: true */
 
 /*
-		This is the amount of items you want to use.
-		0	-> No quick-slot-items
-		1	-> One quick-slot-item
-		2	-> Two quick-slot-items
-		You can choose the items and hotkeys for them yourself.
-		Supported items (so far) are: Antibiotic, Bandage,
-									  Bloodbag, Morphine,
-									  Painkiller
-*/
-rlnt_wh_itemAmount = 2;  /* default: 2 */
-
-/*
 		This is the first quick-slot-item.
 		You always have to write the classname. If you
 		aren't sure what to choose or how to write it, you
 		can take a look in the rlnt_wh_itemList array.
 		There you can find all items that are currently
 		supported by the script.
-		If you don't want to use item 1, write "".
+		If you don't want to use item 1, write nil.
+		So it looks like rlnt_wh_item1 = nil;.
 		If you want to use a bloodbag, make sure the
 		classic bloodbag system is turned on!!!
 */
@@ -209,7 +198,8 @@ rlnt_wh_item1 = "ItemBandage";  /* default: ItemBandage */
 		can take a look in the rlnt_wh_itemList array.
 		There you can find all items that are currently
 		supported by the script.
-		If you don't want to use item 2, write "".
+		If you don't want to use item 2, write nil.
+		So it looks like rlnt_wh_item2 = nil;.
 		If you want to use a bloodbag, make sure the
 		classic bloodbag system is turned on!!!
 */
@@ -383,6 +373,17 @@ rlnt_wh_debug = false;  /* default: false */
 */
 /*  DEBUG  */
 ["file","WH","Weapon HUD Config"] call RLNT_postDebug;
+
+/* SET ITEM AMOUNT */
+if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
+	rlnt_wh_itemAmount = 0;
+} else {
+	if (isNil "rlnt_wh_item2") then {
+		rlnt_wh_itemAmount = 1;
+	} else {
+		rlnt_wh_itemAmount = 2;
+	};
+};
 
 /* TOGGLE LOOP */
 if (rlnt_wh_defaultState) then {
