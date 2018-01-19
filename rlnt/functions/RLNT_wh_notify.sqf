@@ -19,17 +19,17 @@ _messageext = "";
 switch (_type) do {
 
 	case "error": {
-		_message	= "You have an error either in your config or in your installation!";
-		_messageext = "Check the RPT for more info or contact an Admin!";
+		_message	= localize STR_RLNT_WH_NOTIFY_ERROR;
+		_messageext = localize STR_RLNT_WH_NOTIFY_ERROR_EXT;
 	};
 
 	case "toggle": {
 		_check = _this select 1;
 
 		if (_check) then {
-			_message = "The Weapon HUD has been toggled on!";
+			_message = localize STR_RLNT_WH_NOTIFY_TOGGLE_ON;
 		} else {
-			_message = "The Weapon HUD has been toggled off!";
+			_message = localize STR_RLNT_WH_NOTIFY_TOGGLE_OFF;
 		};
 	};
 
@@ -41,17 +41,17 @@ switch (_type) do {
 
 			case "antibiotic": {
 				if (_success) then {
-					_message = "You've taken some antibiotics!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC;
 				} else {
-					_message = "You don't have any antibiotics left!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC_EMPTY;
 				};
 			};
 
 			case "bandage": {
 				if (_success) then {
-					_message = "You've bandaged yourself!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_BANDAGE;
 				} else {
-					_message = "You don't have any bandages left!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_BANDAGE_EMPTY;
 				};
 			};
 
@@ -59,35 +59,35 @@ switch (_type) do {
 				_interrupt = _this select 3;
 
 				if (_success && _interrupt) then {
-					_message = format ["You can only self-blood-bag every %1 seconds!", DZE_selfTransfuse_Values select 2];
+					_message = localize format [STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_DELAY, DZE_selfTransfuse_Values select 2];
 				};
 
 				if (_success && !_interrupt) then {
-					_message = "You've blood-bagged yourself!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG;
 				};
 
 				if (!_success && _interrupt) then {
-					_message = "Blood-bagging has been cancelled!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_CANCELD;
 				};
 
 				if !(_success && _interrupt) then {
-					_message = "You don't have any blood bags left!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_EMPTY;
 				};
 			};
 
 			case "morphine": {
 				if (_success) then {
-					_message = "You've injected some morphine!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_MORPHINE;
 				} else {
-					_message = "You don't have any morphine left!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_MORPHINE_EMPTY;
 				};
 			};
 
 			case "painkiller": {
 				if (_success) then {
-					_message = "You've taken some painkillers!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER;
 				} else {
-					_message = "You don't have any painkillers left!";
+					_message = localize STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER_EMPTY;
 				};
 			};
 		};
