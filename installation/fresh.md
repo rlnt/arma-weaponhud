@@ -5,10 +5,10 @@
 <a name="freshinstallation"></a>
 ## Fresh install instructions
 You should only follow these install instructions if you **don't have any other of my scripts** installed. In case you have addons/scripts that start with RLNT, please follow this instruction instead: [custom install instructions][custominstallation]!
-This instructions are made noob-friendly, read everything carefully! There are many links to guide you through the right steps.
+This instructions are made noob-friendly, read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
 
 <a name="freshclient"></a>
-###Client installation
+# Client installation
 
 1. Download:
 	- [Download latest version!][latest]
@@ -24,6 +24,7 @@ This instructions are made noob-friendly, read everything carefully! There are m
 		- If you **don't have a custom 'compiles.sqf'** follow [these steps](#compiles)!
 
 <a name="compiles"></a>
+3. No custom 'compiles.sqf':
 	- **In the downloaded files**, copy the 'dayz_code' folder into your **mission.pbo**.
 	- Now open your 'init.sqf' and find the following line:
 		```sqf
@@ -34,7 +35,31 @@ This instructions are made noob-friendly, read everything carefully! There are m
 		```sqf
 		call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 		```
-	- Continue with [these steps](#)
+	- Continue with [these steps](#)!
+
+<a name="customcompiles"></a>
+3. Custom 'compiles.sqf':
+	- First, you have to check if you already have a custom 'keyboard.sqf' or not.
+		- If you **have a custom 'keyboard.sqf'** follow [these steps](#customkeyboard)!
+		- If you **don't have a custom 'keyboard.sqf'** follow [these steps](#keyboard)!
+
+<a name="keyboard"></a>
+4. Custom 'keyboard.sqf':
+	- First open the **downloaded files** and place the "Client/dayz_code/compile/keyboard.sqf" in your "mission.pbo/dayz_code/compile" folder. If you don't have that directory, create it. This simply means that you didn't use the Epoch file structure for your custom 'compiles.sqf' but that's not a serious problem.
+	- Now open your **custom** 'compiles.sqf' and find the following line:
+		```sqf
+		DZ_KeyDown_EH = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\keyboard.sqf";
+		```
+	- **Replace** it with this line:
+		```sqf
+		DZ_KeyDown_EH = compile preprocessFileLineNumbers "dayz_code\compile\keyboard.sqf";
+		```
+	- Continue with [these steps](#)!
+
+
+
+
+
 
 
 - Move the 'rlnt' and the 'dayz_code' folder into your mission (where the init.sqf is located).
