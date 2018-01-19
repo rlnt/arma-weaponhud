@@ -43,24 +43,32 @@ switch (_this) do {
 			["error","WH", localize STR_RLNT_WH_ERROR_BLOODBAGSYSTEM_HINT] call RLNT_wh_postDebug;
 		};
 
+		if (!isNil "rlnt_wh_item1") then {
+			{
+				if ((toLower rlnt_wh_item1) != (toLower _x)) then {
+					rlnt_wh_errorsFound = true;
+					["error","WH","Detected that item 1 isn't a supported item!"] call RLNT_wh_postDebug;
+					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+				}
+			} forEach rlnt_wh_itemList;
+		};
+
+		if (!isNil "rlnt_wh_item2") then {
+			{
+				if ((toLower rlnt_wh_item2) != (toLower _x)) then {
+					rlnt_wh_errorsFound = true;
+					["error","WH","Detected that item 2 isn't a supported item!"] call RLNT_wh_postDebug;
+					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+				}
+			} forEach rlnt_wh_itemList;
+		};
+
 		if ((isNil "rlnt_wh_item1") && !(isNil "rlnt_wh_item2")) then {
 			rlnt_wh_item1 = rlnt_wh_item2;
 			rlnt_wh_item1 = nil;
 			["fix","WH", localize STR_RLNT_WH_ERROR_ITEM_SWITCH] call RLNT_wh_postDebug;
 			["fix","WH", localize STR_RLNT_WH_ERROR_ITEM_SWITCH_HINT] call RLNT_wh_postDebug;
-		};
-
-		if ((isNil "rlnt_wh_item2") && (rlnt_wh_itemAmount > 1)) then {
-			rlnt_wh_itemAmount = 1;
-			["fix","WH", localize "Detected that Item 2 is not used but item amount is too high!"] call RLNT_wh_postDebug;
-			["fix","WH", localize "Automatically fixed; set item amount to 1."] call RLNT_wh_postDebug;
-		};
-
-		if ((isNil "rlnt_wh_item1") && (rlnt_wh_itemAmount > 0)) then {
-			rlnt_wh_itemAmount = 0;
-			["fix","WH", localize "Detected that no items are used but item amount is too high!"] call RLNT_wh_postDebug;
-			["fix","WH", localize "Automatically fixed; set item amount to 0."] call RLNT_wh_postDebug;
-		};
+		}
 
 		if (rlnt_wh_bloodSettings select 1 == -1) then {
 			rlnt_wh_bloodSettings set[1, DZE_selfTransfuse_Values select 0];
