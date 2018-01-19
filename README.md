@@ -14,13 +14,16 @@ _Last update: 18.01.2018_ | _v1.0_
 
 ## Credits
 
-**This addon is fully made by myself!**
+- **Authors:**
+	- **Relentless:** [GitHub][relentless]
+	- **Thonikum:** [GitHub][thonikum]
+
+<br>
 
 + **$p4rkY:** taught me most in SQF ([his GitHub][sparky])
 + **Salival:** always helping me with brainf*cking issues ([his GitHub][salival])
 + **Iben:** often helps with issues, also got the GitHub design from him ([his GitHub][iben])
 + **LordGolias:** made an awesome Atom SQF-linter ([his GitHub][golias])
-+ **Thonikum:** helps to compensate my stupidity ([his GitHub][thonikum])
 + **Epoch-Discord:** filled with nice guys that often help ([join the Discord][discord])
 
 ---
@@ -128,11 +131,12 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 [issues]: https://github.com/RLNT/RLNT_WeaponHUD/issues/1 "Go to source"
 [suggestions]: https://github.com/RLNT/RLNT_WeaponHUD/issues/2 "Go to source"
 [releases]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
+[relentless]: https://github.com/DAmNRelentless "Go to source"
+[thonikum]: https://github.com/Thonikum "Go to source"
 [sparky]: https://github.com/SPKcoding "Go to source"
 [salival]: https://github.com/oiad "Go to source"
 [iben]: https://github.com/infobeny "Go to source"
 [golias]: https://github.com/LordGolias "Go to source"
-[thonikum]: https://github.com/Thonikum "Go to source"
 [discord]: https://discord.gg/0k4ynDDCsnMzkxk7 "Go to source"
 [freshinstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/fresh.md "Go to source"
 [custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md "Go to source"
