@@ -37,13 +37,7 @@ switch (_this) do {
 			["error","WH","You have to change one of the hotkeys to prevent errors."] call RLNT_wh_postDebug;
 		};
 
-		if (!dayz_classicBloodBagSystem && (toLower rlnt_wh_item1 == "itembloodbag")) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH","Detected that a blood bag is used as quick-slot-item but the classic blood bag system is disabled!"] call RLNT_wh_postDebug;
-			["error","WH","You have to turn on the dayz_classicBloodBagSystem to use blood bags as quick-slot-items."] call RLNT_wh_postDebug;
-		};
-
-		if (!dayz_classicBloodBagSystem && (toLower rlnt_wh_item2 == "itembloodbag")) exitWith {
+		if (!dayz_classicBloodBagSystem && ((toLower rlnt_wh_item1 == "itembloodbag") || (toLower rlnt_wh_item2 == "itembloodbag"))) exitWith {
 			rlnt_wh_errorsFound = true;
 			["error","WH","Detected that a blood bag is used as quick-slot-item but the classic blood bag system is disabled!"] call RLNT_wh_postDebug;
 			["error","WH","You have to turn on the dayz_classicBloodBagSystem to use blood bags as quick-slot-items."] call RLNT_wh_postDebug;
