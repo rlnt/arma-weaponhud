@@ -6,17 +6,17 @@
 <a name="freshinstallation"></a>
 
 ## Fresh install instructions
-You should only follow these install instructions if you **don't have any other of my scripts** installed.<br>
+You should only follow these install instructions if you **don't have any other of our scripts** installed.<br>
 In case you have addons/scripts that start with RLNT, please follow this instruction instead: [custom install instructions][custominstallation]!<br>
 This instructions are noob-friendly, read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
 
 
 <a name="freshclient"></a>
 
-# Client installation
+## Client installation
 
 1. Download:
-	- [Download latest version!][latest]
+	- [Download the latest version!][latest]
 
 2. File management:
 	- Extract the 'Release.zip' and open it.
@@ -279,8 +279,8 @@ This instructions are noob-friendly, read everything carefully! There are many l
 			};
 		};
 		```
-	- If you already copied the whole 'dayz_code' folder from the **downloaded files** from a previous step in your 'mission.pbo', you can skip this step. Otherwise go to the **downloaded files** and copy the "Client/dayz_code/gui/description.hpp" to your "mission.pbo/dayz_code/gui". If that directory not exists, create it!
-	- Continue with [here](#clientdone)!
+	- If you already copied the whole 'dayz_code' folder from the **downloaded files** from a previous step in your 'mission.pbo', you can skip this step. Otherwise go to the **downloaded files** and copy the "Client/dayz_code/gui/description.hpp" to your "mission.pbo/dayz_code/gui". If that directory doesn't exist, create it!
+	- Continue [here](#clientdone)!
 
 <br>
 <br>
@@ -294,7 +294,7 @@ This instructions are noob-friendly, read everything carefully! There are many l
 		```sqf
 		#include "rlnt\graphics\RLNT_displays.hpp"  /*  RLNT-ADDITIONS  */
 		```
-	- Continue with [here](#clientdone)!
+	- Continue [here](#clientdone)!
 
 <br>
 <br>
@@ -304,13 +304,15 @@ This instructions are noob-friendly, read everything carefully! There are many l
 <a name="clientdone"></a>
 
 **You are done with the client installation!** Now make sure whether you have infiSTAR.
-	- If you have infiSTAR [check this part](#infistar)!
-	- If you don't have infiSTAR [go back to the main post][#mainpost]!
+- If you have infiSTAR [check this part](#infistar)!
+- If you don't have infiSTAR [go back to the main post][mainpost]!
 
 
 <a name="infistar"></a>
 
-8. infiSTAR:
+## infiSTAR installation
+
+- Whitelisting:
 	- Open your infiSTAR 'AHconfig.sqf' and add the following dialog number to your 'ALLOWED_Dialogs':
 		```
 		7211

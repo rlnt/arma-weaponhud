@@ -14,12 +14,9 @@ _Last update: 18.01.2018_ | _v1.0_
 
 ## Credits
 
-- **Authors:**
-	- **Relentless:** [GitHub][relentless]
-	- **Thonikum:** [GitHub][thonikum]
-
-<br>
-
++ **Authors:**
+	+ **Relentless:** [GitHub][relentless]
+	+ **Thonikum:** [GitHub][thonikum]
 + **$p4rkY:** taught me most in SQF ([his GitHub][sparky])
 + **Salival:** always helping me with brainf*cking issues ([his GitHub][salival])
 + **Iben:** often helps with issues, also got the GitHub design from him ([his GitHub][iben])
