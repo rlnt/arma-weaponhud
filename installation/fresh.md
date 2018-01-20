@@ -2,12 +2,17 @@
 
 <br>
 
+
 <a name="freshinstallation"></a>
+
 ## Fresh install instructions
-You should only follow these install instructions if you **don't have any other of my scripts** installed. In case you have addons/scripts that start with RLNT, please follow this instruction instead: [custom install instructions][custominstallation]!
-This instructions are made noob-friendly, read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
+You should only follow these install instructions if you **don't have any other of my scripts** installed.<br>
+In case you have addons/scripts that start with RLNT, please follow this instruction instead: [custom install instructions][custominstallation]!<br>
+This instructions are noob-friendly, read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
+
 
 <a name="freshclient"></a>
+
 # Client installation
 
 1. Download:
@@ -16,34 +21,51 @@ This instructions are made noob-friendly, read everything carefully! There are m
 2. File management:
 	- Extract the 'Release.zip' and open it.
 	- **In there**, open the 'Client' folder.
-	- Move the 'rlnt' folder into your **mission.pbo**.
-		>'mission.pbo' is just a placeholder. Your mission is called something like 'Dayz_Epoch_11.Chernarus', depends on the map you're playing on. It's the same directory where your 'init.sqf' and 'description.ext' is stored in.
+	- Move the 'rlnt' folder into your **'mission.pbo'**.
+		>'mission.pbo' is just a placeholder. Your mission is called something like 'Dayz_Epoch_11.Chernarus', depending on the map you're playing on. It's the same directory where your 'init.sqf' and 'description.ext' is stored in.
 
 	- Now you have to check if you already have a custom 'compiles.sqf' or not.
 		- If you **have a custom 'compiles.sqf'** follow [these steps](#customcompiles)!
 		- If you **don't have a custom 'compiles.sqf'** follow [these steps](#compiles)!
 
+<br>
+<br>
+<br>
+
+
 <a name="compiles"></a>
+
 3. No custom 'compiles.sqf':
 	- **In the downloaded files**, copy the 'dayz_code' folder into your **mission.pbo**.
-	- Now open your 'init.sqf' and find the following line:
+	+ Now open your 'init.sqf' and find the following line:
 		```sqf
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
-		};
 		```
-	- Paste this lines **below**:
+	+ Paste this lines **below**:
 		```sqf
 		call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 		```
-	- Continue with [these steps](#init)!
+	+ Continue with [these steps](#init)!
+
+<br>
+<br>
+<br>
+
 
 <a name="customcompiles"></a>
+
 3. Custom 'compiles.sqf':
 	- First, you have to check if you already have a custom 'keyboard.sqf' or not.
 		- If you **have a custom 'keyboard.sqf'** follow [these steps](#customkeyboard)!
 		- If you **don't have a custom 'keyboard.sqf'** follow [these steps](#keyboard)!
 
+<br>
+<br>
+<br>
+
+
 <a name="keyboard"></a>
+
 4. No custom 'keyboard.sqf':
 	- First open the **downloaded files** and place the "Client/dayz_code/compile/keyboard.sqf" in your "mission.pbo/dayz_code/compile" folder. If you don't have that directory, create it. This simply means that you didn't use the Epoch file structure for your custom 'compiles.sqf' but that's not a serious problem.
 	- Now open your **custom** 'compiles.sqf' and add the following line below the '!isDedicated'-block:
@@ -54,7 +76,13 @@ This instructions are made noob-friendly, read everything carefully! There are m
 
 	- Continue with [these steps](#init)!
 
+<br>
+<br>
+<br>
+
+
 <a name="customkeyboard"></a>
+
 4. Custom 'keyboard.sqf':
 	- First open your **custom** 'keyboard.sqf' and find the following codeblocks:
 		```sqf
@@ -169,7 +197,13 @@ This instructions are made noob-friendly, read everything carefully! There are m
 		```
 	- Continue with [these steps](#init)!
 
+<br>
+<br>
+<br>
+
+
 <a name="init"></a>
+
 5. Init:
 	- Now open your 'init.sqf' and paste the following line **below** the '!isDedicated'-block:
 		```sqf
@@ -185,7 +219,9 @@ This instructions are made noob-friendly, read everything carefully! There are m
 		- If you already have a RscTitles-class follow [these steps](#customrsctitles)!
 		- If you don't have a RscTitles-class or no clue what I am talking about follow [these steps](#rsctitles)!
 
+
 <a name="rsctitles"></a>
+
 7. No 'RscTitles' class:
 	- Still in the 'description.ext', find the following line:
 		```sqf
@@ -246,7 +282,13 @@ This instructions are made noob-friendly, read everything carefully! There are m
 	- If you already copied the whole 'dayz_code' folder from the **downloaded files** from a previous step in your 'mission.pbo', you can skip this step. Otherwise go to the **downloaded files** and copy the "Client/dayz_code/gui/description.hpp" to your "mission.pbo/dayz_code/gui". If that directory not exists, create it!
 	- Continue with [here](#clientdone)!
 
+<br>
+<br>
+<br>
+
+
 <a name="customrsctitles"></a>
+
 7. Custom 'RscTitles' class:
 	- Paste the following line **into** your 'RscTitles' class:
 		```sqf
@@ -254,12 +296,20 @@ This instructions are made noob-friendly, read everything carefully! There are m
 		```
 	- Continue with [here](#clientdone)!
 
+<br>
+<br>
+<br>
+
+
 <a name="clientdone"></a>
+
 **You are done with the client installation!** Now make sure whether you have infiSTAR.
 	- If you have infiSTAR [check this part](#infistar)!
 	- If you don't have infiSTAR [go back to the main post][#mainpost]!
 
+
 <a name="infistar"></a>
+
 8. infiSTAR:
 	- Open your infiSTAR 'AHconfig.sqf' and add the following dialog number to your 'ALLOWED_Dialogs':
 		```
