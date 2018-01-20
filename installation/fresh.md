@@ -307,6 +307,9 @@ This instructions are noob-friendly, read everything carefully! There are many l
 - If you have infiSTAR [check this part](#infistar)!
 - If you don't have infiSTAR [go back to the main post][mainpost]!
 
+<br>
+<br>
+<br>
 
 <a name="infistar"></a>
 
