@@ -1,6 +1,6 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-*Last update: 21.01.2018* | *v1.0.2*
+*Last update: 21.01.2018* | *v1.0.3*
 
 ---
 
@@ -118,11 +118,12 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description        |
-| :---       | :---    | :---               |
-| 21.01.2018 | v1.0.0  | Initial release    |
-| 21.01.2018 | v1.0.1  | Updated references |
-| 21.01.2018 | v1.0.2  | Updated formatting |
+| Date       | Version | Description                                                                          |
+| :---       | :---    | :---                                                                                 |
+| 21.01.2018 | v1.0.0  | Initial release                                                                      |
+| 21.01.2018 | v1.0.1  | Updated references                                                                   |
+| 21.01.2018 | v1.0.2  | Updated formatting                                                                   |
+| 21.01.2018 | v1.0.3  | Fix stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit af9338c][update1]] |
 
 
 <!-- Links  -->
@@ -143,3 +144,4 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 [freshinfistar]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/fresh.md#infistar "Go to source"
 [customclient]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md#client "Go to source"
 [custominfistar]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md#infistar "Go to source"
+[update1]: https://github.com/RLNT/RLNT_WeaponHUD/commit/af9338ca96fcc5990ea0907894537ed8f4b95fea "Go to source"
