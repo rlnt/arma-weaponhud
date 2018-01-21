@@ -118,12 +118,12 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description                                                                  |
-| :---       | :---    | :---                                                                         |
-| 21.01.2018 | v1.0.0  | Initial release                                                              |
-| 21.01.2018 | v1.0.1  | Updated references                                                           |
-| 21.01.2018 | v1.0.2  | Updated formatting                                                           |
-| 21.01.2018 | v1.0.3  | Fix stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit][update1]] |
+| Date       | Version | Description                                                                          |
+| :---       | :---    | :---                                                                                 |
+| 21.01.2018 | v1.0.0  | Initial release                                                                      |
+| 21.01.2018 | v1.0.1  | Updated references                                                                   |
+| 21.01.2018 | v1.0.2  | Updated formatting                                                                   |
+| 21.01.2018 | v1.0.3  | Fix stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit af9338c][update1]] |
 
 
 <!-- Links  -->
