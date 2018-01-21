@@ -3,6 +3,7 @@ File:			RLNT_wh_error.sqf
 Author:			Relentless
 Description:	Error prevention function for Weapon HUD
 */
+private ["_counter"];
 
 
 /*  DEBUG  */
@@ -44,23 +45,33 @@ switch (_this) do {
 		};
 
 		if (!isNil "rlnt_wh_item1") then {
+			_counter = 0;
 			{
 				if ((toLower rlnt_wh_item1) != (toLower _x)) then {
-					rlnt_wh_errorsFound = true;
-					["error","WH","Detected that item 1 isn't a supported item!"] call RLNT_wh_postDebug;
-					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+					_counter = _counter + 1;
 				}
 			} forEach rlnt_wh_itemList;
+
+			if (_counter == (count rlnt_wh_itemList)) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_ERROR_ITEM1_NOT_FOUND"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_ERROR_ITEM_NOT_FOUND_HINT"] call RLNT_wh_postDebug;
+			};
 		};
 
 		if (!isNil "rlnt_wh_item2") then {
+			_counter = 0;
 			{
 				if ((toLower rlnt_wh_item2) != (toLower _x)) then {
-					rlnt_wh_errorsFound = true;
-					["error","WH","Detected that item 2 isn't a supported item!"] call RLNT_wh_postDebug;
-					["error","WH","Make sure the item you set is in the rlnt_wh_itemList!"] call RLNT_wh_postDebug;
+					_counter = _counter + 1;
 				}
 			} forEach rlnt_wh_itemList;
+
+			if (_counter == (count rlnt_wh_itemList)) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_ERROR_ITEM2_NOT_FOUND"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_ERROR_ITEM_NOT_FOUND_HINT"] call RLNT_wh_postDebug;
+			};
 		};
 
 		if ((isNil "rlnt_wh_item1") && !(isNil "rlnt_wh_item2")) then {
