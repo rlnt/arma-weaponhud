@@ -72,7 +72,7 @@ if (_hasItem) then {
 			dayz_lastSelfTransfuse = time;
 			r_doLoop = false;
 
-			["bloodbag",true,false] call RLNT_wh_notifyUser;
+			["action","bloodbag",true,false] call RLNT_wh_notifyUser;
 
 			if (_infection) then {
 				r_player_infected = true;
@@ -82,13 +82,13 @@ if (_hasItem) then {
 
 		if (r_interrupt) then {
 			r_doLoop = false;
-			["bandage",false,true] call RLNT_wh_notifyUser;
+			["action","bloodbag",false,true] call RLNT_wh_notifyUser;
 		};
 		uiSleep 0.1;
 	};
 	dayz_actionInProgress = false;
 } else {
-	["bandage",false,false] call RLNT_wh_notifyUser;
+	["action","bloodbag",false,false] call RLNT_wh_notifyUser;
 };
 
 r_doLoop = false;
