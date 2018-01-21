@@ -1,90 +1,76 @@
-# RLNT Weapon HUD
+# RLNT WEAPON HUD
 
 <br>
 
 
 <a name="freshinstallation"></a>
 
-## Fresh install instructions
-You should only follow these install instructions if you **don't have any other of our scripts** installed.<br>
-In case you have addons/scripts that start with RLNT, please follow this instruction instead: [custom install instructions][custominstallation]!<br>
-This instructions are noob-friendly, read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
+## FRESH INSTALL INSTRUCTIONS
+You should only follow these install instructions if you **don't have any other of our scripts** installed!<br>
+In case you have addons/scripts that start with RLNT please follow these instructions instead: [custom install instructions][custominstallation]!<br>
+This instructions are noob-friendly; read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
 
 
 <a name="freshclient"></a>
 
-## Client installation
+## CLIENT INSTALLATION
 
-1. Download:
-	- [Download the latest version!][latest]
-
-2. File management:
-	- Extract the 'Release.zip' and open it.
-	- **In there**, open the 'Client' folder.
-	- Move the 'rlnt' folder into your **'mission.pbo'**.
-		>'mission.pbo' is just a placeholder. Your mission is called something like 'Dayz_Epoch_11.Chernarus', depending on the map you're playing on. It's the same directory where your 'init.sqf' and 'description.ext' is stored in.
-
-	- Now you have to check if you already have a custom 'compiles.sqf' or not.
-		- If you **have a custom 'compiles.sqf'** follow [these steps](#customcompiles)!
-		- If you **don't have a custom 'compiles.sqf'** follow [these steps](#compiles)!
-
-<br>
-<br>
+1. DOWNLOAD:
+	- [Download the latest version][latest]!
 <br>
 
+2. FILE-MANAGEMENT:
+	- Extract the _Release.zip_ and open it.
+	- **In there** open the _Client_ folder.
+	- Now move the _rlnt_ folder into your _mission.pbo_.
+		>_mission.pbo_ is just a placeholder. Your mission is called something like _Dayz_Epoch_11.Chernarus_ depending on the map you're playing on. It's the same directory where your _init.sqf_ and _description.ext_ is stored in.
 
-<a name="compiles"></a>
+	- Next move the _stringTable.xml_ into your _mission.pbo_.
+		>The _stringTable.xml_ has to be in the root of the _mission.pbo_. That's where the _init.sqf_ is located. If you already have an existing _stringTable.xml_ you need to merge them!
 
-3. No custom 'compiles.sqf':
-	- **In the downloaded files**, copy the 'dayz_code' folder into your **mission.pbo**.
-	+ Now open your 'init.sqf' and find the following line:
+	- Check if you already have a custom _compiles.sqf_ or not.
+		- If you **have a custom** _compiles.sqf_ follow [these steps](#customcompiles)!
+		- If you **don't have a custom** _compiles.sqf_ just continue reading!
+<br>
+
+3. NO CUSTOM _COMPILES.SQF_:
+	- First open the **downloaded files** and move the **"Client/dayz_code/init/compiles.sqf"** into your **"mission.pbo/dayz_code/init"** folder.
+	- Now open your _init.sqf_ and find the following line:
 		```sqf
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 		```
-	+ Paste this lines **below**:
+	- Paste this line **below**:
 		```sqf
 		call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 		```
-	+ Continue with [these steps](#init)!
-
+	- Continue with [these steps](#init)!
 <br>
-<br>
-<br>
-
 
 <a name="customcompiles"></a>
 
-3. Custom 'compiles.sqf':
-	- First, you have to check if you already have a custom 'keyboard.sqf' or not.
-		- If you **have a custom 'keyboard.sqf'** follow [these steps](#customkeyboard)!
-		- If you **don't have a custom 'keyboard.sqf'** follow [these steps](#keyboard)!
-
-<br>
-<br>
+3. CUSTOM _COMPILES.SQF_:
+	- Check if you already have a custom _keyboard.sqf_ or not.
+		- If you **have a custom** _keyboard.sqf_ follow [these steps](#customkeyboard)!
+		- If you **don't have a custom** _keyboard.sqf_ just continue reading!
 <br>
 
+4. NO CUSTOM _KEYBOARD.SQF_:
+	- First open the **downloaded files** and move the **"Client/dayz_code/compile/keyboard.sqf"** into your **"mission.pbo/dayz_code/compile"** folder.
+		>Create the directory if you don't have it yet. This simply means that you didn't use the Epoch file structure for your custom _compiles.sqf_ but that's not a serious problem.
 
-<a name="keyboard"></a>
-
-4. No custom 'keyboard.sqf':
-	- First open the **downloaded files** and place the "Client/dayz_code/compile/keyboard.sqf" in your "mission.pbo/dayz_code/compile" folder. If you don't have that directory, create it. This simply means that you didn't use the Epoch file structure for your custom 'compiles.sqf' but that's not a serious problem.
-	- Now open your **custom** 'compiles.sqf' and add the following line below the '!isDedicated'-block:
+	- Now open your **custom** _compiles.sqf_ and add the following line **below** the _!isDedicated_ block:
 		```sqf
 		DZ_KeyDown_EH = compile preprocessFileLineNumbers "dayz_code\compile\keyboard.sqf";
 		```
-		>if you have a line that already defines the 'keyboard.sqf', you are probably one of those guys that copy the whole 'compiles.sqf' to their mission. If you did that, you have to replace the original 'keyboard.sqf'-line instead!
+		>if you have a line that already defines the _keyboard.sqf_ you are probably one of those guys that copy the whole _compiles.sqf_ to their mission. If you did that you have to replace the original _keyboard.sqf_ line instead!
 
 	- Continue with [these steps](#init)!
-
 <br>
-<br>
-<br>
-
 
 <a name="customkeyboard"></a>
 
-4. Custom 'keyboard.sqf':
-	- First open your **custom** 'keyboard.sqf' and find the following codeblocks:
+4. CUSTOM _KEYBOARD.SQF_:
+	- First open your **custom** _keyboard.sqf_ and find the following codeblocks:
 		```sqf
 		_rifle = {
 			2 call dz_fn_switchWeapon;
@@ -159,7 +145,7 @@ This instructions are noob-friendly, read everything carefully! There are many l
 			_handled = true;
 		};
 		```
-	- After you have done this, find the following lines and **remove** them:
+	- After you have done this find the following lines and **remove** them:
 		```sqf
 		[[DIK_1], _rifle] call _addArray;
 		[[DIK_2], _pistol] call _addArray;
@@ -195,43 +181,37 @@ This instructions are noob-friendly, read everything carefully! There are many l
 			[rlnt_wh_item2_key, _whItem2] call _addArray;
 		};
 		```
-	- Continue with [these steps](#init)!
-
 <br>
-<br>
-<br>
-
 
 <a name="init"></a>
 
-5. Init:
-	- Now open your 'init.sqf' and paste the following line **below** the '!isDedicated'-block:
+5. INIT:
+	- Now open your _init.sqf_ and paste the following line **below** the _!isDedicated_ block:
 		```sqf
 		execVM "rlnt\addons\RLNT_init.sqf";  /*  RLNT-ADDITIONS  */
 		```
+<br>
 
-6. Description:
-	- Open your 'description.ext' and paste the following line at **the very bottom**:
+6. DESCRIPTION:
+	- Open your _description.ext_ and paste the following line at the **very bottom**:
 		```sqf
 		#include "rlnt\graphics\RLNT_dialogs.hpp"  /*  RLNT-ADDITIONS  */
 		```
-	- Now you have to check whether you have a RscTitles-class somewhere!
-		- If you already have a RscTitles-class follow [these steps](#customrsctitles)!
-		- If you don't have a RscTitles-class or no clue what I am talking about follow [these steps](#rsctitles)!
+	- Check if you have a _RscTitles_ class somewhere or not!
+		- If you **already have a** _RscTitles_ class follow [these steps](#customrsctitles)!
+		- If you **don't have a** _RscTitles_ class just continue reading!
+<br>
 
-
-<a name="rsctitles"></a>
-
-7. No 'RscTitles' class:
+7. NO _RSCTITLES_ CLASS:
 	- Still in the 'description.ext', find the following line:
 		```sqf
 		#include "\z\addons\dayz_code\gui\description.hpp"
 		```
-	- **Replace** it with the following line:
+	- **Replace** it with the this line:
 		```sqf
 		#include "dayz_code\gui\description.hpp"
 		```
-	- Now find the following codeblock:
+	- Now find the this codeblock:
 		```sqf
 		class Header
 		{
@@ -279,48 +259,171 @@ This instructions are noob-friendly, read everything carefully! There are many l
 			};
 		};
 		```
-	- If you already copied the whole 'dayz_code' folder from the **downloaded files** from a previous step in your 'mission.pbo', you can skip this step. Otherwise go to the **downloaded files** and copy the "Client/dayz_code/gui/description.hpp" to your "mission.pbo/dayz_code/gui". If that directory doesn't exist, create it!
+	- Now open the **downloaded files** and move the **"Client/dayz_code/gui/description.hpp"** into your **"mission.pbo/dayz_code/gui"** folder.
 	- Continue [here](#clientdone)!
-
 <br>
-<br>
-<br>
-
 
 <a name="customrsctitles"></a>
 
-7. Custom 'RscTitles' class:
-	- Paste the following line **into** your 'RscTitles' class:
+7. _RSCTITLES_ CLASS:
+	- Paste the following line **into** your _RscTitles_ class:
 		```sqf
 		#include "rlnt\graphics\RLNT_displays.hpp"  /*  RLNT-ADDITIONS  */
 		```
-	- Continue [here](#clientdone)!
-
 <br>
-<br>
-<br>
-
 
 <a name="clientdone"></a>
 
-**You are done with the client installation!** Now make sure whether you have infiSTAR.
-- If you have infiSTAR [check this part](#infistar)!
-- If you don't have infiSTAR [go back to the main post][mainpost]!
-
-<br>
-<br>
+**You are done with the client installation!**<br>
+- Check if you have infiSTAR.
+	- If you have infiSTAR [check the bottom part](#freshinfistar)!
+	- If you don't have infiSTAR you are done! Now go back to the [main post][mainpost]!
 <br>
 
-<a name="infistar"></a>
+<a name="freshinfistar"></a>
 
-## infiSTAR installation
+## INFISTAR INSTALLATION
 
-- Whitelisting:
-	- Open your infiSTAR 'AHconfig.sqf' and add the following dialog number to your 'ALLOWED_Dialogs':
+- WHITELISTING:
+	- Open your infiSTAR _AHconfig.sqf_ and add the following dialog number to your _ALLOWED_Dialogs_:
 		```
 		7211
 		```
-	- **That's it!** You should now [go back to the main post too][mainpost]!
+	- **That's it!** You should now go back to the [main post][mainpost] too!
+
+<!-- Some ASCII art to keep the guide active -->
+<br><br><br><br><br><br><br><br><br><br>
+```
+################################################################################################################
+################################################################################################################
+###############++++++++++++++++++#########################################++++++++##############################
+#############+++'''''''''''''''''+++++++################################++''''''''##############################
+############++';;;;;;;;;;;;;;;;;;;;;''''++#############################+'';;;;;;;;##############################
+############+'::,,,,,,,,,,,,,,,,,,,,:::;;''+##########################++;:,,,,,,,,##############################
+###########+';:..````````````````......,,::;'#########################+';,.```````##############################
+###########+';,.`                 ``````..,,:;########################+':,``     `##############################
+###########+';,`                        ```.,:;#######################+':.`       ##############################
+###########+';,`                           ``.,+######################+':.`       ##############################
+###########+';,`                             `.,######################+':.`       ##############################
+###########+';,`                              `.,#####################+':.`       ##############################
+###########+';,`                               `.#####################+':.`       ##############################
+###########+';,`                                `:####################+':.`       ##############################
+###########+';,`       :#########:```           `.####################+':.`       ##############################
+###########+';,`       :###########+.``          `####################+':.`       ##############################
+###########+';,`       :############+,.``        `'###################+':.`       ##############################
+###########+';,`       :#############',.``        ,++++++++++++++++###+':.`       ##############################
+###########+';,`       :##############;,.`        `++++++++++++++++++#+':.`       ##############################
+###########+';,`       :##############';,.`       `++++++++++++++++++#+':.`       ##############################
+###########+';,`       :############+++':,`       `++++++++++++++++++#+':.`       ##############################
+###########+';,`       :##########+++++';,.`      `++++++++++++++++++#+':.`       ##############################
+###########+';,`       :########++++++#+;:.`       ++++++++++++++++++#+':.`       ##############################
+###########+';,`       :######++++++++#+':.`       ++++++++++++++++++#+':.`       ++############################
+###########+';,`       :####+++++++++##+':.`      `++++++++++++++++++#+':.`       +++###########################
+###########+';,`       :###++++++++++##+;,.`      ;++++++++++++++++++#+':.`       +++++#########################
+###########+';,`       :#+++++++++++##+';,`       +++++++++++++++++++#+':.`       ++++++########################
+###########+';,`       :++++++++#####++;:.`       +++++++++++++++++++#+':.`       ++++++++######################
+###########+';,`       `.,;'+####++++';:,.`      `+++++++++++++++++++#+':.`       +++++++++#####################
+###########+';,`       `.,:''++++'''';:,.`       ++++++++++++++++++++#+':.`       ++++++++++####################
+###########+';,`        `.,:;;;;;;;::,..`        ++++++++++++++++++++#+':.`       ++++++++++++##################
+###########+';,`        ``.,,,,,,,,...``        +++++++++++++++++++++#+':.`       +++++++++++++#################
+###########+';,`         ```.....`````         ;+++++++++++++++++++++#+':.`       ++++++++++++++################
+###########+';,`            ````              `++++++++++++++++++++++#+':.`       +++++++++++++++###############
+###########+';,`                             `+++++++++++++++++++++++#+':.`       ++++++++++++++++##############
+###########+';,`                            :++++++++++++++++++++++++#+':.`       +++++++++++++++++#############
+###########+';,`                           ++++++++++++++++++++++++++#+':.`       +++++++++++++++++#############
+###########+';,`                         '+++++++++++++++++++++++++++#+':.`       ++++++++++++++++++############
+###########+';,`                       ++++++++++++++++++++++++++++++#+':.`       +++++++++++++++++++###########
+###########+';,`                      +++++++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++##########
+###########+';,`       ,+              ++++++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++##########
+###########+';,`       :+````          ++++++++++++++++++++++++++++++#+':.`       +++++++++++++++++++++#########
+###########+';,`       :++..``         `+++++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++########
+#########+#+';,`       :++:,,.`        `'++++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++########
+#########+#+';,`       :+++::,`        `.++++++++++++++++++++++++++++#+':.`       +++++++++++++++++++++++#######
+########++#+';,`       :+++';,.`        `'+++++++++++++++++++++++++++#+':.`       +++++++++++++++++++++++#######
+########++#+';,`       :++++':,`        `.+++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++######
+#######+++#+';,`       :+++++;:.`        `;++++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++######
+#######+++#+';,`       :+++++';,``       `.++++++++++++++++++++++++++#+':.`       +++++++++++++++++++++++++#####
+######++++#+';,`       :++++++;:.`        `:+++++++++++++++++++++++++#+':.`       +++++++++++++++++++++++++#####
+######++++#+';,`       :++++++';,.`       `.+++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++++####
+#####+++++#+';,`       :+++++++;:.`        `,++++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++++####
+#####+++++#+';,`       :+++++++';,.`       `.++++++++++++++++++++++++#+':.`       +++++++++++++++++++++++++++###
+#####+++++#+';,`       :++++++++':.`        `,+++++++++++++++++++++++#+':.`       +++++++++++++++++++++++++++###
+####++++++#+';,`       :++++++++';,.`       `.+++++++++++++++++++++++#+':.`       +++++++++++++++++++++++++++###
+####++++++#+';,`       :+++++++++':.`        `.++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++++++##
+####++++++#+';,`       :+++++++++';,.`       `.++++++++++++++++++++++#+':.`       ++++++++++++++++++++++++++++##
+###+++++++#+';,`       :++++++++++':.`        `.+++++++++++++++++++++#+':.`       `.:;++#############+++++++++##
+###+++++++#+';,`       :++++++++++';,.`       `.+++++++++++++++++++++#+':.`       `.,;''++++++++++++++++++++++##
+###+++++++#+';,`       :+++++++++++':,`        `.++++++++++++++++++++#+':.`       ``.:;;;;;;;;;;;;;;;++++++++++#
+###+++++++#+';,`       :+++++++++++';,.`       `.'+++++++++++++++++++#+':.`        `..,,,,,,,,,,,,,,:++++++++++#
+###+++++++#+';,`       :++++++++++++':,`        `.+++++++++++++++++++#+':.`         ```..............++++++++++#
+##++++++++#+';,`       :+++++++++++++;,.`       ``'++++++++++++++++++#+':.`            ``````````````++++++++++#
+##++++++++#+';,`       :+++++++++++++':,`        `.++++++++++++++++++#+':.`                          ++++++++++#
+##++++++++#+';,`       :++++++++++++++;:.`        `;+++++++++++++++++#+':.`                          +++++++++++
+##++++++++#+';,`       :++++++++++++++':,`        `.+++++++++++++++++#+':.`                          +++++++++++
+##++++++++#+';,`       :+++++++++++++++;:.`        `:++++++++++++++++#+':.`                          +++++++++++
+##++++++++#+';,`       :+++++++++++++++';,``       `.++++++++++++++++#+':.`                          +++++++++++
+##++++++++#+';,`       :++++++++++++++++;:.`       ``,+++++++++++++++#+':.`                          +++++++++++
+##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#############++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###
+#############################+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++##########
+##########+++++++++++###########+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#############
+#########';.````````````@########++++++++++';,``````````#########+++;'```````````````````````````````@##########
+#########';.```````````` @########+++++++++';,``````````###########+;'```````````````````````````````@##########
+#########';.```````````` +@########++++++++';,``````````###########+;'```````````````````````````````@##########
+#########';.````````````  @@#######++++++++';,``````````###########+;'```````````````````````````````@##########
+#########';.````````````` `@#########++++++';,``````````###########+''```````````````````````````````@##########
+#########';``````````````  #@#########+++++'',``````````@##########+''```````````````````````````````@##########
+#########';```````````````  @@########+#+++'',``````````@##########+'+```````````````````````````````@##########
+#########';```````````````  `@#############'',``````````@@#########+++##########``````````:@@@@@@@@@@###########
+#########';````````````````` #@############';,``````````@@#########++##########+``````````:@@@@@@@@@############
+#########';```````````````````@@###########';,``````````@@#########+#########+''``````````:@####################
+#########';```````````````````.@###########';,``````````@@##########+########+;;``````````:@####################
+#########';````````````````````#@##########';,``````````@@#########+##+######+;;``````````:@####################
+#########';`````````````````````@@#########+;,``````````@@##########++++#####+;;``````````:@####################
+#########';`````````````````````,@#########+;,``````````@@##########+++++####+;;``````````:@####################
+#########';``````````````````````@@########+;,``````````@@#########++++++####+;'``````````:@####################
+#########';```````````````````````@@#######+;,``````````@@#########+++++++###+;'``````````:@####################
+#########';```````````:```````````:@#######+;,``````````@@#########+++++++###+;'``````````:@####################
+#########';```````````@````````````@@######+;,``````````@@##########++++++###+;'``````````:@####################
+#########';```````````@#````````````@@#####+;,``````````@@#########+++++++###+;'``````````:@####################
+#########';```````````@#,```````````;@#####+;,``````````@@#########++++++++##+;'``````````:@####################
+#########';```````````@@#````````````@@####+;,``````````@@#########++++++++##+;'``````````:@####################
+#########';```````````@@##````````````@@###+;,``````````@@##########+++++++##+;'``````````:@####################
+#########';```````````@@##.```````````'@###+;,``````````@@##########++++++###+;'``````````:@####################
+#########';```````````@@#+#````````````@@##+;,``````````@@###########++++++##+;'``````````:@####################
+#########';```````````@@#+#+````````````@@#+;,``````````@@###########+++++###+;'``````````:@####################
+#########';```````````@@##+#.```````````+@#';,``````````@@###########++++####+;'``````````:@####################
+#########';```````````@@##++#````````````@@';,``````````@@###########+#++####+;'``````````:@####################
+#########';```````````@@###+++````````````@#;,``````````@@#############++####+;;``````````:@####################
+#########';```````````@@####+#````````````#@;,``````````@@#############+#####+;;``````````:@####################
+#########';```````````@@####++#````````````@',``````````@@###################+;;``````````:@####################
+#########';```````````@@#####+++````````````#.``````````@@###################+;;``````````:@####################
+#########';```````````@@######++````````````#,``````````@@###################+;;``````````:@####################
+#########';```````````@@######+++````````````,``````````@@###################+;;``````````:@####################
+#########';```````````@@#######++'``````````````````````@@###################+;;``````````:@####################
+#########';```````````@@#######+++``````````````````````@@###################+;;``````````:@####################
+#########+;```````````@@########+++`````````````````````@@###################+;;``````````:@####################
+#########+;```````````@@#########++;````````````````````@@###################+;;``````````:@####################
+#########+;```````````@@#########+++````````````````````@@###################+;;``````````:@####################
+#########+;```````````@@##########+++```````````````````@@###################+;;``````````:@####################
+#########+;```````````@@###########++:``````````````````@@###################+;;``````````:@####################
+#########+;```````````@@###########+++  ````````````````@@###################+;;``````````:@####################
+#########+;```````````@@############+++  ```````````````@@###################+;;``````````:@####################
+#########+;```````````@@############+++,  ``````````````@@###################+;;``````````:@####################
+#########+;```````````@@#############+++  ``````````````@@###################+;;``````````:@####################
+#########+;```````````@@##############+++  `````````````@@###################+;;``````````:@####################
+#########+;```````````@@##############+++. `````````````@@###################+;;``````````:@####################
+#########+;```````````@@###############+++  ````````````@@###################+;;``````````:@####################
+#########+;```````````@@################+++ ````````````@@###################+;;``````````:@####################
+#########+;```````````@@################+++.````````````@@###################+;;``````````:@####################
+#########+;```````````@@#################+++````````````@@###################+;;``````````:@####################
+#########+'.``````````@@##################+++```````````@@###################+''``````````:@####################
+#########+'.``````````@@##################++#```````````@@###################+'+``````````:@####################
+#########++##@@@@@@@@@@####################+###@@@@@@@@@@#####################+###@@@@@@@@@@####################
+#############@@@@@@@@@#########################@@@@@@@@@######################+###@@@@@@@@@#####################
+################################################################################################################
+```
+
 
 <!-- Links -->
 [custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md "Go to source"
