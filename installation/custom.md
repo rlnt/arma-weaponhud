@@ -371,6 +371,6 @@
 
 
 <!-- Links -->
-[freshinstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/fresh.md "Go to source"
+[freshinstallation]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/fresh.md "Go to source"
 [latest]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
 [mainpost]: https://github.com/RLNT/RLNT_WeaponHUD#config "Go to source"
