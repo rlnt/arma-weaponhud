@@ -1,6 +1,6 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-*Last update: 21.01.2018* | *v1.0.0*
+*Last update: 21.01.2018* | *v1.0.2*
 
 ---
 
@@ -118,9 +118,11 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description     |
-| :---       | :---    | :---            |
-| 21.01.2018 | v1.0    | Initial release |
+| Date       | Version | Description        |
+| :---       | :---    | :---               |
+| 21.01.2018 | v1.0.0  | Initial release    |
+| 21.01.2018 | v1.0.1  | Updated references |
+| 21.01.2018 | v1.0.2  | Updated formatting |
 
 
 <!-- Links  -->
