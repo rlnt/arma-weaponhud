@@ -39,9 +39,9 @@ if (_hasItem) then {
 	PVDZ_send = [player,"Painkiller",[player,player]];
 	publicVariableServer "PVDZ_send";
 
-	["painkiller",true] call RLNT_wh_notifyUser;
+	["action","painkiller",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
-	["painkiller",false] call RLNT_wh_notifyUser;
+	["action","painkiller",false] call RLNT_wh_notifyUser;
 };
