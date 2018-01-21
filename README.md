@@ -1,6 +1,6 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-_Last update: 18.01.2018_ | _v1.0_
+*Last update: 21.01.2018* | *v1.0.0*
 
 ---
 
@@ -120,11 +120,11 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 
 | Date       | Version | Description     |
 | :---       | :---    | :---            |
-| 18.01.2018 | v1.0    | Initial release |
+| 21.01.2018 | v1.0    | Initial release |
 
 
 <!-- Links  -->
-[epochforum]: https://github.com/DAmNRelentless/RLNT_WeaponHUD/tree/experimental "Go to source"
+[epochforum]: https://epochmod.com/forum/topic/44851-uploading-rlnt-weapon-hud-21012018-v100 "Go to source"
 [issues]: https://github.com/RLNT/RLNT_WeaponHUD/issues/1 "Go to source"
 [suggestions]: https://github.com/RLNT/RLNT_WeaponHUD/issues/2 "Go to source"
 [releases]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
