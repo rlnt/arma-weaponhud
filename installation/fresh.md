@@ -6,7 +6,7 @@
 <a name="freshinstallation"></a>
 
 ## FRESH INSTALL INSTRUCTIONS
-You should only follow these install instructions if you **don't have any other of our scripts** installed.<br>
+You should only follow these install instructions if you **don't have any other of our scripts** installed!<br>
 In case you have addons/scripts that start with RLNT please follow these instructions instead: [custom install instructions][custominstallation]!<br>
 This instructions are noob-friendly; read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right order again. Don't be confused about that.
 
@@ -16,7 +16,7 @@ This instructions are noob-friendly; read everything carefully! There are many l
 ## CLIENT INSTALLATION
 
 1. DOWNLOAD:
-	- [Download the latest version!][latest]
+	- [Download the latest version][latest]!
 
 
 2. FILE-MANAGEMENT:
@@ -25,13 +25,16 @@ This instructions are noob-friendly; read everything carefully! There are many l
 	- Now move the _rlnt_ folder into your _mission.pbo_.
 		>_mission.pbo_ is just a placeholder. Your mission is called something like _Dayz_Epoch_11.Chernarus_, depending on the map you're playing on. It's the same directory where your _init.sqf_ and _description.ext_ is stored in.
 
+	- Next move the _stringTable.xml_ into your _mission.pbo_.
+		>The _stringTable.xml_ has to be in the root of the _mission.pbo_. That's where the _init.sqf_ is located. If you already have an existing _stringTable.xml_ you need to merge them!
+
 	- Check if you already have a custom _compiles.sqf_ or not.
 		- If you **have a custom** _compiles.sqf_ follow [these steps](#customcompiles)!
 		- If you **don't have a custom** _compiles.sqf_ just continue reading!
 
 
 3. NO CUSTOM _COMPILES.SQF_:
-	- **In the downloaded files** copy the _dayz_code_ folder into your _mission.pbo_.
+	- First open the **downloaded files** and place the **"Client/dayz_code/init/compiles.sqf"** in your **"mission.pbo/dayz_code/init"** folder.
 	- Now open your _init.sqf_ and find the following line:
 		```sqf
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
@@ -50,8 +53,6 @@ This instructions are noob-friendly; read everything carefully! There are many l
 		- If you **have a custom** _keyboard.sqf_ follow [these steps](#customkeyboard)!
 		- If you **don't have a custom** _keyboard.sqf_ just continue reading!
 
-
-<a name="keyboard"></a>
 
 4. NO CUSTOM _KEYBOARD.SQF_:
 	- First open the **downloaded files** and place the **"Client/dayz_code/compile/keyboard.sqf"** in your **"mission.pbo/dayz_code/compile"** folder.
@@ -257,7 +258,7 @@ This instructions are noob-friendly; read everything carefully! There are many l
 			};
 		};
 		```
-	- If you already copied the whole _dayz_code_ folder from the **downloaded files** from a previous step in your _mission.pbo_, you can skip this step. Otherwise go to the **downloaded files** and copy the **"Client/dayz_code/gui/description.hpp"** to your **"mission.pbo/dayz_code/gui"**. Create the directory if you don't have it yet.!
+	- Now open the **downloaded files** and place the **"Client/dayz_code/gui/description.hpp"** in your **"mission.pbo/dayz_code/gui"** folder.
 	- Continue [here](#clientdone)!
 
 
