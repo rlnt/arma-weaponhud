@@ -37,9 +37,9 @@ if (_hasItem) then {
 	r_player_infected = false;
 	player setVariable["USEC_infected", false, true];
 
-	["antibiotic",true] call RLNT_wh_notifyUser;
+	["action","antibiotic",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
-	["antibiotic",false] call RLNT_wh_notifyUser;
+	["action","antibiotic",false] call RLNT_wh_notifyUser;
 };

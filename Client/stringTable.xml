@@ -72,6 +72,27 @@
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
+			<Key ID="STR_RLNT_WH_ERROR_ITEM1_NOT_FOUND">
+				<English>Detected that "item 1" isn't a supported item!</English>
+				<German>Erkannt, dass "item 1" kein unterstütztes Item ist!</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
+			<Key ID="STR_RLNT_WH_ERROR_ITEM2_NOT_FOUND">
+				<English>Detected that "item 2" isn't a supported item!</English>
+				<German>Erkannt, dass "item 2" kein unterstütztes Item ist!</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
+			<Key ID="STR_RLNT_WH_ERROR_ITEM_NOT_FOUND_HINT">
+				<English>Make sure the item you set is in the rlnt_wh_itemList!</English>
+				<German>Stell sicher, dass sich das Item im "rlnt_wh_itemList"-Array befindet!</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
 			<Key ID="STR_RLNT_WH_ERROR_ITEM_SWITCH">
 				<English>Detected that "item 2" is set but item 1 doesn't!</English>
 				<German>Es wurde "item2" definiert aber nicht "item1"!</German>
