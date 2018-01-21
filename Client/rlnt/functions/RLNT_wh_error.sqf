@@ -68,7 +68,7 @@ switch (_this) do {
 			rlnt_wh_item1 = nil;
 			["fix","WH", localize STR_RLNT_WH_ERROR_ITEM_SWITCH] call RLNT_wh_postDebug;
 			["fix","WH", localize STR_RLNT_WH_ERROR_ITEM_SWITCH_HINT] call RLNT_wh_postDebug;
-		}
+		};
 
 		if (rlnt_wh_bloodSettings select 1 == -1) then {
 			rlnt_wh_bloodSettings set[1, DZE_selfTransfuse_Values select 0];
