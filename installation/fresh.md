@@ -20,22 +20,22 @@ This instructions are noob-friendly; read everything carefully! There are many l
 <br>
 
 2. FILE-MANAGEMENT:
-	- Extract the _Release.zip_ and open it.
-	- **In there** open the _Client_ folder.
-	- Now move the _rlnt_ folder into your _mission.pbo_.
-		>_mission.pbo_ is just a placeholder. Your mission is called something like _Dayz_Epoch_11.Chernarus_ depending on the map you're playing on. It's the same directory where your _init.sqf_ and _description.ext_ is stored in.
+	- Extract the *Release.zip* and open it.
+	- **In there** open the *Client* folder.
+	- Now move the *rlnt* folder into your *mission.pbo*.
+		>*mission.pbo* is just a placeholder. Your mission is called something like *Dayz_Epoch_11.Chernarus* depending on the map you're playing on. It's the same directory where your *init.sqf* and *description.ext* is stored in.
 
-	- Next move the _stringTable.xml_ into your _mission.pbo_.
-		>The _stringTable.xml_ has to be in the root of the _mission.pbo_. That's where the _init.sqf_ is located. If you already have an existing _stringTable.xml_ you need to merge them!
+	- Next move the *stringTable.xml* into your *mission.pbo*.
+		>The *stringTable.xml* has to be in the root of the *mission.pbo*. That's where the *init.sqf* is located. If you already have an existing *stringTable.xml* you need to merge them!
 
-	- Check if you already have a custom _compiles.sqf_ or not.
-		- If you **have a custom** _compiles.sqf_ follow [these steps](#customcompiles)!
-		- If you **don't have a custom** _compiles.sqf_ just continue reading!
+	- Check if you already have a custom *compiles.sqf* or not.
+		- If you **have a custom** *compiles.sqf* follow [these steps](#customcompiles)!
+		- If you **don't have a custom** *compiles.sqf* just continue reading!
 <br>
 
-3. NO CUSTOM _COMPILES.SQF_:
+3. NO CUSTOM *COMPILES.SQF*:
 	- First open the **downloaded files** and move the **"Client/dayz_code/init/compiles.sqf"** into your **"mission.pbo/dayz_code/init"** folder.
-	- Now open your _init.sqf_ and find the following line:
+	- Now open your *init.sqf* and find the following line:
 		```sqf
 		call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 		```
@@ -48,29 +48,29 @@ This instructions are noob-friendly; read everything carefully! There are many l
 
 <a name="customcompiles"></a>
 
-3. CUSTOM _COMPILES.SQF_:
-	- Check if you already have a custom _keyboard.sqf_ or not.
-		- If you **have a custom** _keyboard.sqf_ follow [these steps](#customkeyboard)!
-		- If you **don't have a custom** _keyboard.sqf_ just continue reading!
+3. CUSTOM *COMPILES.SQF*:
+	- Check if you already have a custom *keyboard.sqf* or not.
+		- If you **have a custom** *keyboard.sqf* follow [these steps](#customkeyboard)!
+		- If you **don't have a custom** *keyboard.sqf* just continue reading!
 <br>
 
-4. NO CUSTOM _KEYBOARD.SQF_:
+4. NO CUSTOM *KEYBOARD.SQF*:
 	- First open the **downloaded files** and move the **"Client/dayz_code/compile/keyboard.sqf"** into your **"mission.pbo/dayz_code/compile"** folder.
-		>Create the directory if you don't have it yet. This simply means that you didn't use the Epoch file structure for your custom _compiles.sqf_ but that's not a serious problem.
+		>Create the directory if you don't have it yet. This simply means that you didn't use the Epoch file structure for your custom *compiles.sqf* but that's not a serious problem.
 
-	- Now open your **custom** _compiles.sqf_ and add the following line **below** the _!isDedicated_ block:
+	- Now open your **custom** *compiles.sqf* and add the following line **below** the *!isDedicated* block:
 		```sqf
 		DZ_KeyDown_EH = compile preprocessFileLineNumbers "dayz_code\compile\keyboard.sqf";
 		```
-		>if you have a line that already defines the _keyboard.sqf_ you are probably one of those guys that copy the whole _compiles.sqf_ to their mission. If you did that you have to replace the original _keyboard.sqf_ line instead!
+		>if you have a line that already defines the *keyboard.sqf* you are probably one of those guys that copy the whole *compiles.sqf* to their mission. If you did that you have to replace the original *keyboard.sqf* line instead!
 
 	- Continue with [these steps](#init)!
 <br>
 
 <a name="customkeyboard"></a>
 
-4. CUSTOM _KEYBOARD.SQF_:
-	- First open your **custom** _keyboard.sqf_ and find the following codeblocks:
+4. CUSTOM *KEYBOARD.SQF*:
+	- First open your **custom** *keyboard.sqf* and find the following codeblocks:
 		```sqf
 		_rifle = {
 			2 call dz_fn_switchWeapon;
@@ -186,23 +186,23 @@ This instructions are noob-friendly; read everything carefully! There are many l
 <a name="init"></a>
 
 5. INIT:
-	- Now open your _init.sqf_ and paste the following line **below** the _!isDedicated_ block:
+	- Now open your *init.sqf* and paste the following line **below** the *!isDedicated* block:
 		```sqf
 		execVM "rlnt\addons\RLNT_init.sqf";  /*  RLNT-ADDITIONS  */
 		```
 <br>
 
 6. DESCRIPTION:
-	- Open your _description.ext_ and paste the following line at the **very bottom**:
+	- Open your *description.ext* and paste the following line at the **very bottom**:
 		```sqf
 		#include "rlnt\graphics\RLNT_dialogs.hpp"  /*  RLNT-ADDITIONS  */
 		```
-	- Check if you have a _RscTitles_ class somewhere or not!
-		- If you **already have a** _RscTitles_ class follow [these steps](#customrsctitles)!
-		- If you **don't have a** _RscTitles_ class just continue reading!
+	- Check if you have a *RscTitles* class somewhere or not!
+		- If you **already have a** *RscTitles* class follow [these steps](#customrsctitles)!
+		- If you **don't have a** *RscTitles* class just continue reading!
 <br>
 
-7. NO _RSCTITLES_ CLASS:
+7. NO *RSCTITLES* CLASS:
 	- Still in the 'description.ext', find the following line:
 		```sqf
 		#include "\z\addons\dayz_code\gui\description.hpp"
@@ -265,8 +265,8 @@ This instructions are noob-friendly; read everything carefully! There are many l
 
 <a name="customrsctitles"></a>
 
-7. _RSCTITLES_ CLASS:
-	- Paste the following line **into** your _RscTitles_ class:
+7. *RSCTITLES* CLASS:
+	- Paste the following line **into** your *RscTitles* class:
 		```sqf
 		#include "rlnt\graphics\RLNT_displays.hpp"  /*  RLNT-ADDITIONS  */
 		```
@@ -285,7 +285,7 @@ This instructions are noob-friendly; read everything carefully! There are many l
 ## INFISTAR INSTALLATION
 
 - WHITELISTING:
-	- Open your infiSTAR _AHconfig.sqf_ and add the following dialog number to your _ALLOWED_Dialogs_:
+	- Open your infiSTAR *AHconfig.sqf* and add the following dialog number to your *ALLOWED_Dialogs*:
 		```
 		7211
 		```
