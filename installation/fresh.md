@@ -426,6 +426,6 @@ This instructions are noob-friendly; read everything carefully! There are many l
 
 
 <!-- Links -->
-[custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md "Go to source"
+[custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md "Go to source"
 [latest]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
 [mainpost]: https://github.com/RLNT/RLNT_WeaponHUD#config "Go to source"
