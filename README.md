@@ -1,6 +1,6 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-*Last update: 21.01.2018* | *v1.0.4*
+*Last update: 21.01.2018* | *v1.1.0*
 
 ---
 
@@ -118,13 +118,14 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description                                                                                      |
-| :---       | :---    | :---                                                                                             |
-| 21.01.2018 | v1.0.0  | Initial release                                                                                  |
-| 21.01.2018 | v1.0.1  | Updated references                                                                               |
-| 21.01.2018 | v1.0.2  | Updated formatting                                                                               |
-| 21.01.2018 | v1.0.3  | Fix stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit af9338c][update1]]             |
-| 21.01.2018 | v1.0.4  | Fix undefined error variable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit 3bf67d][update2]] |
+| Date       | Version | Description                                                                                        |
+| :---       | :---    | :---                                                                                               |
+| 21.01.2018 | v1.0.0  | Initial release                                                                                    |
+| 21.01.2018 | v1.0.1  | Updated references                                                                                 |
+| 21.01.2018 | v1.0.2  | Updated formatting                                                                                 |
+| 21.01.2018 | v1.0.3  | Fixed stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit af9338c][update1]]             |
+| 21.01.2018 | v1.0.4  | Fixed undefined error variable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit 3bf67d][update2]] |
+| 21.01.2018 | v1.1.0  | Fixed item notifications, error spam, localization<br>Localized missing strings<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit e3e105][update3]] [[commit 7e8168][update 4]] [[commit eec26a][update 5]] [[commit 71fab4][update 6]] |
 
 
 <!-- Links  -->
@@ -147,3 +148,7 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 [custominfistar]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md#infistar "Go to source"
 [update1]: https://github.com/RLNT/RLNT_WeaponHUD/commit/af9338ca96fcc5990ea0907894537ed8f4b95fea "Go to source"
 [update2]: https://github.com/RLNT/RLNT_WeaponHUD/commit/3bf67dcf27880d87b826748698485e14dc945618 "Go to source"
+[update3]: https://github.com/RLNT/RLNT_WeaponHUD/commit/e3e10568ccf6e4e41b97e5191f1fa12703b98e34 "Go to source"
+[update4]: https://github.com/RLNT/RLNT_WeaponHUD/commit/7e816888972df33bee799a9b5650a9e39741340f "Go to source"
+[update5]: https://github.com/RLNT/RLNT_WeaponHUD/commit/eec26ab46e73527c5ffa2919f056e57fa214f5fb "Go to source"
+[update6]: https://github.com/RLNT/RLNT_WeaponHUD/commit/71fab4ac76ec20eed18b95896ece3b1fbf0150dd "Go to source"
