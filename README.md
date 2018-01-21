@@ -118,14 +118,14 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description                                                                                        |
-| :---       | :---    | :---                                                                                               |
-| 21.01.2018 | v1.0.0  | Initial release                                                                                    |
-| 21.01.2018 | v1.0.1  | Updated references                                                                                 |
-| 21.01.2018 | v1.0.2  | Updated formatting                                                                                 |
-| 21.01.2018 | v1.0.3  | Fixed stringTable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit af9338c][update1]]             |
-| 21.01.2018 | v1.0.4  | Fixed undefined error variable<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit 3bf67d][update2]] |
-| 21.01.2018 | v1.1.0  | Fixed item notifications, error spam, localization<br>Localized missing strings<br>*Thanks:* @kingpapawawa<br>*Changes:* [[commit e3e105][update3]] [[commit 7e8168][update 4]] [[commit eec26a][update 5]] [[commit 71fab4][update 6]] |
+| Date       | Version | Description |
+| :---       | :---    | :---        |
+| 21.01.2018 | v1.0.0  | - Initial release |
+| 21.01.2018 | v1.0.1  | - Updated references |
+| 21.01.2018 | v1.0.2  | - Updated formatting |
+| 21.01.2018 | v1.0.3  | - Fixed stringable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit af9338c][update1]* |
+| 21.01.2018 | v1.0.4  | - Fixed undefined error variable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit 3bf67d][update2]* |
+| 21.01.2018 | v1.1.0  | - Fixed item notifications, error spam, localization<br>- Localized missing strings<br>*Thanks: @kingpapawawa*<br>*Changes: [commit e3e105][update3] [commit 7e8168][update4] [commit eec26a][update5] [commit 71fab4][update6]* |
 
 
 <!-- Links  -->
