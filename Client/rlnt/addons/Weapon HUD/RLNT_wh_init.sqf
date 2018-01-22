@@ -11,4 +11,4 @@ if (!isDedicated && hasInterface) then {
 
 
 /*  DEBUG  */
-["file","WH","Weapon HUD Init"] call RLNT_postDebug;
+["file","WH","Weapon HUD init"] call RLNT_postDebug;

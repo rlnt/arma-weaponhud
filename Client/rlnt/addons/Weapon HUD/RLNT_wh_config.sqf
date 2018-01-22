@@ -247,7 +247,7 @@ rlnt_wh_item2_keyName = "5";  /* default: 5 */
 		false	-> Hide item names above the boxes
 		They are automatically localized and self-resizing.
 */
-rlnt_wh_showItemName = true;  /* default: true */
+rlnt_wh_showItemNames = true;  /* default: true */
 
 /*
 		This is the item amount in the boxes.
@@ -371,9 +371,6 @@ rlnt_wh_debug = false;  /* default: false */
 	##########  Don't edit below  ##########
 	########################################
 */
-/*  DEBUG  */
-["file","WH","Weapon HUD Config"] call RLNT_postDebug;
-
 /* SET ITEM AMOUNT */
 if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
 	rlnt_wh_itemAmount = 0;
@@ -385,9 +382,17 @@ if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
 	};
 };
 
+/* SET BLOOD INJECTION AMOUNT IF NOT SET */
+if (rlnt_wh_bloodSettings select 1 == -1) then {
+	rlnt_wh_bloodSettings set[1, DZE_selfTransfuse_Values select 0];
+};
+
 /* TOGGLE LOOP */
 if (rlnt_wh_defaultState) then {
 	rlnt_wh_doLoop = true;
 } else {
 	rlnt_wh_doLoop = false;
 };
+
+/*  DEBUG  */
+["file","WH","Weapon HUD config"] call RLNT_postDebug;

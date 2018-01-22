@@ -20,4 +20,4 @@ call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_init.sqf"
 
 
 /*  DEBUG  */
-["file","MAIN","Client Init"] call RLNT_postDebug;
+["file","MAIN","Client init"] call RLNT_postDebug;
