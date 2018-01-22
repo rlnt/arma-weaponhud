@@ -4,21 +4,21 @@ Author:			Relentless
 Description:	Setup function for Weapon HUD
 */
 disableSerialization;
-private [
-	"_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_boxes","_namePrimary","_nameSecondary",
-	"_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"
-];
+private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_boxes","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];
+
+
+/*  SKIP SETUP IF DEFAULT STATE IS FALSE  */
+if (!rlnt_wh_defaultState) exitWith {
+	rlnt_wh_defaultState	= true;
+	rlnt_wh_doLoop			= true;
+};
 
 
 /*  DEBUG  */
-["function","WH","Setup"] call RLNT_wh_postDebug;
+["function","WH","Setup function"] call RLNT_wh_postDebug;
 
 
 /*  ERROR PREVENTION  */
-if (!rlnt_wh_defaultState) exitWith {
-	rlnt_wh_defaultState = true;
-};
-
 "setup" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {
 	"error" call RLNT_wh_notifyUser;
@@ -99,7 +99,7 @@ if !(DZE_TwoPrimaries == 2) then {
 
 /*  SETUP DISPLAY  */
 _style = _boxes - 1;
-["other","WH",format["Display style is %1.", _style]] call RLNT_wh_postDebug;
+["other","WH", format["Display style is %1.", _style]] call RLNT_wh_postDebug;
 
 _layer cutRsc["rlnt_weaponhud_style_" + str(_style), "PLAIN", 1];
 uiSleep 0.2;
@@ -213,6 +213,8 @@ switch (_style) do {
 			if (rlnt_wh_showWeaponNames) then {
 				(_display displayCtrl 1033) ctrlSetText(_namePrimary);
 				(_display displayCtrl 1037) ctrlSetText(_nameHandgun);
+			};
+			if (rlnt_wh_showItemNames) then {
 				(_display displayCtrl 1041) ctrlSetText(_nameItem1);
 			};
 
@@ -288,6 +290,9 @@ switch (_style) do {
 			if (rlnt_wh_showWeaponNames) then {
 				(_display displayCtrl 1033) ctrlSetText(_namePrimary);
 				(_display displayCtrl 1037) ctrlSetText(_nameHandgun);
+
+			};
+			if (rlnt_wh_showItemNames) then {
 				(_display displayCtrl 1041) ctrlSetText(_nameItem1);
 				(_display displayCtrl 1046) ctrlSetText(_nameItem2);
 			};
@@ -330,6 +335,8 @@ switch (_style) do {
 				(_display displayCtrl 1033) ctrlSetText(_namePrimary);
 				(_display displayCtrl 1037) ctrlSetText(_nameSecondary);
 				(_display displayCtrl 1041) ctrlSetText(_nameHandgun);
+			};
+			if (rlnt_wh_showItemNames) then {
 				(_display displayCtrl 1046) ctrlSetText(_nameItem1);
 			};
 
@@ -382,6 +389,8 @@ switch (_style) do {
 			(_display displayCtrl 1033) ctrlSetText(_namePrimary);
 			(_display displayCtrl 1037) ctrlSetText(_nameSecondary);
 			(_display displayCtrl 1041) ctrlSetText(_nameHandgun);
+		};
+		if (rlnt_wh_showItemNames) then {
 			(_display displayCtrl 1045) ctrlSetText(_nameItem1);
 			(_display displayCtrl 1050) ctrlSetText(_nameItem2);
 		};
