@@ -43,9 +43,9 @@ if (_hasItem) then {
 		player setVariable["USEC_lowBlood", false, true];
 	};
 
-	["action",true] call RLNT_wh_notifyUser;
+	["action","bandage",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
-	["action",false] call RLNT_wh_notifyUser;
+	["action","bandage",false] call RLNT_wh_notifyUser;
 };

@@ -1,6 +1,6 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-_Last update: 18.01.2018_ | _v1.0_
+*Last update: 21.01.2018* | *v1.1.0*
 
 ---
 
@@ -118,13 +118,18 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 <a name="changelog"></a>
 ## Changelog
 
-| Date       | Version | Description     |
-| :---       | :---    | :---            |
-| 18.01.2018 | v1.0    | Initial release |
+| Date       | Version | Description |
+| :---       | :---    | :---        |
+| 21.01.2018 | v1.0.0  | - Initial release |
+| 21.01.2018 | v1.0.1  | - Updated references |
+| 21.01.2018 | v1.0.2  | - Updated formatting |
+| 21.01.2018 | v1.0.3  | - Fixed stringable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit af9338c][update1]* |
+| 21.01.2018 | v1.0.4  | - Fixed undefined error variable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit 3bf67d][update2]* |
+| 21.01.2018 | v1.1.0  | - Fixed item notifications, error spam, localization<br>- Localized missing strings<br>*Thanks: @kingpapawawa*<br>*Changes: [commit e3e105][update3] [commit 7e8168][update4] [commit eec26a][update5] [commit 71fab4][update6]* |
 
 
 <!-- Links  -->
-[epochforum]: https://github.com/DAmNRelentless/RLNT_WeaponHUD/tree/experimental "Go to source"
+[epochforum]: https://epochmod.com/forum/topic/44851-uploading-rlnt-weapon-hud-21012018-v100 "Go to source"
 [issues]: https://github.com/RLNT/RLNT_WeaponHUD/issues/1 "Go to source"
 [suggestions]: https://github.com/RLNT/RLNT_WeaponHUD/issues/2 "Go to source"
 [releases]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
@@ -135,9 +140,15 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 [iben]: https://github.com/infobeny "Go to source"
 [golias]: https://github.com/LordGolias "Go to source"
 [discord]: https://discord.gg/0k4ynDDCsnMzkxk7 "Go to source"
-[freshinstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/fresh.md "Go to source"
-[custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md "Go to source"
-[freshclient]: https://github.com/RLNT/RLNT_WeaponHUD/installation/fresh.md#client "Go to source"
-[freshinfistar]: https://github.com/RLNT/RLNT_WeaponHUD/installation/fresh.md#infistar "Go to source"
-[customclient]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md#client "Go to source"
-[custominfistar]: https://github.com/RLNT/RLNT_WeaponHUD/installation/custom.md#infistar "Go to source"
+[freshinstallation]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/fresh.md "Go to source"
+[custominstallation]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md "Go to source"
+[freshclient]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/fresh.md#client "Go to source"
+[freshinfistar]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/fresh.md#infistar "Go to source"
+[customclient]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md#client "Go to source"
+[custominfistar]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/installation/custom.md#infistar "Go to source"
+[update1]: https://github.com/RLNT/RLNT_WeaponHUD/commit/af9338ca96fcc5990ea0907894537ed8f4b95fea "Go to source"
+[update2]: https://github.com/RLNT/RLNT_WeaponHUD/commit/3bf67dcf27880d87b826748698485e14dc945618 "Go to source"
+[update3]: https://github.com/RLNT/RLNT_WeaponHUD/commit/e3e10568ccf6e4e41b97e5191f1fa12703b98e34 "Go to source"
+[update4]: https://github.com/RLNT/RLNT_WeaponHUD/commit/7e816888972df33bee799a9b5650a9e39741340f "Go to source"
+[update5]: https://github.com/RLNT/RLNT_WeaponHUD/commit/eec26ab46e73527c5ffa2919f056e57fa214f5fb "Go to source"
+[update6]: https://github.com/RLNT/RLNT_WeaponHUD/commit/71fab4ac76ec20eed18b95896ece3b1fbf0150dd "Go to source"
