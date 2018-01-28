@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/RLNT/RLNT_WeaponHUD.png?columns=all)](https://waffle.io/RLNT/RLNT_WeaponHUD?utm_source=badge)
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
 *Last update: 21.01.2018* | *v1.1.0*
