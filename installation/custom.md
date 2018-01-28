@@ -16,17 +16,19 @@
 ## CLIENT INSTALLATION
 
 1. DOWNLOAD:
-	- [Download the latest version][latest]!
+	- [Download the latest Custom-Release.zip][latest]!
 <br>
 
 2. FILE-MANAGEMENT:
-	- Extract the *Release.zip* and open it.
+	- Extract the *Custom-Release.zip* and open it.
 	- **In there** open the *Client* folder.
-	- Now you should see a *dayz_code* and a *rlnt* folder which you should already have.
-	- First you should merge the *rlnt* folder. For that open your **"mission.pbo/rlnt/addons"**.
+	- Now move the *rlnt* folder into your *mission.pbo*.
 		>*mission.pbo* is just a placeholder. Your mission is called something like *Dayz_Epoch_11.Chernarus* depending on the map you're playing on. It's the same directory where your *init.sqf* and *description.ext* is stored in.
 
-	- Now open the *RLNT_init.sqf* and paste the following line **below** the *FILE EXECUTION* part:
+	- Next move the *stringTable.xml* into your *mission.pbo*.
+		>The *stringTable.xml* has to be in the root of the *mission.pbo*. That's where the *init.sqf* is located. If you already have an existing *stringTable.xml* you need to merge them!
+
+	- Go to **"mission.pbo/rlnt/addons"**, open the *RLNT_init.sqf* and paste the following line **below** the *FILE EXECUTION* part:
 		```sqf
 		call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_init.sqf";	//Weapon HUD Init
 		```
@@ -49,10 +51,6 @@
 		RLNT_wh_switchInfo		= compile preprocessFileLineNumbers "rlnt\functions\RLNT_wh_switch.sqf";
 		RLNT_wh_selectAction	= compile preprocessFileLineNumbers "rlnt\functions\RLNT_wh_action.sqf";
 		```
-	- Go to the **downloaded files** and move the **"Client/rlnt/addons/Weapon HUD"** folder into your **"mission.pbo/rlnt/addons"** folder!
-	- Now change the directory in the **downloaded files** to the **"Client/rlnt"** folder and move the *functions* and *graphics* folders into your **"mission.pbo/rlnt"** folder!
-	- Last move the *stringTable.xml* from your **downloaded files** *Client* folder into your *mission.pbo*.
-		>the *stringTable.xml* has to be in the root of the *mission.pbo*. That's where the *init.sqf* is located. If you already have an existing *stringTable.xml* you need to merge them!
 
 	- Check if you already have a custom *compiles.sqf* or not.
 		- If you **have a custom** *compiles.sqf* follow [these steps](#customcompiles)!
