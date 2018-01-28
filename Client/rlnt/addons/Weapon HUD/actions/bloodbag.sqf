@@ -1,7 +1,7 @@
 /*
 File:			bloodbag.sqf
-Author:			Relentless
-Description:	Quick-Item bloodbag for Weapon HUD
+Author:			RLNT
+Description:	bloodbag action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem","_timer","_infection","_i","_animation","_medic","_blood"];

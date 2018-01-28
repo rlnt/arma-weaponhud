@@ -1,7 +1,7 @@
 /*
 File:			painkiller.sqf
-Author:			Relentless
-Description:	Quick-Item painkiller for Weapon HUD
+Author:			RLNT
+Description:	painkiller action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem"];

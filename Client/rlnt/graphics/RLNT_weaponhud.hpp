@@ -1,7 +1,7 @@
 /*
 File:			RLNT_weaponhud.hpp
-Author:			Relentless
-Description:	Display for Weapon HUD
+Author:			RLNT
+Description:	displays for Weapon HUD
 Calculation:	1 GUI_GRID = 0.0173 * SafezoneH
 */
 

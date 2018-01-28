@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_toggle.sqf
-Author:			Relentless
-Description:	Toggle function for Weapon HUD
+Author:			RLNT
+Description:	toggle function for Weapon HUD
 */
 
 

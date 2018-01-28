@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_init.sqf
-Author:			Relentless
-Description:	Init file for Weapon HUD
+Author:			RLNT
+Description:	init file for Weapon HUD
 */
 
 if (!isDedicated && hasInterface) then {

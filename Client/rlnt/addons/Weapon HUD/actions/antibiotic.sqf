@@ -1,7 +1,7 @@
 /*
 File:			antibiotic.sqf
-Author:			Relentless
-Description:	Quick-Item antibiotic for Weapon HUD
+Author:			RLNT
+Description:	antibiotic action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem"];

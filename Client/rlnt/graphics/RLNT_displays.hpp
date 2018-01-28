@@ -1,7 +1,7 @@
 /*
 File:			RLNT_displays.hpp
-Author:			Relentless
-Description:	Displays for RLNT-Additions
+Author:			RLNT
+Description:	displays for RLNT-Additions
 */
 
 #include "RLNT_defines.hpp"														//DEFINES

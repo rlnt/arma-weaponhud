@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_action.sqf
-Author:			Relentless
-Description:	Action selection function for Weapon HUD
+Author:			RLNT
+Description:	action selection function for Weapon HUD
 */
 private ["_item"];
 

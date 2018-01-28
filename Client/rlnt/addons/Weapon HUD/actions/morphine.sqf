@@ -1,7 +1,7 @@
 /*
 File:			morphine.sqf
-Author:			Relentless
-Description:	Quick-Item morphine for Weapon HUD
+Author:			RLNT
+Description:	morphine action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem"];

@@ -1,7 +1,7 @@
 /*
 File:			RLNT_defines.hpp
-Author:			Relentless
-Description:	Defines for RLNT-Additions
+Author:			RLNT
+Description:	defines for RLNT-Additions
 Calculation:	1 GUI_GRID = 0.0173 * SafezoneH
 */
 

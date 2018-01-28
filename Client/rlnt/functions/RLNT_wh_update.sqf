@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_update.sqf
-Author:			Relentless
-Description:	Update check function for Weapon HUD
+Author:			RLNT
+Description:	update check function for Weapon HUD
 */
 disableSerialization;
 private ["_style","_item1","_item2","_cItem1","_cItem2","_primary","_cPrimary","_secondary","_cSecondary","_handgun","_cHandgun"];
