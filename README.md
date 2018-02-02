@@ -1,6 +1,7 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-*Last update: 21.01.2018* | *v1.1.0*
+*Last update: 21.01.2018* | *v1.1.0*<br>
+[![Work table](https://badge.waffle.io/RLNT/RLNT_WeaponHUD.svg?columns=all)](https://waffle.io/RLNT/RLNT_WeaponHUD)
 
 ---
 

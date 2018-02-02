@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_notify.sqf
-Author:			Relentless
-Description:	Notification function for Weapon HUD
+Author:			RLNT
+Description:	notification function for Weapon HUD
 */
 private ["_message","_messageext","_type","_check","_item","_success","_interrupt"];
 
@@ -19,17 +19,17 @@ _messageext = "";
 switch (_type) do {
 
 	case "error": {
-		_message	= localize "STR_RLNT_WH_NOTIFY_ERROR";
-		_messageext = localize "STR_RLNT_WH_NOTIFY_ERROR_EXT";
+		_message	= localize "STR_RLNT_WH_ERROR";
+		_messageext = localize "STR_RLNT_WH_ERROR_EXT";
 	};
 
 	case "toggle": {
 		_check = _this select 1;
 
 		if (_check) then {
-			_message = localize "STR_RLNT_WH_NOTIFY_TOGGLE_ON";
+			_message = localize "STR_RLNT_WH_TOGGLE_ON";
 		} else {
-			_message = localize "STR_RLNT_WH_NOTIFY_TOGGLE_OFF";
+			_message = localize "STR_RLNT_WH_TOGGLE_OFF";
 		};
 	};
 
@@ -41,17 +41,17 @@ switch (_type) do {
 
 			case "antibiotic": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC";
+					_message = localize "STR_RLNT_WH_ACTION_ANTIBIOTIC";
 				} else {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC_EMPTY";
+					_message = localize "STR_RLNT_WH_ACTION_ANTIBIOTIC_EMPTY";
 				};
 			};
 
 			case "bandage": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_BANDAGE";
+					_message = localize "STR_RLNT_WH_ACTION_BANDAGE";
 				} else {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_BANDAGE_EMPTY";
+					_message = localize "STR_RLNT_WH_ACTION_BANDAGE_EMPTY";
 				};
 			};
 
@@ -59,35 +59,35 @@ switch (_type) do {
 				_interrupt = _this select 3;
 
 				if (_success && _interrupt) then {
-					_message = localize format ["STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_DELAY", DZE_selfTransfuse_Values select 2];
+					_message = localize format ["STR_RLNT_WH_ACTION_BLOODBAG_DELAY", DZE_selfTransfuse_Values select 2];
 				};
 
 				if (_success && !_interrupt) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG";
+					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG";
 				};
 
 				if (!_success && _interrupt) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_CANCELD";
+					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG_CANCELD";
 				};
 
 				if !(_success && _interrupt) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_EMPTY";
+					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG_EMPTY";
 				};
 			};
 
 			case "morphine": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_MORPHINE";
+					_message = localize "STR_RLNT_WH_ACTION_MORPHINE";
 				} else {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_MORPHINE_EMPTY";
+					_message = localize "STR_RLNT_WH_ACTION_MORPHINE_EMPTY";
 				};
 			};
 
 			case "painkiller": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER";
+					_message = localize "STR_RLNT_WH_ACTION_PAINKILLER";
 				} else {
-					_message = localize "STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER_EMPTY";
+					_message = localize "STR_RLNT_WH_ACTION_PAINKILLER_EMPTY";
 				};
 			};
 		};

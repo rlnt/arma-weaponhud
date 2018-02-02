@@ -1,6 +1,6 @@
 /*
 File:			RLNT_weaponhud.hpp
-Author:			Relentless
+Author:			RLNT
 Description:	Display for Weapon HUD
 */
 

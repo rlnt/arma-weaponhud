@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_init.sqf
-Author:			Relentless
-Description:	Init file for Weapon HUD
+Author:			RLNT
+Description:	init file for Weapon HUD
 */
 
 if (!isDedicated && hasInterface) then {
@@ -11,4 +11,4 @@ if (!isDedicated && hasInterface) then {
 
 
 /*  DEBUG  */
-["file","WH","Weapon HUD Init"] call RLNT_postDebug;
+["file","WH","Weapon HUD init"] call RLNT_postDebug;

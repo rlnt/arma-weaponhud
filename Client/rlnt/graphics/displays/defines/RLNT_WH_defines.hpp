@@ -1,6 +1,6 @@
 /*
 File:			RLNT_WH_defines.hpp
-Author:			Relentless
+Author:			RLNT
 Description:	Defines for Weapon HUD
 */
 

@@ -1,7 +1,7 @@
 /*
 File:			RLNT_init.sqf
-Author:			Relentless
-Description:	Client Init for all RLNT-Additions
+Author:			RLNT
+Description:	client init for RLNT-Additions
 */
 
 
@@ -20,4 +20,4 @@ call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_init.sqf"
 
 
 /*  DEBUG  */
-["file","MAIN","Client Init"] call RLNT_postDebug;
+["file","MAIN","Client init"] call RLNT_postDebug;

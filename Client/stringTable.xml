@@ -107,20 +107,6 @@
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT">
-				<English>Detected that no custom blood injection amount is set! (rlnt_wh_bloodSettings = [#,-1])</English>
-				<German>Es wurde keine eigene Bluttransfusionsmenge definiert! (rlnt_wh_bloodSettings = [#,-1])</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT_HINT">
-				<English>Automatically fixed; set amount to Epoch value.</English>
-				<German>Automatisch behoben; Menge wurde auf Epoch Standartwerte festgelegt.</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
 			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_DURATION_LOW">
 				<English>Detected that blood injection duration is too low!</English>
 				<German>Die Bluttransfusionszeit wurde zu niedrig eingestellt!</German>

@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_debug.sqf
-Author:			Relentless
-Description:	Debug function for Weapon HUD
+Author:			RLNT
+Description:	debug function for Weapon HUD
 */
 private ["_type","_tag","_name","_action"];
 
