@@ -23,7 +23,7 @@ _timer 		= diag_tickTime;
 _infection 	= false;
 _i 			= 0;
 r_interrupt = false;
-r_doLoop 	= false;
+r_doLoop 	= true;
 
 if (DZE_selfTransfuse_Values select 1 <= 0) then {
 	_infection = false;
