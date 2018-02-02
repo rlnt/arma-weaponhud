@@ -1,6 +1,6 @@
 /*
 File:			RLNT_macros.hpp
-Author:			Relentless
+Author:			RLNT
 Description:	Macros for RLNT-Displays
 */
 

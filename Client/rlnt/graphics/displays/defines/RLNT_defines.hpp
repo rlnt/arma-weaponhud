@@ -1,6 +1,6 @@
 /*
 File:			RLNT_defines.hpp
-Author:			Relentless
+Author:			RLNT
 Description:	Defines for RLNT-Additions
 */
 
