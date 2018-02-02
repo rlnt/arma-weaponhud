@@ -1,6 +1,6 @@
 /*
 File:			RLNT_WH_macros.hpp
-Author:			Relentless
+Author:			RLNT
 Description:	Macros for Weapon HUD
 */
 
