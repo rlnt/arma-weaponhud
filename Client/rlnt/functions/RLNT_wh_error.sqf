@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_error.sqf
 Author:			Relentless
-Description:	Error prevention function for Weapon HUD
+Description:	error prevention function for Weapon HUD
 */
 private ["_notMatchItem"];
 

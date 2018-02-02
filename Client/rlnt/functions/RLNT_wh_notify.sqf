@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_notify.sqf
-Author:			Relentless
-Description:	Notification function for Weapon HUD
+Author:			RLNT
+Description:	notification function for Weapon HUD
 */
 private ["_message","_messageext","_type","_check","_item","_success","_interrupt"];
 

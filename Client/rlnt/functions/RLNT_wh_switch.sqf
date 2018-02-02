@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_update.sqf
-Author:			Relentless
-Description:	Switch function for Weapon HUD
+Author:			RLNT
+Description:	switch function for Weapon HUD
 */
 disableSerialization;
 private ["_type","_object","_style","_display","_smallWeapons"];

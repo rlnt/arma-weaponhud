@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_config.sqf
-Author:			Relentless
-Description:	Config file for Weapon HUD
+Author:			RLNT
+Description:	config file for Weapon HUD
 */
 #include "\ca\editor\Data\Scripts\dikCodes.h"
 

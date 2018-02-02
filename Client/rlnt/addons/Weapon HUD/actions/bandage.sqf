@@ -1,7 +1,7 @@
 /*
 File:			bandage.sqf
-Author:			Relentless
-Description:	Quick-Item bandage for Weapon HUD
+Author:			RLNT
+Description:	bandage action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem"];

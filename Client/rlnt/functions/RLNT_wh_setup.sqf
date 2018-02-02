@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_setup.sqf
-Author:			Relentless
-Description:	Setup function for Weapon HUD
+Author:			RLNT
+Description:	setup function for Weapon HUD
 */
 disableSerialization;
 private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_boxes","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];

@@ -1,7 +1,7 @@
 /*
 File:			RLNT_compiles.sqf
-Author:			Relentless
-Description:	Compiles for all RLNT-Additions
+Author:			RLNT
+Description:	compiles for RLNT-Additions
 */
 
 

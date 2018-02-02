@@ -1,7 +1,7 @@
 /*
 File:			RLNT_init.sqf
-Author:			Relentless
-Description:	Client Init for all RLNT-Additions
+Author:			RLNT
+Description:	client init for RLNT-Additions
 */
 
 
