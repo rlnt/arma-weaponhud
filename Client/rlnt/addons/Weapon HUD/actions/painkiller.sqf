@@ -8,7 +8,7 @@ private ["_item","_hasItem"];
 
 
 /*  DEBUG  */
-["action","WH",name player,"is trying to take Painkillers (Quick-Item)"] call RLNT_wh_postDebug;
+["action","WH",name player,"is trying to take painkillers (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
 /*  ERROR-PREVENTION  */
@@ -39,9 +39,11 @@ if (_hasItem) then {
 	PVDZ_send = [player,"Painkiller",[player,player]];
 	publicVariableServer "PVDZ_send";
 
+	["action","WH",name player,"took painkillers (successful)"] call RLNT_wh_postDebug;
 	["action","painkiller",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
+	["action","WH",name player,"failed taking painkillers (no item left)"] call RLNT_wh_postDebug;
 	["action","painkiller",false] call RLNT_wh_notifyUser;
 };

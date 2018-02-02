@@ -8,7 +8,7 @@ private ["_item","_hasItem"];
 
 
 /*  DEBUG  */
-["action","WH",name player,"is trying to inject morphine (Quick-Item)"] call RLNT_wh_postDebug;
+["action","WH",name player,"is trying to inject morphine (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
 /*  ERROR-PREVENTION  */
@@ -45,9 +45,11 @@ if (_hasItem) then {
 	PVDZ_send = [player,"Morphine",[player,player]];
 	publicVariableServer "PVDZ_send";
 
+	["action","WH",name player,"injected morphine (successful)"] call RLNT_wh_postDebug;
 	["action","morphine",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
+	["action","WH",name player,"failed injecting morphine (no item left)"] call RLNT_wh_postDebug;
 	["action","morphine",false] call RLNT_wh_notifyUser;
 };

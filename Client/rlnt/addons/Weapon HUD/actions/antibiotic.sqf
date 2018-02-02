@@ -8,7 +8,7 @@ private ["_item","_hasItem"];
 
 
 /*  DEBUG  */
-["action","WH",name player,"is trying to take Antibiotics (Quick-Item)"] call RLNT_wh_postDebug;
+["action","WH",name player,"is trying to take antibiotics (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
 /*  ERROR-PREVENTION  */
@@ -37,9 +37,11 @@ if (_hasItem) then {
 	r_player_infected = false;
 	player setVariable["USEC_infected", false, true];
 
+	["action","WH",name player,"took antibiotics (successful)"] call RLNT_wh_postDebug;
 	["action","antibiotic",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
+	["action","WH",name player,"failed taking antibiotics (no item left)"] call RLNT_wh_postDebug;
 	["action","antibiotic",false] call RLNT_wh_notifyUser;
 };
