@@ -15,56 +15,55 @@ class rlnt_weaponhud_style_1 {
 	onLoad			= "uiNamespace setVariable ['rlnt_weaponhud_style_1', _this select 0];";
 
 	class Controls {
+		//BOX 1
+			class rlnt_1_bg1 : RLNT_WH_Bg1 {
+				idc = 1031;
+				x = 0.5 - PXWIDTH * 20 * SCALE - PXWIDTH * 0.5;
+			};
+			class rlnt_1_bg2 : RLNT_WH_Bg2 {
+				idc = 1032;
+				x = 0.5 - PXWIDTH * 19.5 * SCALE - PXWIDTH * 0.5;
+			};
+			class rlnt_1_picture : RLNT_WH_Picture {
+				idc = 1207;
+				x = 0.5 - PXWIDTH * 18.5 * SCALE - PXWIDTH * 0.5;
+			};
+			class rlnt_1_name : RLNT_WH_Name {
+				idc = 1033;
+				x = 0.5 - PXWIDTH * 20 * SCALE - PXWIDTH * 0.5;
+			};
+			class rlnt_1_hotkey : RLNT_WH_Hotkey {
+				idc = 1034;
+				x = 0.5 - PXWIDTH * 19.5 * SCALE - PXWIDTH * 0.5;
+				text = "1";
+			};
 
-				//BOX 1
-					class rlnt_1_bg1 : RLNT_WH_Bg1 {
-						idc = 1031;
-						x = 0.5 - PXWIDTH * 20 * SCALE - PXWIDTH * 0.5;
-					};
-					class rlnt_1_bg2 : RLNT_WH_Bg2 {
-						idc = 1032;
-						x = 0.5 - PXWIDTH * 19.5 * SCALE - PXWIDTH * 0.5;
-					};
-					class rlnt_1_picture : RLNT_WH_Picture {
-						idc = 1207;
-						x = 0.5 - PXWIDTH * 18.5 * SCALE - PXWIDTH * 0.5;
-					};
-					class rlnt_1_name : RLNT_WH_Name {
-						idc = 1033;
-						x = 0.5 - PXWIDTH * 20 * SCALE - PXWIDTH * 0.5;
-					};
-					class rlnt_1_hotkey : RLNT_WH_Hotkey {
-						idc = 1034;
-						x = 0.5 - PXWIDTH * 19.5 * SCALE - PXWIDTH * 0.5;
-						text = "1";
-					};
-
-				//BOX 2
-					class rlnt_2_bg1 : RLNT_WH_Bg1 {
-						idc = 1035;
-						x = 0.5 + PXWIDTH * 0 * SCALE + PXWIDTH * 0.5;
-					};
-					class rlnt_2_bg2 : RLNT_WH_Bg2 {
-						idc = 1036;
-						x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
-					};
-					class rlnt_2_picture : RLNT_WH_Picture {
-						idc = 1208;
-						x = 0.5 + PXWIDTH * 1.5 * SCALE + PXWIDTH * 0.5;
-					};
-					class rlnt_2_picture_q : RLNT_WH_PictureQ {
-						idc = 1209;
-						x = 0.5 + PXWIDTH * 5 * SCALE + PXWIDTH * 0.5;
-					};
-					class rlnt_2_name : RLNT_WH_Name {
-						idc = 1037;
-						x = 0.5 + PXWIDTH * 0 * SCALE + PXWIDTH * 0.5;
-					};
-					class rlnt_2_hotkey : RLNT_WH_Hotkey {
-						idc = 1038;
-						x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
-						text = "2";
-					};
+		//BOX 2
+			class rlnt_2_bg1 : RLNT_WH_Bg1 {
+				idc = 1035;
+				x = 0.5 + PXWIDTH * 0 * SCALE + PXWIDTH * 0.5;
+			};
+			class rlnt_2_bg2 : RLNT_WH_Bg2 {
+				idc = 1036;
+				x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
+			};
+			class rlnt_2_picture : RLNT_WH_Picture {
+				idc = 1208;
+				x = 0.5 + PXWIDTH * 1.5 * SCALE + PXWIDTH * 0.5;
+			};
+			class rlnt_2_picture_q : RLNT_WH_PictureQ {
+				idc = 1209;
+				x = 0.5 + PXWIDTH * 5 * SCALE + PXWIDTH * 0.5;
+			};
+			class rlnt_2_name : RLNT_WH_Name {
+				idc = 1037;
+				x = 0.5 + PXWIDTH * 0 * SCALE + PXWIDTH * 0.5;
+			};
+			class rlnt_2_hotkey : RLNT_WH_Hotkey {
+				idc = 1038;
+				x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
+				text = "2";
+			};
 	}
 }
 
@@ -77,86 +76,86 @@ class rlnt_weaponhud_style_2 {
 
 	class Controls {
 
-				//BOX 1
-					class rlnt_1_bg1 : RLNT_WH_Bg1 {
-						idc = 1031;
-						x = 0.5 - PXWIDTH * 30 * SCALE - PXWIDTH * 1;
-					};
-					class rlnt_1_bg2 : RLNT_WH_Bg2 {
-						idc = 1032;
-						x = 0.5 - PXWIDTH * 29.5 * SCALE - PXWIDTH * 1;
-					};
-					class rlnt_1_picture : RLNT_WH_Picture {
-						idc = 1207;
-						x = 0.5 - PXWIDTH * 28.5 * SCALE - PXWIDTH * 1;
-					};
-					class rlnt_1_name : RLNT_WH_Name {
-						idc = 1033;
-						x = 0.5 - PXWIDTH * 30 * SCALE - PXWIDTH * 1;
-					};
-					class rlnt_1_hotkey : RLNT_WH_Hotkey {
-						idc = 1034;
-						x = 0.5 - PXWIDTH * 29.5 * SCALE - PXWIDTH * 1;
-						text = "1";
-					};
+		//BOX 1
+			class rlnt_1_bg1 : RLNT_WH_Bg1 {
+				idc = 1031;
+				x = 0.5 - PXWIDTH * 30 * SCALE - PXWIDTH * 1;
+			};
+			class rlnt_1_bg2 : RLNT_WH_Bg2 {
+				idc = 1032;
+				x = 0.5 - PXWIDTH * 29.5 * SCALE - PXWIDTH * 1;
+			};
+			class rlnt_1_picture : RLNT_WH_Picture {
+				idc = 1207;
+				x = 0.5 - PXWIDTH * 28.5 * SCALE - PXWIDTH * 1;
+			};
+			class rlnt_1_name : RLNT_WH_Name {
+				idc = 1033;
+				x = 0.5 - PXWIDTH * 30 * SCALE - PXWIDTH * 1;
+			};
+			class rlnt_1_hotkey : RLNT_WH_Hotkey {
+				idc = 1034;
+				x = 0.5 - PXWIDTH * 29.5 * SCALE - PXWIDTH * 1;
+				text = "1";
+			};
 
-				//BOX 2
-					class rlnt_2_bg1 : RLNT_WH_Bg1 {
-						idc = 1035;
-						x = 0.5 - PXWIDTH * 10 * SCALE - PXWIDTH * 0;
-					};
-					class rlnt_2_bg2 : RLNT_WH_Bg2 {
-						idc = 1036;
-						x = 0.5 - PXWIDTH * 9.5 * SCALE - PXWIDTH * 0;
-					};
-					class rlnt_2_picture : RLNT_WH_Picture {
-						idc = 1208;
-						x = 0.5 - PXWIDTH * 8.5 * SCALE - PXWIDTH * 0;
-					};
-					class rlnt_2_picture_q : RLNT_WH_PictureQ {
-						idc = 1209;
-						x = 0.5 - PXWIDTH * 5 * SCALE - PXWIDTH * 0;
-					};
-					class rlnt_2_name : RLNT_WH_Name {
-						idc = 1037;
-						x = 0.5 - PXWIDTH * 10 * SCALE - PXWIDTH * 0;
-					};
-					class rlnt_2_hotkey : RLNT_WH_Hotkey {
-						idc = 1038;
-						x = 0.5 - PXWIDTH * 9.5 * SCALE - PXWIDTH * 0;
-						text = "2";
-					};
+		//BOX 2
+			class rlnt_2_bg1 : RLNT_WH_Bg1 {
+				idc = 1035;
+				x = 0.5 - PXWIDTH * 10 * SCALE - PXWIDTH * 0;
+			};
+			class rlnt_2_bg2 : RLNT_WH_Bg2 {
+				idc = 1036;
+				x = 0.5 - PXWIDTH * 9.5 * SCALE - PXWIDTH * 0;
+			};
+			class rlnt_2_picture : RLNT_WH_Picture {
+				idc = 1208;
+				x = 0.5 - PXWIDTH * 8.5 * SCALE - PXWIDTH * 0;
+			};
+			class rlnt_2_picture_q : RLNT_WH_PictureQ {
+				idc = 1209;
+				x = 0.5 - PXWIDTH * 5 * SCALE - PXWIDTH * 0;
+			};
+			class rlnt_2_name : RLNT_WH_Name {
+				idc = 1037;
+				x = 0.5 - PXWIDTH * 10 * SCALE - PXWIDTH * 0;
+			};
+			class rlnt_2_hotkey : RLNT_WH_Hotkey {
+				idc = 1038;
+				x = 0.5 - PXWIDTH * 9.5 * SCALE - PXWIDTH * 0;
+				text = "2";
+			};
 
-				//BOX 3
-					class rlnt_3_bg1 : RLNT_WH_Bg1 {
-						idc = 1039;
-						x = 0.5 + PXWIDTH * 10 * SCALE + PXWIDTH * 1;
-					};
-					class rlnt_3_bg2 : RLNT_WH_Bg2 {
-						idc = 1040;
-						x = 0.5 + PXWIDTH * 10.5 * SCALE - PXWIDTH * 1;
-					};
-					class rlnt_3_picture : RLNT_WH_Picture {
-						idc = 1210;
-						x = 0.5 + PXWIDTH * 11.5 * SCALE + PXWIDTH * 1;
-					};
-					class rlnt_3_picture_q : RLNT_WH_PictureQ {
-						idc = 1211;
-						x = 0.5 + PXWIDTH * 15 * SCALE + PXWIDTH * 1;
-					};
-					class rlnt_3_name : RLNT_WH_Name {
-						idc = 1041;
-						x = 0.5 + PXWIDTH * 10 * SCALE + PXWIDTH * 1;
-					};
-					class rlnt_3_amount : RLNT_WH_Amount {
-						idc = 1042;
-						x = 0.5 + PXWIDTH * 26.5 * SCALE + PXWIDTH * 1;
-					};
-					class rlnt_3_hotkey : RLNT_WH_Hotkey {
-						idc = 1043;
-						x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
-						text = "3";
-					};
+		//BOX 3
+			class rlnt_3_bg1 : RLNT_WH_Bg1 {
+				idc = 1039;
+				x = 0.5 + PXWIDTH * 10 * SCALE + PXWIDTH * 1;
+			};
+			class rlnt_3_bg2 : RLNT_WH_Bg2 {
+				idc = 1040;
+				x = 0.5 + PXWIDTH * 10.5 * SCALE - PXWIDTH * 1;
+			};
+				class rlnt_3_picture : RLNT_WH_Picture {
+				idc = 1210;
+				x = 0.5 + PXWIDTH * 11.5 * SCALE + PXWIDTH * 1;
+			};
+			class rlnt_3_picture_q : RLNT_WH_PictureQ {
+				idc = 1211;
+				x = 0.5 + PXWIDTH * 15 * SCALE + PXWIDTH * 1;
+			};
+			class rlnt_3_name : RLNT_WH_Name {
+				idc = 1041;
+				x = 0.5 + PXWIDTH * 10 * SCALE + PXWIDTH * 1;
+			};
+			class rlnt_3_amount : RLNT_WH_Amount {
+				idc = 1042;
+				x = 0.5 + PXWIDTH * 26.5 * SCALE + PXWIDTH * 1;
+			};
+			class rlnt_3_hotkey : RLNT_WH_Hotkey {
+				idc = 1043;
+				x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
+				text = "3";
+			};
 	}
 }
 
