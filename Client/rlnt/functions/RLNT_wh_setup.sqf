@@ -29,6 +29,7 @@ if (rlnt_wh_errorsFound) exitWith {
 _layer			= 1300;
 _smallWeapons	= [];
 _itemList		= [];
+_nameHandgun	= "";
 
 {
 	_smallWeapons set[_forEachIndex, toLower _x];
@@ -163,7 +164,7 @@ switch (_style) do {
 		(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 		//Handgun
-		if (!isNil "_nameHandgun") then {
+		if !(_nameHandgun == "") then {
 			{
 				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 					if !(toLower _x in _smallWeapons) then {
@@ -191,7 +192,7 @@ switch (_style) do {
 			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 			//Handgun
-			if (!isNil "_nameHandgun") then {
+			if !(_nameHandgun == "") then {
 				{
 					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 						if !(toLower _x in _smallWeapons) then {
@@ -234,7 +235,7 @@ switch (_style) do {
 			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 			//Handgun
-			if (!isNil "_nameHandgun") then {
+			if !(_nameHandgun == "") then {
 				{
 					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 						if !(toLower _x in _smallWeapons) then {
@@ -264,7 +265,7 @@ switch (_style) do {
 			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 			//Handgun
-			if (!isNil "_nameHandgun") then {
+			if !(_nameHandgun == "") then {
 				{
 					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 						if !(toLower _x in _smallWeapons) then {
@@ -318,7 +319,7 @@ switch (_style) do {
 			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 			//Handgun
-			if (!isNil "_nameHandgun") then {
+			if !(_nameHandgun == "") then {
 				{
 					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 						if !(toLower _x in _smallWeapons) then {
@@ -366,7 +367,7 @@ switch (_style) do {
 		(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 		//Handgun
-		if (!isNil "_nameHandgun") then {
+		if !(_nameHandgun == "") then {
 			{
 				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 					if !(toLower _x in _smallWeapons) then {
