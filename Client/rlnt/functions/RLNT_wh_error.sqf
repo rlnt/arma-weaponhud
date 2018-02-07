@@ -50,13 +50,6 @@ switch (_this) do {
 				["error","WH", localize format["STR_RLNT_WH_UNSUPPORTED_ITEM_1", "1"]] call RLNT_wh_postDebug;
 				["error","WH", localize "STR_RLNT_WH_UNSUPPORTED_ITEM_2"] call RLNT_wh_postDebug;
 			};
-
-			if !(isNil "rlnt_wh_item2") then {
-				rlnt_wh_item1 = rlnt_wh_item2;
-				rlnt_wh_item2 = nil;
-				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_1"] call RLNT_wh_postDebug;
-				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_2"] call RLNT_wh_postDebug;
-			};
 		};
 
 		if !(isNil "rlnt_wh_item2") then {
@@ -77,6 +70,13 @@ switch (_this) do {
 				rlnt_wh_errorsFound = true;
 				["error","WH", localize format["STR_RLNT_WH_UNSUPPORTED_ITEM_1", "2"]] call RLNT_wh_postDebug;
 				["error","WH", localize "STR_RLNT_WH_UNSUPPORTED_ITEM_2"] call RLNT_wh_postDebug;
+			};
+
+			if (isNil "rlnt_wh_item1") then {
+				rlnt_wh_item1 = rlnt_wh_item2;
+				rlnt_wh_item2 = nil;
+				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_1"] call RLNT_wh_postDebug;
+				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_2"] call RLNT_wh_postDebug;
 			};
 		};
 
