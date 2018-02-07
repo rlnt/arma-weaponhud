@@ -372,7 +372,7 @@ class rlnt_weaponhud_style_4 {
 			};
 			class rlnt_4_bg2 : RLNT_WH_Bg2 {
 				idc = 1044;
-				x = 0.5 + PXWIDTH * 10.5 * SCALE - PXWIDTH * 1;
+				x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
 			};
 			class rlnt_4_picture : RLNT_WH_Picture {
 				idc = 1211;
