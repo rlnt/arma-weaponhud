@@ -14,37 +14,30 @@ private ["_notMatchItem"];
 switch (_this) do {
 
 	case "setup": {
-		if !(rlnt_wh_doLoop) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH", localize format["STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_1","Setup"]] call RLNT_wh_postDebug;
-			["error","WH", localize "STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_2"] call RLNT_wh_postDebug;
+
+		if !((isNil "rlnt_wh_item1_key") && (isNil "rlnt_wh_item2_key")) then {
+			if (str(rlnt_wh_item1_key select 0) == str(rlnt_wh_item2_key select 0)) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_SAME_HOTKEY_1"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_SAME_HOTKEY_2"] call RLNT_wh_postDebug;
+			};
 		};
 
-		if ((rlnt_wh_nfcStyle == 1) && (isNil "rlnt_up_installed")) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH", localize "STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_1"] call RLNT_wh_postDebug;
-			["error","WH", localize "STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_2"] call RLNT_wh_postDebug;
+		if !((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
+			if ((toLower rlnt_wh_item1) == (toLower rlnt_wh_item2)) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_SAME_ITEM_1"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_SAME_ITEM_2"] call RLNT_wh_postDebug;
+			};
 		};
 
-		if ((toLower rlnt_wh_item1) == (toLower rlnt_wh_item2)) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH", localize "STR_RLNT_WH_SAME_ITEM_1"] call RLNT_wh_postDebug;
-			["error","WH", localize "STR_RLNT_WH_SAME_ITEM_2"] call RLNT_wh_postDebug;
-		};
+		if !(isNil "rlnt_wh_item1") then {
+			if (!dayz_classicBloodBagSystem && (toLower rlnt_wh_item1 == "itembloodbag")) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_1"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_2"] call RLNT_wh_postDebug;
+			};
 
-		if (str(rlnt_wh_item1_key select 0) == str(rlnt_wh_item2_key select 0)) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH", localize "STR_RLNT_WH_SAME_HOTKEY_1"] call RLNT_wh_postDebug;
-			["error","WH", localize "STR_RLNT_WH_SAME_HOTKEY_2"] call RLNT_wh_postDebug;
-		};
-
-		if (!dayz_classicBloodBagSystem && ((toLower rlnt_wh_item1 == "itembloodbag") || (toLower rlnt_wh_item2 == "itembloodbag"))) exitWith {
-			rlnt_wh_errorsFound = true;
-			["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_1"] call RLNT_wh_postDebug;
-			["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_2"] call RLNT_wh_postDebug;
-		};
-
-		if (!isNil "rlnt_wh_item1") then {
 			_notMatchItem = 0;
 			{
 				if ((toLower rlnt_wh_item1) != (toLower _x)) then {
@@ -57,9 +50,22 @@ switch (_this) do {
 				["error","WH", localize format["STR_RLNT_WH_UNSUPPORTED_ITEM_1", "1"]] call RLNT_wh_postDebug;
 				["error","WH", localize "STR_RLNT_WH_UNSUPPORTED_ITEM_2"] call RLNT_wh_postDebug;
 			};
+
+			if !(isNil "rlnt_wh_item2") then {
+				rlnt_wh_item1 = rlnt_wh_item2;
+				rlnt_wh_item2 = nil;
+				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_1"] call RLNT_wh_postDebug;
+				["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_2"] call RLNT_wh_postDebug;
+			};
 		};
 
-		if (!isNil "rlnt_wh_item2") then {
+		if !(isNil "rlnt_wh_item2") then {
+			if (!dayz_classicBloodBagSystem && (toLower rlnt_wh_item2 == "itembloodbag")) exitWith {
+				rlnt_wh_errorsFound = true;
+				["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_1"] call RLNT_wh_postDebug;
+				["error","WH", localize "STR_RLNT_WH_BLOODBAGSYSTEM_2"] call RLNT_wh_postDebug;
+			};
+
 			_notMatchItem = 0;
 			{
 				if ((toLower rlnt_wh_item2) != (toLower _x)) then {
@@ -74,11 +80,16 @@ switch (_this) do {
 			};
 		};
 
-		if ((isNil "rlnt_wh_item1") && !(isNil "rlnt_wh_item2")) then {
-			rlnt_wh_item1 = rlnt_wh_item2;
-			rlnt_wh_item2 = nil;
-			["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_1"] call RLNT_wh_postDebug;
-			["fix","WH", localize "STR_RLNT_WH_SWITCH_ITEMS_2"] call RLNT_wh_postDebug;
+		if ((isNil "rlnt_wh_doLoop") || !rlnt_wh_doLoop) exitWith {
+			rlnt_wh_errorsFound = true;
+			["error","WH", localize format["STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_1","Setup"]] call RLNT_wh_postDebug;
+			["error","WH", localize "STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_2"] call RLNT_wh_postDebug;
+		};
+
+		if ((rlnt_wh_nfcStyle == 1) && (isNil "rlnt_up_installed")) exitWith {
+			rlnt_wh_errorsFound = true;
+			["error","WH", localize "STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_1"] call RLNT_wh_postDebug;
+			["error","WH", localize "STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_2"] call RLNT_wh_postDebug;
 		};
 
 		if (rlnt_wh_bloodSettings select 0 < 2) then {
