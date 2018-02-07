@@ -65,8 +65,8 @@ class rlnt_weaponhud_style_1 {
 						x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
 						text = "2";
 					};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_2 {
 
@@ -157,8 +157,8 @@ class rlnt_weaponhud_style_2 {
 						x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
 						text = "3";
 					};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_3 {
 
@@ -280,8 +280,8 @@ class rlnt_weaponhud_style_3 {
 				x = 0.5 + PXWIDTH * 20.5 * SCALE + PXWIDTH * 1.5;
 				text = "4";
 			};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_4 {
 
