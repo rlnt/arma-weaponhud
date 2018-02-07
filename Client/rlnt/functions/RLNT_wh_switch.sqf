@@ -7,11 +7,11 @@ disableSerialization;
 private ["_type","_object","_style","_display","_smallWeapons"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Switch function"] call RLNT_wh_postDebug;
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type			= _this select 0;
 _object			= _this select 1;
 _style			= _this select 2;
@@ -23,7 +23,7 @@ _smallWeapons	= [];
 } forEach rlnt_wh_smallWeapons;
 
 
-/*  UPDATE IMAGES AND INFO  */
+/* UPDATE IMAGES AND INFO */
 switch (_style) do {
 
 	//Style 1 - 2 Boxes

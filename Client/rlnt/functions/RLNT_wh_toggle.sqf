@@ -5,7 +5,7 @@ Description:	toggle function for Weapon HUD
 */
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Toggle function"] call RLNT_wh_postDebug;
 
 

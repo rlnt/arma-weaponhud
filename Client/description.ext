@@ -21,13 +21,13 @@ loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
 
 class Header
 {
-	gameType = COOP;            //DM, Team, Coop, ...
-	minPlayers = 1;             //min # of players the mission supports
-	maxPlayers = 100;           //Max # of players the mission supports
+	gameType = COOP;			//DM, Team, Coop, ...
+	minPlayers = 1;				//min # of players the mission supports
+	maxPlayers = 100;			//Max # of players the mission supports
 };
 
 class RscTitles {
-	#include "rlnt\graphics\RLNT_displays.hpp"  /*  RLNT-ADDITIONS  */
+	#include "rlnt\graphics\RLNT_displays.hpp"  /* RLNT-ADDITIONS */
 	class wm_disp {
 		idd = -1;
 		onLoad = "uiNamespace setVariable ['wm_disp', _this select 0]";
@@ -71,4 +71,4 @@ diagHit = 1;
 #include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "\z\addons\dayz_code\Configs\CfgServerTrader\CfgServerTrader.hpp"
 
-#include "rlnt\graphics\RLNT_dialogs.hpp"  /*  RLNT-ADDITIONS  */
+#include "rlnt\graphics\RLNT_dialogs.hpp"  /* RLNT-ADDITIONS */

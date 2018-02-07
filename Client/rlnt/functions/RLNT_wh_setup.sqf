@@ -7,25 +7,25 @@ disableSerialization;
 private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_boxes","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];
 
 
-/*  SKIP SETUP IF DEFAULT STATE IS FALSE  */
+/* SKIP SETUP IF DEFAULT STATE IS FALSE */
 if (!rlnt_wh_defaultState) exitWith {
 	rlnt_wh_defaultState	= true;
 	rlnt_wh_doLoop			= true;
 };
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Setup function"] call RLNT_wh_postDebug;
 
 
-/*  ERROR PREVENTION  */
+/* ERROR PREVENTION */
 "setup" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {
 	"error" call RLNT_wh_notifyUser;
 };
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _layer			= 1300;
 _smallWeapons	= [];
 _itemList		= [];
@@ -39,7 +39,7 @@ _itemList		= [];
 } forEach rlnt_wh_itemList;
 
 
-/*  ITEM AMOUNT DEPENDENTS  */
+/* ITEM AMOUNT DEPENDENTS */
 switch (rlnt_wh_itemAmount) do {
 
 	//No items
@@ -70,13 +70,13 @@ switch (rlnt_wh_itemAmount) do {
 };
 
 
-/*  WEAPON AMOUNT DEPENDENTS  */
+/* WEAPON AMOUNT DEPENDENTS */
 if !(DZE_TwoPrimaries == 2) then {
 	["other","WH","Weapon amount is 1."] call RLNT_wh_postDebug;
 
 	_boxes			= 2 + rlnt_wh_itemAmount;
 	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
-	_nameHandgun = "";
+	_nameHandgun	= "";
 	{
 		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
@@ -88,7 +88,7 @@ if !(DZE_TwoPrimaries == 2) then {
 	_boxes 			= 3 + rlnt_wh_itemAmount;
 	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
 	_nameSecondary	= getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'displayName');
-	_nameHandgun = "";
+	_nameHandgun	= "";
 	{
 		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
 			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
@@ -97,7 +97,7 @@ if !(DZE_TwoPrimaries == 2) then {
 };
 
 
-/*  SETUP DISPLAY  */
+/* SETUP DISPLAY */
 _style = _boxes - 1;
 ["other","WH", format["Display style is %1.", _style]] call RLNT_wh_postDebug;
 
@@ -107,7 +107,7 @@ uiSleep 0.2;
 _display = uiNamespace getVariable["rlnt_weaponhud_style_" + str(_style), displayNull];
 
 
-/*  SET COLORS  */
+/* SET COLORS */
 switch (_style) do {
 
 	//Style 1 - 2 Boxes
@@ -154,7 +154,7 @@ switch (_style) do {
 ["other","WH",format["Font: %1; Background: %2; Hotkey: %3", str(_ftArray), str(_bgArray), str(_hkArray)]] call RLNT_wh_postDebug;
 
 
-/*  SET IMAGES AND INFORMATION  */
+/* SET IMAGES AND INFORMATION */
 switch (_style) do {
 
 	//Style 1 - 2 Boxes
@@ -404,5 +404,5 @@ switch (_style) do {
 };
 
 
-/*  START UPDATE CHECKING LOOP  */
+/* START UPDATE CHECKING LOOP */
 [_style,_amountItem1,_amountItem2] spawn RLNT_wh_checkUpdate;

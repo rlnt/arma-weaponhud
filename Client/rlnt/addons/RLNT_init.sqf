@@ -14,10 +14,10 @@ Description:	client init for RLNT-Additions
 rlnt_debug = false;
 
 
-/*  FILE EXECUTION  */
+/* FILE EXECUTION */
 call compile preprocessFileLineNumbers "rlnt\addons\RLNT_compiles.sqf";				//Compiles
 call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_init.sqf";	//Weapon HUD Init
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["file","MAIN","Client init"] call RLNT_postDebug;

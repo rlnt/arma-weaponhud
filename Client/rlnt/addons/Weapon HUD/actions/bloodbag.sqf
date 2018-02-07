@@ -7,16 +7,16 @@ Credits:		DayZ Epoch Mod Team
 private ["_item","_hasItem","_timer","_infection","_i","_animation","_medic","_blood"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["action","WH",name player,"is trying to bloodbag themself (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
-/*  ERROR-PREVENTION  */
+/* ERROR-PREVENTION */
 "bloodbag" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {};
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _item		= "ItemBloodbag";
 _hasItem 	= _item in magazines player;
 _timer 		= diag_tickTime;
@@ -35,7 +35,7 @@ if (DZE_selfTransfuse_Values select 1 <= 0) then {
 };
 
 
-/*  ACTION  */
+/* ACTION */
 if (_hasItem) then {
 	dayz_actionInProgress = true;
 
