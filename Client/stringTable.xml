@@ -190,14 +190,14 @@
 			</Key>
 			<Key ID="STR_RLNT_WH_TOGGLE_ON">
 				<English>The Weapon HUD has been toggled on!</English>
-				<German>Die Weapon HUD wurde aktiviert!</German>
+				<German>Das Weapon HUD wurde aktiviert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_TOGGLE_OFF">
 				<English>The Weapon HUD has been toggled off!</English>
-				<German>Die Weapon HUD wurde deaktiviert!</German>
+				<German>Das Weapon HUD wurde deaktiviert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->

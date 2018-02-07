@@ -40,6 +40,18 @@ _nameHandgun	= "";
 } forEach rlnt_wh_itemList;
 
 
+/* SET ITEM AMOUNT */
+if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
+	rlnt_wh_itemAmount = 0;
+} else {
+	if (isNil "rlnt_wh_item2") then {
+		rlnt_wh_itemAmount = 1;
+	} else {
+		rlnt_wh_itemAmount = 2;
+	};
+};
+
+
 /* WEAPON AMOUNT DEPENDENTS */
 if !(DZE_TwoPrimaries == 2) then {
 	["other","WH","Weapon amount is 1."] call RLNT_wh_postDebug;
