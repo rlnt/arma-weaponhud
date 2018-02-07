@@ -39,6 +39,31 @@ _itemList		= [];
 } forEach rlnt_wh_itemList;
 
 
+/* WEAPON AMOUNT DEPENDENTS */
+if !(DZE_TwoPrimaries == 2) then {
+	["other","WH","Weapon amount is 1."] call RLNT_wh_postDebug;
+
+	_boxes			= 2 + rlnt_wh_itemAmount;
+	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
+	{
+		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
+		};
+	} forEach weapons player;
+} else {
+	["other","WH","Weapon amount is 2."] call RLNT_wh_postDebug;
+
+	_boxes 			= 3 + rlnt_wh_itemAmount;
+	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
+	_nameSecondary	= getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'displayName');
+	{
+		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
+		};
+	} forEach weapons player;
+};
+
+
 /* ITEM AMOUNT DEPENDENTS */
 switch (rlnt_wh_itemAmount) do {
 
@@ -67,33 +92,6 @@ switch (rlnt_wh_itemAmount) do {
 		_amountItem2	= str({_x == rlnt_wh_item2} count (magazines player));
 		_nameItem2		= getText(configFile >> 'CfgMagazines' >> rlnt_wh_item2 >> 'displayName');
 	};
-};
-
-
-/* WEAPON AMOUNT DEPENDENTS */
-if !(DZE_TwoPrimaries == 2) then {
-	["other","WH","Weapon amount is 1."] call RLNT_wh_postDebug;
-
-	_boxes			= 2 + rlnt_wh_itemAmount;
-	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
-	_nameHandgun	= "";
-	{
-		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
-		};
-	} forEach weapons player;
-} else {
-	["other","WH","Weapon amount is 2."] call RLNT_wh_postDebug;
-
-	_boxes 			= 3 + rlnt_wh_itemAmount;
-	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
-	_nameSecondary	= getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'displayName');
-	_nameHandgun	= "";
-	{
-		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-			_nameHandgun = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
-		};
-	} forEach weapons player;
 };
 
 
@@ -165,15 +163,17 @@ switch (_style) do {
 		(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 		//Handgun
-		{
-			if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-				if !(toLower _x in _smallWeapons) then {
-					(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-				} else {
-					(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+		if (!isNil "_nameHandgun") then {
+			{
+				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+					if !(toLower _x in _smallWeapons) then {
+						(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					} else {
+						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					};
 				};
-			};
-		} forEach weapons player;
+			} forEach weapons player;
+		};
 
 		//Weapon and Item names
 		if (rlnt_wh_showWeaponNames) then {
@@ -191,15 +191,17 @@ switch (_style) do {
 			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 			//Handgun
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-					} else {
-						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (!isNil "_nameHandgun") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 
 			//Item 1
 			(_display displayCtrl 1043) ctrlSetText(rlnt_wh_item1_keyName);
@@ -232,15 +234,17 @@ switch (_style) do {
 			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 			//Handgun
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-					} else {
-						(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (!isNil "_nameHandgun") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 
 			//Weapon and Item names
 			if (rlnt_wh_showWeaponNames) then {
@@ -260,15 +264,17 @@ switch (_style) do {
 			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
 			//Handgun
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-					} else {
-						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (!isNil "_nameHandgun") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 
 			//Item 1
 			(_display displayCtrl 1043) ctrlSetText(rlnt_wh_item1_keyName);
@@ -312,15 +318,17 @@ switch (_style) do {
 			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 			//Handgun
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-					} else {
-						(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (!isNil "_nameHandgun") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 
 			//Item 1
 			(_display displayCtrl 1048) ctrlSetText(rlnt_wh_item1_keyName);
@@ -358,15 +366,17 @@ switch (_style) do {
 		(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
 
 		//Handgun
-		{
-			if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-				if !(toLower _x in _smallWeapons) then {
-					(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-				} else {
-					(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+		if (!isNil "_nameHandgun") then {
+			{
+				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+					if !(toLower _x in _smallWeapons) then {
+						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					} else {
+						(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					};
 				};
-			};
-		} forEach weapons player;
+			} forEach weapons player;
+		};
 
 		//Item 1
 		(_display displayCtrl 1047) ctrlSetText(rlnt_wh_item1_keyName);
