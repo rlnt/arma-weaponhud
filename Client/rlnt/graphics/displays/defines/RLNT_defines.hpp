@@ -38,6 +38,7 @@ class RLNT_Structured_Text : RLNT_Main {
 
 class RLNT_Picture : RLNT_Main {
 	style = 48;
+	colorText[] = {1,1,1,1};
 };
 
 class RLNT_Frame : RLNT_Main {
