@@ -288,7 +288,7 @@ class rlnt_weaponhud_style_4 {
 	idd				= 7211;
 	movingenable	= false;
 	duration		= 10e10;
-	onLoad			= "uiNamespace setVariable ['rlnt_weaponhud_style_1', _this select 0];";
+	onLoad			= "uiNamespace setVariable ['rlnt_weaponhud_style_4', _this select 0];";
 
 	class Controls {
 
