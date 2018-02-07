@@ -1,7 +1,7 @@
 /*
 File:			RLNT_wh_config.sqf
-Author:			Relentless
-Description:	Config file for Weapon HUD
+Author:			RLNT
+Description:	config file for Weapon HUD
 */
 #include "\ca\editor\Data\Scripts\dikCodes.h"
 
@@ -48,12 +48,16 @@ included so you will get notified if you have to edit something.
 rlnt_wh_defaultState = true;  /* default: true */
 
 /*
-		This is the key you can toggle the Weapon HUD with.
+		This is the hotkey you can toggle the Weapon HUD with.
+		It can also be a key combination.
 		You need to write the DIK-Key-Code as an array!
 		That means you have to place it in []!
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
 
+		1 hotkey:	rlnt_wh_toggleKey = [DIK_TAB];
+		key combo:	rlnt_wh_toggleKey = [DIK_TAB,DIK_LSHIFT];
+		disabled:	rlnt_wh_toggleKey = nil;
 */
 rlnt_wh_toggleKey = [DIK_TAB];  /* default: [DIK_TAB] */
 
@@ -184,10 +188,10 @@ rlnt_wh_showWeaponNames = true;  /* default: true */
 		can take a look in the rlnt_wh_itemList array.
 		There you can find all items that are currently
 		supported by the script.
-		If you don't want to use item 1, write nil.
-		So it looks like rlnt_wh_item1 = nil;.
-		If you want to use a bloodbag, make sure the
-		classic bloodbag system is turned on!!!
+		To disable item 1, write nil.
+
+		any item:	rlnt_wh_item1 = "ItemClassname";
+		disabled:	rlnt_wh_item1 = nil;
 */
 rlnt_wh_item1 = "ItemBandage";  /* default: ItemBandage */
 
@@ -198,28 +202,38 @@ rlnt_wh_item1 = "ItemBandage";  /* default: ItemBandage */
 		can take a look in the rlnt_wh_itemList array.
 		There you can find all items that are currently
 		supported by the script.
-		If you don't want to use item 2, write nil.
-		So it looks like rlnt_wh_item2 = nil;.
-		If you want to use a bloodbag, make sure the
-		classic bloodbag system is turned on!!!
+		To disable item 2, write nil.
+
+		any item:	rlnt_wh_item2 = "ItemClassname";
+		disabled:	rlnt_wh_item2 = nil;
 */
 rlnt_wh_item2 = "ItemPainkiller";  /* default: ItemPainkiller */
 
 /*
-		This is the hotkey for the first quick-slot-item.
+		This is the hotkey for Quick-Slot-Item 1.
+		It can also be a key combination.
 		You need to write the DIK-Key-Code as an array!
 		That means you have to place it in []!
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
+
+		1 hotkey:	rlnt_wh_item1_key = [DIK_4];
+		key combo:	rlnt_wh_item1_key = [DIK_4,DIK_LSHIFT];
+		disabled:	rlnt_wh_item1_key = nil;
 */
 rlnt_wh_item1_key = [DIK_4];  /* default: DIK_4 */
 
 /*
-		This is the hotkey for the second quick-slot-item.
+		This is the hotkey for Quick-Slot-Item 2.
+		It can also be a key combination.
 		You need to write the DIK-Key-Code as an array!
 		That means you have to place it in []!
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
+
+		1 hotkey:	rlnt_wh_item2_key = [DIK_5];
+		key combo:	rlnt_wh_item2_key = [DIK_4,DIK_LSHIFT];
+		disabled:	rlnt_wh_item2_key = nil;
 */
 rlnt_wh_item2_key = [DIK_5];  /* default: DIK_5 */
 
@@ -247,7 +261,7 @@ rlnt_wh_item2_keyName = "5";  /* default: 5 */
 		false	-> Hide item names above the boxes
 		They are automatically localized and self-resizing.
 */
-rlnt_wh_showItemName = true;  /* default: true */
+rlnt_wh_showItemNames = true;  /* default: true */
 
 /*
 		This is the item amount in the boxes.
@@ -320,13 +334,13 @@ rlnt_wh_bloodSettings = [4,-1];  /* default: 4,-1 */
 		included all Epoch-Weapons.
 */
 rlnt_wh_smallWeapons = [
-  "Makarov","Makarov_DZ","MakarovSD","Makarov_SD_DZ",
-  "Revolver_DZ","Revolver_EP1","Revolver_Gold_EP1",
-  "Colt1911","M1911_DZ",
-  "Glock17_EP1","G17_DZ","G17_FL_DZ","G17_MFL_DZ","G17_SD_DZ","G17_SD_FL_DZ","G17_SD_MFL_DZ",
-  "UZI_EP1","UZI_SD_EP1","PDW_DZ",
-  "M9","M9_DZ","M9SD","M9_SD_DZ",
-  "Sa61_EP1"
+	"Makarov","Makarov_DZ","MakarovSD","Makarov_SD_DZ",
+	"Revolver_DZ","Revolver_EP1","Revolver_Gold_EP1",
+	"Colt1911","M1911_DZ",
+	"Glock17_EP1","G17_DZ","G17_FL_DZ","G17_MFL_DZ","G17_SD_DZ","G17_SD_FL_DZ","G17_SD_MFL_DZ",
+	"UZI_EP1","UZI_SD_EP1","PDW_DZ",
+	"M9","M9_DZ","M9SD","M9_SD_DZ",
+	"Sa61_EP1"
 ];
 
 /*
@@ -371,18 +385,10 @@ rlnt_wh_debug = false;  /* default: false */
 	##########  Don't edit below  ##########
 	########################################
 */
-/*  DEBUG  */
-["file","WH","Weapon HUD Config"] call RLNT_postDebug;
 
-/* SET ITEM AMOUNT */
-if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
-	rlnt_wh_itemAmount = 0;
-} else {
-	if (isNil "rlnt_wh_item2") then {
-		rlnt_wh_itemAmount = 1;
-	} else {
-		rlnt_wh_itemAmount = 2;
-	};
+/* SET BLOOD INJECTION AMOUNT IF NOT SET */
+if (rlnt_wh_bloodSettings select 1 == -1) then {
+	rlnt_wh_bloodSettings set[1, DZE_selfTransfuse_Values select 0];
 };
 
 /* TOGGLE LOOP */
@@ -391,3 +397,6 @@ if (rlnt_wh_defaultState) then {
 } else {
 	rlnt_wh_doLoop = false;
 };
+
+/* DEBUG */
+["file","WH","Weapon HUD config"] call RLNT_postDebug;

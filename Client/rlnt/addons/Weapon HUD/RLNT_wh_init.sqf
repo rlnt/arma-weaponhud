@@ -1,8 +1,11 @@
 /*
 File:			RLNT_wh_init.sqf
-Author:			Relentless
-Description:	Init file for Weapon HUD
+Author:			RLNT
+Description:	init file for Weapon HUD
 */
+
+rlnt_wh_installed = true;
+
 
 if (!isDedicated && hasInterface) then {
 	call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_config.sqf";		//Config
@@ -10,5 +13,5 @@ if (!isDedicated && hasInterface) then {
 };
 
 
-/*  DEBUG  */
-["file","WH","Weapon HUD Init"] call RLNT_postDebug;
+/* DEBUG */
+["file","WH","Weapon HUD init"] call RLNT_postDebug;

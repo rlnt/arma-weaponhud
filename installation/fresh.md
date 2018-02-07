@@ -16,11 +16,11 @@ This instructions are noob-friendly; read everything carefully! There are many l
 ## CLIENT INSTALLATION
 
 1. DOWNLOAD:
-	- [Download the latest version][latest]!
+	- [Download the latest Fresh-Release.zip][latest]!
 <br>
 
 2. FILE-MANAGEMENT:
-	- Extract the *Release.zip* and open it.
+	- Extract the *Fresh-Release.zip* and open it.
 	- **In there** open the *Client* folder.
 	- Now move the *rlnt* folder into your *mission.pbo*.
 		>*mission.pbo* is just a placeholder. Your mission is called something like *Dayz_Epoch_11.Chernarus* depending on the map you're playing on. It's the same directory where your *init.sqf* and *description.ext* is stored in.

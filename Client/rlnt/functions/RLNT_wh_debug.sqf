@@ -1,12 +1,12 @@
 /*
 File:			RLNT_wh_debug.sqf
-Author:			Relentless
-Description:	Debug function for Weapon HUD
+Author:			RLNT
+Description:	debug function for Weapon HUD
 */
 private ["_type","_tag","_name","_action"];
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type	= _this select 0;
 _tag	= _this select 1;
 _name	= _this select 2;
@@ -16,7 +16,7 @@ if (count _this > 3) then {
 };
 
 
-/*  DEBUG  */
+/* DEBUG */
 switch (_type) do {
 
 	case "function": {

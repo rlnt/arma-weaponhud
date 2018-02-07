@@ -1,40 +1,41 @@
 /*
 File:			bloodbag.sqf
-Author:			Relentless
-Description:	Quick-Item bloodbag for Weapon HUD
+Author:			RLNT
+Description:	bloodbag action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem","_timer","_infection","_i","_animation","_medic","_blood"];
 
 
-/*  DEBUG  */
-["action","WH",name player,"is trying to self blood bag (Quick-Item)"] call RLNT_wh_postDebug;
+/* DEBUG */
+["action","WH",name player,"is trying to bloodbag themself (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
-/*  ERROR-PREVENTION  */
+/* ERROR-PREVENTION */
 "bloodbag" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {};
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _item		= "ItemBloodbag";
 _hasItem 	= _item in magazines player;
 _timer 		= diag_tickTime;
 _infection 	= false;
 _i 			= 0;
 r_interrupt = false;
-r_doLoop 	= false;
+r_doLoop 	= true;
 
 if (DZE_selfTransfuse_Values select 1 <= 0) then {
 	_infection = false;
 } else {
 	if ((random 100) < (DZE_selfTransfuse_Values select 1)) then {
 		_infection = true;
+		["action","WH",name player,"got infected while trying to bloodbag themself"] call RLNT_wh_postDebug;
 	};
 };
 
 
-/*  ACTION  */
+/* ACTION */
 if (_hasItem) then {
 	dayz_actionInProgress = true;
 
@@ -72,6 +73,7 @@ if (_hasItem) then {
 			dayz_lastSelfTransfuse = time;
 			r_doLoop = false;
 
+			["action","WH",name player,"bloodbagged themself (successful)"] call RLNT_wh_postDebug;
 			["action","bloodbag",true,false] call RLNT_wh_notifyUser;
 
 			if (_infection) then {
@@ -82,12 +84,14 @@ if (_hasItem) then {
 
 		if (r_interrupt) then {
 			r_doLoop = false;
+			["action","WH",name player,"cancelled bloodbagging (interrupted)"] call RLNT_wh_postDebug;
 			["action","bloodbag",false,true] call RLNT_wh_notifyUser;
 		};
 		uiSleep 0.1;
 	};
 	dayz_actionInProgress = false;
 } else {
+	["action","WH",name player,"failed bloodbagging (no item left)"] call RLNT_wh_postDebug;
 	["action","bloodbag",false,false] call RLNT_wh_notifyUser;
 };
 
