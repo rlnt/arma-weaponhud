@@ -6,11 +6,11 @@ Description:	notification function for Weapon HUD
 private ["_message","_messageext","_type","_check","_item","_success","_interrupt"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Notification"] call RLNT_wh_postDebug;
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type = _this select 0;
 _message = "";
 _messageext = "";

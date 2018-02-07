@@ -7,18 +7,18 @@ disableSerialization;
 private ["_style","_item1","_item2","_cItem1","_cItem2","_primary","_cPrimary","_secondary","_cSecondary","_handgun","_cHandgun"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Update function"] call RLNT_wh_postDebug;
 
 
-/*  ERROR PREVENTION  */
+/* ERROR PREVENTION */
 "update" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {
 	"error" call RLNT_wh_notifyUser;
 };
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _style		= _this select 0;
 _item1		= _this select 1;
 _item2		= _this select 2;
@@ -32,10 +32,10 @@ _handgun	= "";
 _cHandgun	= "";
 
 
-/*  UPDATE CHECK LOOP  */
+/* UPDATE CHECK LOOP */
 while {rlnt_wh_doLoop} do {
 
-	/*  CHECK DIFFERENCE  */
+	/* CHECK DIFFERENCE */
 	//Primary
 	if (_cPrimary != _primary) then {
 		[1,_primary,_style] call RLNT_wh_switchInfo;
@@ -62,7 +62,7 @@ while {rlnt_wh_doLoop} do {
 		 _cItem2 = _item2;
 	};
 
-	/*  SAVE CURRENT  */
+	/* SAVE CURRENT */
 	//Primary
 	_primary = getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
 	//Secondary
@@ -86,7 +86,7 @@ while {rlnt_wh_doLoop} do {
 		};
 	};
 
-	/*  PAUSE LOOP  */
+	/* PAUSE LOOP */
 	if (rlnt_wh_doLoop) then {
 		uiSleep rlnt_wh_refreshRate;
 	};

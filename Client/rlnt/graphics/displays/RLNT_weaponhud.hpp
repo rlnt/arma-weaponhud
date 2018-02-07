@@ -65,8 +65,8 @@ class rlnt_weaponhud_style_1 {
 						x = 0.5 + PXWIDTH * 0.5 * SCALE + PXWIDTH * 0.5;
 						text = "2";
 					};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_2 {
 
@@ -157,8 +157,8 @@ class rlnt_weaponhud_style_2 {
 						x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
 						text = "3";
 					};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_3 {
 
@@ -280,15 +280,15 @@ class rlnt_weaponhud_style_3 {
 				x = 0.5 + PXWIDTH * 20.5 * SCALE + PXWIDTH * 1.5;
 				text = "4";
 			};
-	}
-}
+	};
+};
 
 class rlnt_weaponhud_style_4 {
 
 	idd				= 7211;
 	movingenable	= false;
 	duration		= 10e10;
-	onLoad			= "uiNamespace setVariable ['rlnt_weaponhud_style_1', _this select 0];";
+	onLoad			= "uiNamespace setVariable ['rlnt_weaponhud_style_4', _this select 0];";
 
 	class Controls {
 
@@ -372,7 +372,7 @@ class rlnt_weaponhud_style_4 {
 			};
 			class rlnt_4_bg2 : RLNT_WH_Bg2 {
 				idc = 1044;
-				x = 0.5 + PXWIDTH * 10.5 * SCALE - PXWIDTH * 1;
+				x = 0.5 + PXWIDTH * 10.5 * SCALE + PXWIDTH * 1;
 			};
 			class rlnt_4_picture : RLNT_WH_Picture {
 				idc = 1211;

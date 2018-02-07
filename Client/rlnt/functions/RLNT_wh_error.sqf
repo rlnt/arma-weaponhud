@@ -6,11 +6,11 @@ Description:	error prevention function for Weapon HUD
 private ["_notMatchItem"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Error function"] call RLNT_wh_postDebug;
 
 
-/*  CHECK ERRORS  */
+/* CHECK ERRORS */
 switch (_this) do {
 
 	case "setup": {
@@ -170,5 +170,5 @@ switch (_this) do {
 };
 
 
-/*  UPDATE  */
+/* UPDATE */
 rlnt_wh_errorsFound = false;

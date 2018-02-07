@@ -138,4 +138,4 @@ if (!isDedicated) then {
 	endLoadingScreen;
 };
 
-execVM "rlnt\addons\RLNT_init.sqf";  /*  RLNT-ADDITIONS  */
+execVM "rlnt\addons\RLNT_init.sqf";  /* RLNT-ADDITIONS */

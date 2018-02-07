@@ -6,13 +6,13 @@ Description:	debug function for RLNT-Additions
 private ["_type","_tag","_name"];
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type	= _this select 0;
 _tag	= _this select 1;
 _name	= _this select 2;
 
 
-/*  DEBUG  */
+/* DEBUG */
 switch (_type) do {
 
 	case "file": {

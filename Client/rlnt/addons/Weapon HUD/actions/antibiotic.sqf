@@ -7,21 +7,21 @@ Credits:		DayZ Epoch Mod Team
 private ["_item","_hasItem"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["action","WH",name player,"is trying to take antibiotics (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
-/*  ERROR-PREVENTION  */
+/* ERROR-PREVENTION */
 "antibiotic" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {};
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _item 		= "ItemAntibiotic";
 _hasItem 	= _item in magazines player;
 
 
-/*  ACTION  */
+/* ACTION */
 if (_hasItem) then {
 	dayz_actionInProgress = true;
 
