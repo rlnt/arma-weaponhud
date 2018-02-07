@@ -14,6 +14,10 @@ class RLNT_Main {
 	y = 0;
 	h = 0;
 	w = 0;
+	text = "";
+	font = "Zeppelin32";
+	sizeEx = TEXTSIZE;
+	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};
 	access = 0;
 };
@@ -23,23 +27,17 @@ class RLNT_Background : RLNT_Main {
 };
 
 class RLNT_Text : RLNT_Main {
-	sizeEx = TEXTSIZE;
 	linespacing = 1;
 	shadow = 0;
-	font = "Zeppelin32";
-	text = "";
 	colorText[] = {1,1,1,1};
 };
 
 class RLNT_Structured_Text : RLNT_Main {
 	type = 13;
-	text = "";
-	sizeEx = TEXTSIZE;
 };
 
 class RLNT_Picture : RLNT_Main {
 	style = 48;
-	text = "";
 };
 
 class RLNT_Frame : RLNT_Main {
