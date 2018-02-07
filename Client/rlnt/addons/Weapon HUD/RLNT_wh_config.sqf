@@ -385,16 +385,6 @@ rlnt_wh_debug = false;  /* default: false */
 	##########  Don't edit below  ##########
 	########################################
 */
-/* SET ITEM AMOUNT */
-if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
-	rlnt_wh_itemAmount = 0;
-} else {
-	if (isNil "rlnt_wh_item2") then {
-		rlnt_wh_itemAmount = 1;
-	} else {
-		rlnt_wh_itemAmount = 2;
-	};
-};
 
 /* SET BLOOD INJECTION AMOUNT IF NOT SET */
 if (rlnt_wh_bloodSettings select 1 == -1) then {
