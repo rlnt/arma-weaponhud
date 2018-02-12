@@ -334,13 +334,13 @@ rlnt_wh_bloodSettings = [4,-1];  /* default: 4,-1 */
 		included all Epoch-Weapons.
 */
 rlnt_wh_smallWeapons = [
-  "Makarov","Makarov_DZ","MakarovSD","Makarov_SD_DZ",
-  "Revolver_DZ","Revolver_EP1","Revolver_Gold_EP1",
-  "Colt1911","M1911_DZ",
-  "Glock17_EP1","G17_DZ","G17_FL_DZ","G17_MFL_DZ","G17_SD_DZ","G17_SD_FL_DZ","G17_SD_MFL_DZ",
-  "UZI_EP1","UZI_SD_EP1","PDW_DZ",
-  "M9","M9_DZ","M9SD","M9_SD_DZ",
-  "Sa61_EP1"
+	"Makarov","Makarov_DZ","MakarovSD","Makarov_SD_DZ",
+	"Revolver_DZ","Revolver_EP1","Revolver_Gold_EP1",
+	"Colt1911","M1911_DZ",
+	"Glock17_EP1","G17_DZ","G17_FL_DZ","G17_MFL_DZ","G17_SD_DZ","G17_SD_FL_DZ","G17_SD_MFL_DZ",
+	"UZI_EP1","UZI_SD_EP1","PDW_DZ",
+	"M9","M9_DZ","M9SD","M9_SD_DZ",
+	"Sa61_EP1"
 ];
 
 /*
@@ -385,16 +385,6 @@ rlnt_wh_debug = false;  /* default: false */
 	##########  Don't edit below  ##########
 	########################################
 */
-/* SET ITEM AMOUNT */
-if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
-	rlnt_wh_itemAmount = 0;
-} else {
-	if (isNil "rlnt_wh_item2") then {
-		rlnt_wh_itemAmount = 1;
-	} else {
-		rlnt_wh_itemAmount = 2;
-	};
-};
 
 /* SET BLOOD INJECTION AMOUNT IF NOT SET */
 if (rlnt_wh_bloodSettings select 1 == -1) then {
@@ -408,5 +398,5 @@ if (rlnt_wh_defaultState) then {
 	rlnt_wh_doLoop = false;
 };
 
-/*  DEBUG  */
+/* DEBUG */
 ["file","WH","Weapon HUD config"] call RLNT_postDebug;

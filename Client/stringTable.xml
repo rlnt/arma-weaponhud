@@ -2,305 +2,286 @@
 <Project name="DayZMission">
 	<Package name="RLNT_WH">
 		<Container name="ERROR">
-			<Key ID="STR_RLNT_WH_ERROR_INSTALLATION">
-				<English>Something seems to be wrong with your Weapon HUD installation!</English>
-				<German>Bei der Installation der Weapon HUD scheint ein Fehler aufgetreten zu sein!</German>
+			<Key ID="STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_1">
+				<English>The %1 function was triggered before the loop started!</English>
+				<German>Die %1-Funktion wurde ausgelöst, bevor der Loop gestartet ist!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_INSTALLATION_HINT">
+			<Key ID="STR_RLNT_WH_FUNCTION_WITHOUT_LOOP_2">
 				<English>It's recommended to check the installation or reinstall the whole script.</English>
 				<German>Es wird empfohlen die Installation zu überprüfen oder das gesamte Script neu zu installieren.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_NO_UPDATE_PANEL">
-				<English>Detected that "nfcStyle 1" is selected but Update Panel is not installed!</English>
-				<German>Es wurde "nfcStyle 1" ausgewählt, obwohl das Update Panel nicht installiert ist!</German>
+			<Key ID="STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_1">
+				<English>~nfcStyle 1~ is selected but the RLNT Update Panel is not installed!</English>
+				<German>~nfcStyle 1~ ist ausgewählt, obwohl das RLNT Update Panel nicht installiert ist!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_NO_UPDATE_PANEL_HINT">
-				<English>In order to use "nfcStyle 1", you have to install the RLNT Update Panel.</English>
-				<German>Um "nfcStyle 1" zu benutzen muss das RLNT Update Panel installiert werden.</German>
+			<Key ID="STR_RLNT_WH_NFC1_WITHOUT_UPDATEPANEL_2">
+				<English>In order to use ~nfcStyle 1~, you have to install the RLNT Update Panel.</English>
+				<German>Um ~nfcStyle 1~ benutzen zu können, muss das RLNT Update Panel installiert sein.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_DUPLCATE_ITEM">
-				<English>Detected that "item 1" and "item 2" are the same!</English>
-				<German>Für "item 1" and "item 2" wurde das gleiche Item gewählt!</German>
+			<Key ID="STR_RLNT_WH_SAME_ITEM_1">
+				<English>~item 1~ and ~item 2~ are equal!</English>
+				<German>~item 1~ und ~item 2~ sind identisch!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_DUPLCATE_ITEM_HINT">
-				<English>You either have to delete "item 2" or choose another item.</English>
-				<German>Sie müssen "item 2" löschen oder ein anderes Item wählen.</German>
+			<Key ID="STR_RLNT_WH_SAME_ITEM_2">
+				<English>You either have to delete ~item 2~ or choose another one.</English>
+				<German>Du musst entweder ~item 2~ löschen oder ein anderes Item wählen.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_DUPLCATE_HOTKEY">
-				<English>Detected that "item1_key" and "item2_key" are equal!</English>
-				<German>"item1_key" und "item2_key" sind gleich!</German>
+			<Key ID="STR_RLNT_WH_SAME_HOTKEY_1">
+				<English>~item1_key~ and ~item2_key~ are equal!</English>
+				<German>~item1_key~ und ~item2_key~ sind identisch!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_DUPLCATE_HOTKEY_HINT">
-				<English>You have to change one of the hotkeys to prevent errors.</English>
-				<German>Sie müssen einen der Hotkeys ändern um Fehler zu vermeiden.</German>
+			<Key ID="STR_RLNT_WH_SAME_HOTKEY_2">
+				<English>You have to change one of the hotkeys.</English>
+				<German>Du musst einen der Hotkeys ändern.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOODBAGSYSTEM">
-				<English>Detected that a blood bag is used as quick-slot-item but the "classic blood bag system" is disabled!</English>
-				<German>Die Blutkonserve wurde als Quick-Slot-Item ausgewählt aber das "classic blood bag system" ist deaktiviert!</German>
+			<Key ID="STR_RLNT_WH_BLOODBAGSYSTEM_1">
+				<English>~ItemBloodbag~ is used as Quick-Slot-Item but ~dayz_classicBloodBagSystem~ is disabled!</English>
+				<German>~ItemBloodbag~ wird als Quick-Slot-Item genutzt aber ~dayz_classicBloodBagSystem~ ist deaktiviert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOODBAGSYSTEM_HINT">
-				<English>You have to turn on the "dayz_classicBloodBagSystem" to use blood bags as quick-slot-items.</English>
-				<German>Sie müssen "dayz_classicBloodBagSystem" aktiviert haben um Blutkonserven als Quick-Slot-Item zu verwenden.</German>
+			<Key ID="STR_RLNT_WH_BLOODBAGSYSTEM_2">
+				<English>You have to activate ~dayz_classicBloodBagSystem~ in order to use bloodbags as Quick-Slot-Items.</English>
+				<German>Du musst ~dayz_classicBloodBagSystem~ aktivieren, um Blutkonserven als Quick-Slot-Items benutzen zu können.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ITEM1_NOT_FOUND">
-				<English>Detected that "item 1" isn't a supported item!</English>
-				<German>Erkannt, dass "item 1" kein unterstütztes Item ist!</German>
+			<Key ID="STR_RLNT_WH_UNSUPPORTED_ITEM_1">
+				<English>~item %1~ is not a supported item!</English>
+				<German>~item %1~ ist kein unterstütztes Item!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ITEM2_NOT_FOUND">
-				<English>Detected that "item 2" isn't a supported item!</English>
-				<German>Erkannt, dass "item 2" kein unterstütztes Item ist!</German>
+			<Key ID="STR_RLNT_WH_UNSUPPORTED_ITEM_2">
+				<English>Make sure the Quick-Slot-Item you want to use is in the ~wh_itemList~!</English>
+				<German>Stelle sicher, dass sich das Quick-Slot-Item, welches du benutzen willst, in der ~wh_itemList~ befindet!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ITEM_NOT_FOUND_HINT">
-				<English>Make sure the item you set is in the rlnt_wh_itemList!</English>
-				<German>Stell sicher, dass sich das Item im "rlnt_wh_itemList"-Array befindet!</German>
+			<Key ID="STR_RLNT_WH_ACTION_WITHOUT_ITEMS_1">
+				<English>The action function was triggered without having Quick-Slot-Items enabled!</English>
+				<German>Die Action-Funktoin wurde ausgelöst, ohne dass Quick-Slot-Items aktiviert sind!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ITEM_SWITCH">
-				<English>Detected that "item 2" is set but item 1 doesn't!</English>
-				<German>Es wurde "item2" definiert aber nicht "item1"!</German>
+			<Key ID="STR_RLNT_WH_ACTION_WITHOUT_ITEMS_2">
+				<English>It's recommended to check the installation or reinstall the whole script.</English>
+				<German>Es wird empfohlen die Installation zu überprüfen oder das gesamte Script neu zu installieren.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ITEM_SWITCH_HINT">
-				<English>Automatically fixed; exchanged items.</English>
-				<German>Automatisch behoben; Items wurden getauscht.</German>
+		</Container>
+		<Container name="FIX">
+			<Key ID="STR_RLNT_WH_SWITCH_ITEMS_1">
+				<English>~item 2~ is defined but ~item 1~ isn't!</English>
+				<German>~item 2~ ist definiert aber ~item 1~ nicht!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_DURATION_LOW">
-				<English>Detected that blood injection duration is too low!</English>
+			<Key ID="STR_RLNT_WH_SWITCH_ITEMS_2">
+				<English>Automatically fixed; the items were switched.</English>
+				<German>Automatisch behoben; die Items wurden getauscht.</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
+			<Key ID="STR_RLNT_WH_BLOOD_DURATION_LOW_1">
+				<English>Blood injection duration is too low!</English>
 				<German>Die Bluttransfusionszeit wurde zu niedrig eingestellt!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_DURATION_LOW_HINT">
-				<English>Automatically fixed; set duration to the minimum: 2.</English>
-				<German>Automatisch behoben; Dauer wurde auf das Minimum gesetzt: 2.</German>
+			<Key ID="STR_RLNT_WH_BLOOD_DURATION_LOW_2">
+				<English>Automatically fixed; blood injection duration was set to minimum: 2s.</English>
+				<German>Automatisch behoben; Bluttransfusionszeit wurde auf das Minimum gestellt: 2s.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_DURATION_HIGH">
-				<English>Detected that blood injection duration is too high!</English>
+			<Key ID="STR_RLNT_WH_BLOOD_DURATION_HIGH_1">
+				<English>Blood injection duration is too high!</English>
 				<German>Die Bluttransfusionszeit wurde zu hoch eingestellt!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_DURATION_HIGH_HINT">
-				<English>Automatically fixed; set duration to the maximum: 120.</English>
-				<German>Automatisch behoben; Dauer wurde auf das Maximum gesetzt: 120.</German>
+			<Key ID="STR_RLNT_WH_BLOOD_DURATION_HIGH_2">
+				<English>Automatically fixed; blood injection duration was set to maximum: 120s.</English>
+				<German>Automatisch behoben; Bluttransfusionszeit wurde auf das Maximum gestellt: 120s.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT_LOW">
-				<English>Detected that blood injection amount is too low!</English>
+			<Key ID="STR_RLNT_WH_BLOOD_AMOUNT_LOW_1">
+				<English>Blood injection amount is too low!</English>
 				<German>Die Bluttransfusionsmenge wurde zu niedrig eingestellt!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT_LOW_HINT">
-				<English>Automatically fixed; set amount to 500.</English>
-				<German>Automatisch behoben; Dauer wurde auf das Minimum gesetzt: 500.</German>
+			<Key ID="STR_RLNT_WH_BLOOD_AMOUNT_LOW_2">
+				<English>Automatically fixed; blood injection amount was set to minimum: 500.</English>
+				<German>Automatisch behoben; Bluttransfusionsmenge wurde auf das Minimum gestellt: 500.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT_HIGH">
-				<English>Detected that blood injection amount is too high!</English>
+			<Key ID="STR_RLNT_WH_BLOOD_AMOUNT_HIGH_1">
+				<English>Blood injection amount is too high!</English>
 				<German>Die Bluttransfusionsmenge wurde zu hoch eingestellt!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_BLOOD_INJECTION_AMOUNT_HIGH_HINT">
-				<English>Automatically fixed; set amount to 12000.</English>
-				<German>Automatisch behoben; Dauer wurde auf das Maximum gesetzt: 12000.</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_UPDATE">
-				<English>Update function was triggered before display was spawned!</English>
-				<German>Die Update-Funktion wurde vor dem Display aufgerufen!</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_UPDATE_HINT">
-				<English>Script cancelled to prevent further errors.</English>
-				<German>Script wurde abgebrochen, um Fehler zu verhindern.</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ACTION">
-				<English>Detected that action function was triggered without having quick-slot-items enabled!</English>
-				<German>Es wurde die Aktions-Funktion aufgerufen,obwohl Quick-Slot-Items deaktiviert sind!</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_ERROR_ACTION_HINT">
-				<English>It's recommended to check the "keyboard.sqf".</English>
-				<German>Es wird empfohlen die "keyboard.sqf" zu überprüfen.</German>
+			<Key ID="STR_RLNT_WH_BLOOD_AMOUNT_HIGH_2">
+				<English>Automatically fixed; blood injection amount was set to maximum: 12000.</English>
+				<German>Automatisch behoben; Bluttransfusionsmenge wurde auf das Maximum gestellt: 12000.</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
 		</Container>
 		<Container name="NOTIFY">
-			<Key ID="STR_RLNT_WH_NOTIFY_ERROR">
-				<English>You have an error either in your config or in your installation!</English>
+			<Key ID="STR_RLNT_WH_ERROR_1">
+				<English>You either have an error in your config or in your installation!</English>
 				<German>Die Config oder die Installation enthält einen Fehler!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ERROR_EXT">
-				<English>Check the RPT for more info or contact an Admin!</English>
-				<German>Überprüfen Sie die RPT oder befragen Sie einen Administrator!</German>
+			<Key ID="STR_RLNT_WH_ERROR_2">
+				<English>Check the RPT for more info or contact an admin!</English>
+				<German>Überprüfe die RPT oder melde dich an einen Admin!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_TOGGLE_ON">
+			<Key ID="STR_RLNT_WH_TOGGLE_ON">
 				<English>The Weapon HUD has been toggled on!</English>
-				<German>Die Weapon HUD wurde aktiviert!</German>
+				<German>Das Weapon HUD wurde aktiviert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_TOGGLE_OFF">
+			<Key ID="STR_RLNT_WH_TOGGLE_OFF">
 				<English>The Weapon HUD has been toggled off!</English>
-				<German>Die Weapon HUD wurde deaktiviert!</German>
+				<German>Das Weapon HUD wurde deaktiviert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC">
-				<English>You've taken some antibiotics!</English>
-				<German>Sie haben Antibiotika genommen!</German>
+			<Key ID="STR_RLNT_WH_ANTIBIOTIC_1">
+				<English>You have taken some antibiotics!</English>
+				<German>Du hast Antibiotika genommen!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC_EMPTY">
+			<Key ID="STR_RLNT_WH_ANTIBIOTIC_2">
 				<English>You don't have any antibiotics left!</English>
-				<German>Sie haben keine Antibiotika mehr übrig!</German>
+				<German>Du hast keine Antibiotika mehr übrig!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BANDAGE">
-				<English>You've bandaged yourself!</English>
-				<German>Sie haben sich bandagiert!</German>
+			<Key ID="STR_RLNT_WH_BANDAGE_1">
+				<English>You have bandaged yourself!</English>
+				<German>Du hast dich bandagiert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BANDAGE_EMPTY">
+			<Key ID="STR_RLNT_WH_BANDAGE_2">
 				<English>You don't have any bandages left!</English>
-				<German>Sie haben keine Bandagen mehr übrig!</German>
+				<German>Du hast keine Bandagen mehr übrig!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_DELAY">
-				<English>You can only self-blood-bag every %1 seconds!</English>
-				<German>Sie können sich nur alle %1 Sekunden eine Bluttransfusion geben!</German>
+			<Key ID="STR_RLNT_WH_BLOODBAG_1">
+				<English>You transfused blood to yourself!</English>
+				<German>Du hast dir selbst Blut verabreicht!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG">
-				<English>You've performed a blood transfusiuon on yourself!</English>
-				<German>Die Bluttransfusion wurde erfolgreich durchgeführt!</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_CANCELD">
-				<English>The blood transfusion has been cancelled!</English>
-				<German>Die Bluttransfusion wurde abgebrochen!</German>
-				<!--<French></French>-->
-				<!--<Russian></Russian>-->
-				<!--<Spanish></Spanish>-->
-			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_EMPTY">
+			<Key ID="STR_RLNT_WH_BLOODBAG_2">
 				<English>You don't have any blood bags left!</English>
-				<German>Sie haben keine Blutkonserven mehr übrig!</German>
+				<German>Du hast keine Blutkonserven mehr übrig!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_MORPHINE">
-				<English>You've injected some morphine!</English>
+			<Key ID="STR_RLNT_WH_BLOODBAG_3">
+				<English>The blood transfusion has been cancelled!</English>
+				<German>Die Bluttransfusion wurde unterbrochen!</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
+			<Key ID="STR_RLNT_WH_BLOODBAG_4">
+				<English>You can only self-blood-bag every %1 seconds!</English>
+				<German>Du kannst dir nur alle %1 Sekunden eine Bluttransfusion geben!</German>
+				<!--<French></French>-->
+				<!--<Russian></Russian>-->
+				<!--<Spanish></Spanish>-->
+			</Key>
+			<Key ID="STR_RLNT_WH_MORPHINE_1">
+				<English>You have injected some morphine!</English>
 				<German>Sie haben sich Morphin injiziert!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_MORPHINE_EMPTY">
+			<Key ID="STR_RLNT_WH_MORPHINE_2">
 				<English>You don't have any morphine left!</English>
-				<German>Sie haben kein Morphin mehr übrig!</German>
+				<German>Du hast kein Morphin mehr übrig!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER">
-				<English>You've taken some painkillers!</English>
-				<German>Sie haben Schwerzmittel eingenommen!</German>
+			<Key ID="STR_RLNT_WH_PAINKILLER_1">
+				<English>You have taken some painkillers!</English>
+				<German>Du hast Schwerzmittel eingenommen!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->
 			</Key>
-			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER_EMPTY">
+			<Key ID="STR_RLNT_WH_PAINKILLER_2">
 				<English>You don't have any painkillers left!</English>
-				<German>Sie haben keine Schwerzmittel mehr übrig!</German>
+				<German>Du hast keine Schwerzmittel mehr übrig!</German>
 				<!--<French></French>-->
 				<!--<Russian></Russian>-->
 				<!--<Spanish></Spanish>-->

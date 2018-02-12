@@ -4,11 +4,14 @@ Author:			RLNT
 Description:	init file for Weapon HUD
 */
 
+rlnt_wh_installed = true;
+
+
 if (!isDedicated && hasInterface) then {
 	call compile preprocessFileLineNumbers "rlnt\addons\Weapon HUD\RLNT_wh_config.sqf";		//Config
 	[] spawn RLNT_wh_startSetup;															//Setup
 };
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["file","WH","Weapon HUD init"] call RLNT_postDebug;

@@ -6,22 +6,22 @@ Description:	action selection function for Weapon HUD
 private ["_item"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Action function"] call RLNT_wh_postDebug;
 
 
-/*  ERROR PREVENTION  */
+/* ERROR PREVENTION */
 "action" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {
 	"error" call RLNT_wh_notifyUser;
 };
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _item = toLower(_this);
 
 
-/*  FIND ACTION  */
+/* FIND ACTION */
 switch (_item) do {
 	case "itemantibiotic": {
 		execVM "rlnt\addons\Weapon HUD\actions\antibiotic.sqf";

@@ -7,11 +7,11 @@ disableSerialization;
 private ["_type","_object","_style","_display","_smallWeapons"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Switch function"] call RLNT_wh_postDebug;
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type			= _this select 0;
 _object			= _this select 1;
 _style			= _this select 2;
@@ -23,7 +23,7 @@ _smallWeapons	= [];
 } forEach rlnt_wh_smallWeapons;
 
 
-/*  UPDATE IMAGES AND INFO  */
+/* UPDATE IMAGES AND INFO */
 switch (_style) do {
 
 	//Style 1 - 2 Boxes
@@ -36,17 +36,22 @@ switch (_style) do {
 
 		//Handgun
 		if (_type == 3) then {
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-						(_display displayCtrl 1209) ctrlSetText("");
-					} else {
-						(_display displayCtrl 1208) ctrlSetText("");
-						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (_object == "") then {
+				(_display displayCtrl 1208) ctrlSetText("");
+				(_display displayCtrl 1209) ctrlSetText("");
+			} else {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							(_display displayCtrl 1209) ctrlSetText("");
+						} else {
+							(_display displayCtrl 1208) ctrlSetText("");
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 			(_display displayCtrl 1037) ctrlSetText(_object);
 		};
 	};
@@ -68,32 +73,42 @@ switch (_style) do {
 
 		//Handgun
 		if (_type == 3) then {
-			if !(DZE_TwoPrimaries == 2) then {
-				{
-					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-						if !(toLower _x in _smallWeapons) then {
-							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-							(_display displayCtrl 1209) ctrlSetText("");
-						} else {
-							(_display displayCtrl 1208) ctrlSetText("");
-							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-						};
-					};
-				} forEach weapons player;
-				(_display displayCtrl 1037) ctrlSetText(_object);
+			if (_object == "") then {
+				if !(DZE_TwoPrimaries == 2) then {
+					(_display displayCtrl 1208) ctrlSetText("");
+					(_display displayCtrl 1209) ctrlSetText("");
+				} else {
+					(_display displayCtrl 1210) ctrlSetText("");
+					(_display displayCtrl 1211) ctrlSetText("");
+				};
 			} else {
-				{
-					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-						if !(toLower _x in _smallWeapons) then {
-							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-							(_display displayCtrl 1211) ctrlSetText("");
-						} else {
-							(_display displayCtrl 1210) ctrlSetText("");
-							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+				if !(DZE_TwoPrimaries == 2) then {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1209) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1208) ctrlSetText("");
+								(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
 						};
-					};
-				} forEach weapons player;
-				(_display displayCtrl 1041) ctrlSetText(_object);
+					} forEach weapons player;
+					(_display displayCtrl 1037) ctrlSetText(_object);
+				} else {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1211) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1210) ctrlSetText("");
+								(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1041) ctrlSetText(_object);
+				};
 			};
 		};
 
@@ -119,32 +134,42 @@ switch (_style) do {
 
 		//Handgun
 		if (_type == 3) then {
-			if !(DZE_TwoPrimaries == 2) then {
-				{
-					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-						if !(toLower _x in _smallWeapons) then {
-							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-							(_display displayCtrl 1209) ctrlSetText("");
-						} else {
-							(_display displayCtrl 1208) ctrlSetText("");
-							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-						};
-					};
-				} forEach weapons player;
-				(_display displayCtrl 1037) ctrlSetText(_object);
+			if (_object == "") then {
+				if !(DZE_TwoPrimaries == 2) then {
+					(_display displayCtrl 1208) ctrlSetText("");
+					(_display displayCtrl 1209) ctrlSetText("");
+				} else {
+					(_display displayCtrl 1210) ctrlSetText("");
+					(_display displayCtrl 1211) ctrlSetText("");
+				};
 			} else {
-				{
-					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-						if !(toLower _x in _smallWeapons) then {
-							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-							(_display displayCtrl 1211) ctrlSetText("");
-						} else {
-							(_display displayCtrl 1210) ctrlSetText("");
-							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+				if !(DZE_TwoPrimaries == 2) then {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1209) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1208) ctrlSetText("");
+								(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
 						};
-					};
-				} forEach weapons player;
-				(_display displayCtrl 1041) ctrlSetText(_object);
+					} forEach weapons player;
+					(_display displayCtrl 1037) ctrlSetText(_object);
+				} else {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1211) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1210) ctrlSetText("");
+								(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1041) ctrlSetText(_object);
+				};
 			};
 		};
 
@@ -179,17 +204,22 @@ switch (_style) do {
 
 		//Handgun
 		if (_type == 3) then {
-			{
-				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-					if !(toLower _x in _smallWeapons) then {
-						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
-						(_display displayCtrl 1210) ctrlSetText("");
-					} else {
-						(_display displayCtrl 1209) ctrlSetText("");
-						(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+			if (_object == "") then {
+				(_display displayCtrl 1209) ctrlSetText("");
+				(_display displayCtrl 1210) ctrlSetText("");
+			} else {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							(_display displayCtrl 1210) ctrlSetText("");
+						} else {
+							(_display displayCtrl 1209) ctrlSetText("");
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
 					};
-				};
-			} forEach weapons player;
+				} forEach weapons player;
+			};
 			(_display displayCtrl 1041) ctrlSetText(_object);
 		};
 

@@ -4,5 +4,5 @@ Author:			RLNT
 Description:	displays for RLNT-Additions
 */
 
-#include "RLNT_defines.hpp"														//DEFINES
-#include "RLNT_weaponhud.hpp"													//WEAPON HUD
+#include "displays\defines\RLNT_defines.hpp"									//DEFINES
+#include "displays\RLNT_weaponhud.hpp"											//WEAPON HUD

@@ -6,11 +6,11 @@ Description:	notification function for Weapon HUD
 private ["_message","_messageext","_type","_check","_item","_success","_interrupt"];
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["function","WH","Notification"] call RLNT_wh_postDebug;
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _type = _this select 0;
 _message = "";
 _messageext = "";
@@ -19,8 +19,8 @@ _messageext = "";
 switch (_type) do {
 
 	case "error": {
-		_message	= localize "STR_RLNT_WH_ERROR";
-		_messageext = localize "STR_RLNT_WH_ERROR_EXT";
+		_message	= localize "STR_RLNT_WH_ERROR_1";
+		_messageext = localize "STR_RLNT_WH_ERROR_2";
 	};
 
 	case "toggle": {
@@ -41,53 +41,50 @@ switch (_type) do {
 
 			case "antibiotic": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_ACTION_ANTIBIOTIC";
+					_message = localize "STR_RLNT_WH_ANTIBIOTIC_1";
 				} else {
-					_message = localize "STR_RLNT_WH_ACTION_ANTIBIOTIC_EMPTY";
+					_message = localize "STR_RLNT_WH_ANTIBIOTIC_2";
 				};
 			};
 
 			case "bandage": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_ACTION_BANDAGE";
+					_message = localize "STR_RLNT_WH_BANDAGE_1";
 				} else {
-					_message = localize "STR_RLNT_WH_ACTION_BANDAGE_EMPTY";
+					_message = localize "STR_RLNT_WH_BANDAGE_2";
 				};
 			};
 
 			case "bloodbag": {
 				_interrupt = _this select 3;
 
-				if (_success && _interrupt) then {
-					_message = localize format ["STR_RLNT_WH_ACTION_BLOODBAG_DELAY", DZE_selfTransfuse_Values select 2];
-				};
-
 				if (_success && !_interrupt) then {
-					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG";
+					_message = localize "STR_RLNT_WH_BLOODBAG_1";
 				};
-
-				if (!_success && _interrupt) then {
-					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG_CANCELD";
-				};
-
 				if !(_success && _interrupt) then {
-					_message = localize "STR_RLNT_WH_ACTION_BLOODBAG_EMPTY";
+					_message = localize "STR_RLNT_WH_BLOODBAG_2";
+				};
+				if (!_success && _interrupt) then {
+					_message = localize "STR_RLNT_WH_BLOODBAG_3";
+				};
+				if (_success && _interrupt) then {
+					_message = localize format ["STR_RLNT_WH_BLOODBAG_4", DZE_selfTransfuse_Values select 2];
 				};
 			};
 
 			case "morphine": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_ACTION_MORPHINE";
+					_message = localize "STR_RLNT_WH_MORPHINE_1";
 				} else {
-					_message = localize "STR_RLNT_WH_ACTION_MORPHINE_EMPTY";
+					_message = localize "STR_RLNT_WH_MORPHINE_2";
 				};
 			};
 
 			case "painkiller": {
 				if (_success) then {
-					_message = localize "STR_RLNT_WH_ACTION_PAINKILLER";
+					_message = localize "STR_RLNT_WH_PAINKILLER_1";
 				} else {
-					_message = localize "STR_RLNT_WH_ACTION_PAINKILLER_EMPTY";
+					_message = localize "STR_RLNT_WH_PAINKILLER_2";
 				};
 			};
 		};
