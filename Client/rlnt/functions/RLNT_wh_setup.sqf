@@ -37,7 +37,7 @@ _nameHandgun	= "";
 
 {
 	_itemList set[_forEachIndex, toLower _x];
-} forEach rlnt_wh_itemList;
+} forEach rlnt_wh_smallItems;
 
 
 /* SET ITEM AMOUNT */

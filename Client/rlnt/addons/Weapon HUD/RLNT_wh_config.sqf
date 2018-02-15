@@ -375,6 +375,21 @@ rlnt_wh_itemList = [
 ];
 
 /*
+		This is the small item array.
+		Same as the small weapon array, just for items.
+		That means that if you have a custom item
+		added to the itemList that is NOT squarish
+		don't add it here!
+*/
+rlnt_wh_smallItems = [
+	"ItemAntibiotic",
+	"ItemBandage",
+	"ItemBloodbag",
+	"ItemMorphine",
+	"ItemPainkiller"
+];
+
+/*
 		This is the debug option for devs.
 		The option lets you enable the debug mode of my
 		script which I would highly recommend for
