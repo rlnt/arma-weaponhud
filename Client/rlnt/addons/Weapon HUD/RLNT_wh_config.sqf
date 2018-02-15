@@ -93,6 +93,17 @@ rlnt_wh_nfcStyle = 4;  /* default: 4 */
 ////	above the specific option.						////
 ////////////////////////////////////////////////////////////
 /*
+		This is the style of the hotkey display method.
+		By default hotkeys are shown over the images but
+		since many users liked the old design with seperated
+		hotkeys you have an option to choose your favorite
+		style.
+		true	-> old style
+		false	-> new style
+*/
+rlnt_wh_oldHotkeys = false;  /* default: false */
+
+/*
 		This is the font color of the Weapon HUD.
 		All texts that are displayed except the hotkey text
 		on the Weapon HUD will have this color!

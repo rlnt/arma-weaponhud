@@ -109,7 +109,13 @@ switch (rlnt_wh_itemAmount) do {
 
 
 /* SETUP DISPLAY */
-_style = _boxes - 1;
+if (rlnt_wh_oldHotkeys) then {
+	["other","WH","Old hotkey style is selected."] call RLNT_wh_postDebug;
+	_style = _boxes + 3;
+} else {
+	["other","WH","New hotkey style is selected."] call RLNT_wh_postDebug;
+	_style = _boxes - 1;
+};
 ["other","WH", format["Display style is %1.", _style]] call RLNT_wh_postDebug;
 
 _layer cutRsc["rlnt_weaponhud_style_" + str(_style), "PLAIN", 1];
@@ -147,6 +153,34 @@ switch (_style) do {
 		_ftArray = [1033,1037,1041,1045,1046,1050,1051];
 		_bgArray = [1031,1035,1039,1043,1048];
 		_hkArray = [1034,1038,1042,1047,1052];
+	};
+
+	//Style 5 - 2 Boxes
+	case 5: {
+		_ftArray = [1034,1039];
+		_bgArray = [1031,1036];
+		_hkArray = [1035,1040];
+	};
+
+	//Style 6 - 3 Boxes
+	case 6: {
+		_ftArray = [1034,1039,1044,1045];
+		_bgArray = [1031,1036,1041];
+		_hkArray = [1035,1040,1046];
+	};
+
+	//Style 7 - 4 Boxes
+	case 7: {
+		_ftArray = [1034,1039,1044,1045,1050,1051];
+		_bgArray = [1031,1036,1041,1047];
+		_hkArray = [1035,1040,1046,1052];
+	};
+
+	//Style 8 - 5 Boxes
+	case 8: {
+		_ftArray = [1034,1039,1044,1049,1050,1055,1056];
+		_bgArray = [1031,1036,1041,1046,1052];
+		_hkArray = [1035,1040,1045,1051,1057];
 	};
 };
 
@@ -422,6 +456,263 @@ switch (_style) do {
 		if (rlnt_wh_showItemAmount) then {
 			(_display displayCtrl 1046) ctrlSetText(_amountItem1);
 			(_display displayCtrl 1051) ctrlSetText(_amountItem2);
+		};
+	};
+
+	//Style 5 - 2 Boxes
+	case 5: {
+		["other","WH","The Weapon HUD is style 5."] call RLNT_wh_postDebug;
+
+		//Primary
+		(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+		//Handgun
+		if !(_nameHandgun == "") then {
+			{
+				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+					if !(toLower _x in _smallWeapons) then {
+						(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					} else {
+						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					};
+				};
+			} forEach weapons player;
+		};
+
+		//Weapon and Item names
+		if (rlnt_wh_showWeaponNames) then {
+			(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+			(_display displayCtrl 1039) ctrlSetText(_nameHandgun);
+		};
+	};
+
+	//Style 6 - 3 Boxes
+	case 6: {
+		if !(DZE_TwoPrimaries == 2) then {
+			["other","WH","The Weapon HUD is style 6.1."] call RLNT_wh_postDebug;
+
+			//Primary
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+			//Handgun
+			if !(_nameHandgun == "") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+
+			//Item 1
+			(_display displayCtrl 1044) ctrlSetText(rlnt_wh_item1_keyName);
+			if !(_isListedItem1) then {
+				(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			} else {
+				(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			};
+
+			//Weapon and Item names
+			if (rlnt_wh_showWeaponNames) then {
+				(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+				(_display displayCtrl 1039) ctrlSetText(_nameHandgun);
+			};
+			if (rlnt_wh_showItemNames) then {
+				(_display displayCtrl 1044) ctrlSetText(_nameItem1);
+			};
+
+			//Item amounts
+			if (rlnt_wh_showItemAmount) then {
+				(_display displayCtrl 1045) ctrlSetText(_amountItem1);
+			};
+		} else {
+			["other","WH","The Weapon HUD is style 6.2."] call RLNT_wh_postDebug;
+
+			//Primary
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+			//Secondary
+			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+
+			//Handgun
+			if !(_nameHandgun == "") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+
+			//Weapon and Item names
+			if (rlnt_wh_showWeaponNames) then {
+				(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+				(_display displayCtrl 1039) ctrlSetText(_nameSecondary);
+				(_display displayCtrl 1044) ctrlSetText(_nameHandgun);
+			};
+		};
+	};
+
+	//Style 7 - 4 Boxes
+	case 7: {
+		if !(DZE_TwoPrimaries == 2) then {
+			["other","WH","The Weapon HUD is style 7.1."] call RLNT_wh_postDebug;
+
+			//Primary
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+			//Handgun
+			if !(_nameHandgun == "") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+
+			//Item 1
+			(_display displayCtrl 1046) ctrlSetText(rlnt_wh_item1_keyName);
+			if !(_isListedItem1) then {
+				(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			} else {
+				(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			};
+
+			//Item 2
+			(_display displayCtrl 1052) ctrlSetText(rlnt_wh_item2_keyName);
+			if !(_isListedItem2) then {
+				(_display displayCtrl 1212) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item2 >> 'picture'));
+			} else {
+				(_display displayCtrl 1213) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item2 >> 'picture'));
+			};
+
+			//Weapon and Item names
+			if (rlnt_wh_showWeaponNames) then {
+				(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+				(_display displayCtrl 1039) ctrlSetText(_nameHandgun);
+
+			};
+			if (rlnt_wh_showItemNames) then {
+				(_display displayCtrl 1044) ctrlSetText(_nameItem1);
+				(_display displayCtrl 1050) ctrlSetText(_nameItem2);
+			};
+
+			//Item amounts
+			if (rlnt_wh_showItemAmount) then {
+				(_display displayCtrl 1045) ctrlSetText(_amountItem1);
+				(_display displayCtrl 1051) ctrlSetText(_amountItem2);
+			};
+		} else {
+			["other","WH","The Weapon HUD is style 7.2."] call RLNT_wh_postDebug;
+
+			//Primary
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+			//Secondary
+			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+
+			//Handgun
+			if !(_nameHandgun == "") then {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						} else {
+							(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+
+			//Item 1
+			(_display displayCtrl 1050) ctrlSetText(rlnt_wh_item1_keyName);
+			if !(_isListedItem1) then {
+				(_display displayCtrl 1212) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			} else {
+				(_display displayCtrl 1213) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+			};
+
+			//Weapon and Item names
+			if (rlnt_wh_showWeaponNames) then {
+				(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+				(_display displayCtrl 1039) ctrlSetText(_nameSecondary);
+				(_display displayCtrl 1044) ctrlSetText(_nameHandgun);
+			};
+			if (rlnt_wh_showItemNames) then {
+				(_display displayCtrl 1050) ctrlSetText(_nameItem1);
+			};
+
+			//Item amounts
+			if (rlnt_wh_showItemAmount) then {
+				(_display displayCtrl 1051) ctrlSetText(_amountItem1);
+			};
+		};
+	};
+
+	//Style 8 - 5 Boxes
+	case 8: {
+		["other","WH","The Weapon HUD is style 8."] call RLNT_wh_postDebug;
+
+		//Primary
+		(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+
+		//Secondary
+		(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+
+		//Handgun
+		if !(_nameHandgun == "") then {
+			{
+				if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+					if !(toLower _x in _smallWeapons) then {
+						(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					} else {
+						(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+					};
+				};
+			} forEach weapons player;
+		};
+
+		//Item 1
+		(_display displayCtrl 1051) ctrlSetText(rlnt_wh_item1_keyName);
+		if !(_isListedItem1) then {
+			(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+		} else {
+			(_display displayCtrl 1212) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item1 >> 'picture'));
+		};
+
+		//Item 2
+		(_display displayCtrl 1057) ctrlSetText(rlnt_wh_item2_keyName);
+		if !(_isListedItem2) then {
+			(_display displayCtrl 1213) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item2 >> 'picture'));
+		} else {
+			(_display displayCtrl 1214) ctrlSetText(getText(configFile >> 'CfgMagazines' >> rlnt_wh_item2 >> 'picture'));
+		};
+
+		//Weapon and Item names
+		if (rlnt_wh_showWeaponNames) then {
+			(_display displayCtrl 1034) ctrlSetText(_namePrimary);
+			(_display displayCtrl 1039) ctrlSetText(_nameSecondary);
+			(_display displayCtrl 1044) ctrlSetText(_nameHandgun);
+		};
+		if (rlnt_wh_showItemNames) then {
+			(_display displayCtrl 1049) ctrlSetText(_nameItem1);
+			(_display displayCtrl 1055) ctrlSetText(_nameItem2);
+		};
+
+		//Item amounts
+		if (rlnt_wh_showItemAmount) then {
+			(_display displayCtrl 1050) ctrlSetText(_amountItem1);
+			(_display displayCtrl 1056) ctrlSetText(_amountItem2);
 		};
 	};
 };
