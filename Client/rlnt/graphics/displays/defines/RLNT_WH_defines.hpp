@@ -19,6 +19,18 @@ class RLNT_WH_Bg2 : RLNT_Background {
 	h = PXHEIGHT * 13 * SCALE;
 };
 
+class RLNT_WH_Bg3 : RLNT_Background {
+	y = WINDOW_BOTTOM - PXHEIGHT * 15 * SCALE - PXHEIGHT * 2;
+	w = PXWIDTH * 24 * SCALE;
+	h = PXHEIGHT * 15 * SCALE;
+};
+
+class RLNT_WH_Bg4 : RLNT_Background {
+	y = WINDOW_BOTTOM - PXHEIGHT * 14 * SCALE - PXHEIGHT * 2;
+	w = PXWIDTH * 3 * SCALE;
+	h = PXHEIGHT * 13 * SCALE;
+};
+
 class RLNT_WH_Name : RLNT_Text {
 	y = WINDOW_BOTTOM - PXHEIGHT * 19 * SCALE - PXHEIGHT * 3;
 	w = PXWIDTH * 20 * SCALE;
@@ -27,9 +39,18 @@ class RLNT_WH_Name : RLNT_Text {
 	shadow = 1;
 };
 
-class RLNT_WH_Hotkey : RLNT_Text {
+class RLNT_WH_Hotkey1 : RLNT_Text {
 	y = WINDOW_BOTTOM - PXHEIGHT * 14 * SCALE - PXHEIGHT * 2;
 	w = PXWIDTH * 19 * SCALE;
+	h = PXHEIGHT * 13 * SCALE;
+	sizeEx = TEXTSIZE * 4 * SCALE;
+	colorText[] = {1,1,1,0.8};
+	shadow = 1;
+};
+
+class RLNT_WH_Hotkey2 : RLNT_Text {
+	y = WINDOW_BOTTOM - PXHEIGHT * 14 * SCALE - PXHEIGHT * 2;
+	w = PXWIDTH * 3 * SCALE;
 	h = PXHEIGHT * 13 * SCALE;
 	sizeEx = TEXTSIZE * 4 * SCALE;
 	colorText[] = {1,1,1,0.8};
