@@ -260,11 +260,11 @@ class rlnt_weaponhud_style_3 {
 				x = 0.5 + PXWIDTH * 20.5 * SCALE - PXWIDTH * 1.5;
 			};
 			class rlnt_4_picture : RLNT_WH_Picture {
-				idc = 1211;
+				idc = 1212;
 				x = 0.5 + PXWIDTH * 21.5 * SCALE + PXWIDTH * 1.5;
 			};
 			class rlnt_4_picture_q : RLNT_WH_PictureQ {
-				idc = 1212;
+				idc = 1213;
 				x = 0.5 + PXWIDTH * 25 * SCALE + PXWIDTH * 1.5;
 			};
 			class rlnt_4_name : RLNT_WH_Name {
@@ -718,11 +718,11 @@ class rlnt_weaponhud_style_7 {
 				x = 0.5 + PXWIDTH * 24.5 * SCALE + PXWIDTH * 1.5;
 			};
 			class rlnt_4_picture : RLNT_WH_Picture {
-				idc = 1211;
+				idc = 1212;
 				x = 0.5 + PXWIDTH * 29.5 * SCALE + PXWIDTH * 1.5;
 			};
 			class rlnt_4_picture_q : RLNT_WH_PictureQ {
-				idc = 1212;
+				idc = 1213;
 				x = 0.5 + PXWIDTH * 33 * SCALE + PXWIDTH * 1.5;
 			};
 			class rlnt_4_name : RLNT_WH_Name {
