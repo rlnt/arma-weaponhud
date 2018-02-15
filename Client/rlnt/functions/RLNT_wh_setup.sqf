@@ -4,7 +4,7 @@ Author:			RLNT
 Description:	setup function for Weapon HUD
 */
 disableSerialization;
-private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_boxes","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];
+private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_frames","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];
 
 
 /* SKIP SETUP IF DEFAULT STATE IS FALSE */
@@ -37,7 +37,7 @@ _nameHandgun	= "";
 
 {
 	_itemList set[_forEachIndex, toLower _x];
-} forEach rlnt_wh_itemList;
+} forEach rlnt_wh_smallItems;
 
 
 /* SET ITEM AMOUNT */
@@ -56,7 +56,7 @@ if ((isNil "rlnt_wh_item1") && (isNil "rlnt_wh_item2")) then {
 if !(DZE_TwoPrimaries == 2) then {
 	["other","WH","Weapon amount is 1."] call RLNT_wh_postDebug;
 
-	_boxes			= 2 + rlnt_wh_itemAmount;
+	_frames			= 2 + rlnt_wh_itemAmount;
 	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
 	{
 		if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
@@ -66,7 +66,7 @@ if !(DZE_TwoPrimaries == 2) then {
 } else {
 	["other","WH","Weapon amount is 2."] call RLNT_wh_postDebug;
 
-	_boxes 			= 3 + rlnt_wh_itemAmount;
+	_frames 			= 3 + rlnt_wh_itemAmount;
 	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
 	_nameSecondary	= getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'displayName');
 	{
@@ -111,10 +111,10 @@ switch (rlnt_wh_itemAmount) do {
 /* SETUP DISPLAY */
 if (rlnt_wh_oldHotkeys) then {
 	["other","WH","Old hotkey style is selected."] call RLNT_wh_postDebug;
-	_style = _boxes + 3;
+	_style = _frames + 3;
 } else {
 	["other","WH","New hotkey style is selected."] call RLNT_wh_postDebug;
-	_style = _boxes - 1;
+	_style = _frames - 1;
 };
 ["other","WH", format["Display style is %1.", _style]] call RLNT_wh_postDebug;
 
