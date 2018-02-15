@@ -233,4 +233,212 @@ switch (_style) do {
 			(_display displayCtrl 1051) ctrlSetText(_object);
 		};
 	};
+
+	//Style 5 - 2 Boxes
+	case 5: {
+		//Primary
+		if (_type == 1) then {
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+			(_display displayCtrl 1034) ctrlSetText(_object);
+		};
+
+		//Handgun
+		if (_type == 3) then {
+			if (_object == "") then {
+				(_display displayCtrl 1208) ctrlSetText("");
+				(_display displayCtrl 1209) ctrlSetText("");
+			} else {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							(_display displayCtrl 1209) ctrlSetText("");
+						} else {
+							(_display displayCtrl 1208) ctrlSetText("");
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+			(_display displayCtrl 1039) ctrlSetText(_object);
+		};
+	};
+
+	//Style 6 - 3 Boxes
+	case 6: {
+		//Primary
+		if (_type == 1) then {
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+			(_display displayCtrl 1034) ctrlSetText(_object);
+		};
+
+		//Secondary
+		if (_type == 2) then {
+			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+			(_display displayCtrl 1209) ctrlSetText("");
+			(_display displayCtrl 1039) ctrlSetText(_object);
+		};
+
+		//Handgun
+		if (_type == 3) then {
+			if (_object == "") then {
+				if !(DZE_TwoPrimaries == 2) then {
+					(_display displayCtrl 1208) ctrlSetText("");
+					(_display displayCtrl 1209) ctrlSetText("");
+				} else {
+					(_display displayCtrl 1210) ctrlSetText("");
+					(_display displayCtrl 1211) ctrlSetText("");
+				};
+			} else {
+				if !(DZE_TwoPrimaries == 2) then {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1209) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1208) ctrlSetText("");
+								(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1039) ctrlSetText(_object);
+				} else {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1211) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1210) ctrlSetText("");
+								(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1044) ctrlSetText(_object);
+				};
+			};
+		};
+
+		//Item 1
+		if (_type == 4) then {
+			(_display displayCtrl 1045) ctrlSetText(_object);
+		};
+	};
+
+	//Style 7 - 4 Boxes
+	case 7: {
+		//Primary
+		if (_type == 1) then {
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+			(_display displayCtrl 1034) ctrlSetText(_object);
+		};
+
+		//Secondary
+		if (_type == 2) then {
+			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+			(_display displayCtrl 1039) ctrlSetText(_object);
+		};
+
+		//Handgun
+		if (_type == 3) then {
+			if (_object == "") then {
+				if !(DZE_TwoPrimaries == 2) then {
+					(_display displayCtrl 1208) ctrlSetText("");
+					(_display displayCtrl 1209) ctrlSetText("");
+				} else {
+					(_display displayCtrl 1210) ctrlSetText("");
+					(_display displayCtrl 1211) ctrlSetText("");
+				};
+			} else {
+				if !(DZE_TwoPrimaries == 2) then {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1209) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1208) ctrlSetText("");
+								(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1039) ctrlSetText(_object);
+				} else {
+					{
+						if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+							if !(toLower _x in _smallWeapons) then {
+								(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+								(_display displayCtrl 1211) ctrlSetText("");
+							} else {
+								(_display displayCtrl 1210) ctrlSetText("");
+								(_display displayCtrl 1211) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							};
+						};
+					} forEach weapons player;
+					(_display displayCtrl 1044) ctrlSetText(_object);
+				};
+			};
+		};
+
+		//Item 1
+		if (_type == 4) then {
+			if !(DZE_TwoPrimaries == 2) then {
+				(_display displayCtrl 1045) ctrlSetText(_object);
+			} else {
+				(_display displayCtrl 1051) ctrlSetText(_object);
+			};
+		};
+
+		//Item 2
+		if (_type == 5) then {
+			(_display displayCtrl 1051) ctrlSetText(_object);
+		};
+	};
+
+	//Style 8 - 5 Boxes
+	case 8: {
+		//Primary
+		if (_type == 1) then {
+			(_display displayCtrl 1207) ctrlSetText(getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'picture'));
+			(_display displayCtrl 1034) ctrlSetText(_object);
+		};
+
+		//Secondary
+		if (_type == 2) then {
+			(_display displayCtrl 1208) ctrlSetText(getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'picture'));
+			(_display displayCtrl 1039) ctrlSetText(_object);
+		};
+
+		//Handgun
+		if (_type == 3) then {
+			if (_object == "") then {
+				(_display displayCtrl 1209) ctrlSetText("");
+				(_display displayCtrl 1210) ctrlSetText("");
+			} else {
+				{
+					if ((getNumber(configFile >> 'CfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+						if !(toLower _x in _smallWeapons) then {
+							(_display displayCtrl 1209) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+							(_display displayCtrl 1210) ctrlSetText("");
+						} else {
+							(_display displayCtrl 1209) ctrlSetText("");
+							(_display displayCtrl 1210) ctrlSetText(getText(configFile >> 'CfgWeapons' >> _x >> 'picture'));
+						};
+					};
+				} forEach weapons player;
+			};
+			(_display displayCtrl 1044) ctrlSetText(_object);
+		};
+
+		//Item 1
+		if (_type == 4) then {
+			(_display displayCtrl 1050) ctrlSetText(_object);
+		};
+
+		//Item 2
+		if (_type == 5) then {
+			(_display displayCtrl 1056) ctrlSetText(_object);
+		};
+	};
 };
