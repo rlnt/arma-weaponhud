@@ -211,56 +211,56 @@
 				<English>You have an error either in your config or in your installation!</English>
 				<German>Die Config oder die Installation enthält einen Fehler!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Ошибка при инсталляции скрипта или в его настройках!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ERROR_EXT">
 				<English>Check the RPT for more info or contact an Admin!</English>
 				<German>Überprüfen Sie die RPT oder befragen Sie einen Administrator!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Проверьте RPT-файлы на наличие ошибок и свяжитесь с админом!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_TOGGLE_ON">
 				<English>The Weapon HUD has been toggled on!</English>
 				<German>Die Weapon HUD wurde aktiviert!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Weapon HUD включен!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_TOGGLE_OFF">
 				<English>The Weapon HUD has been toggled off!</English>
 				<German>Die Weapon HUD wurde deaktiviert!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Weapon HUD выключен!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC">
 				<English>You've taken some antibiotics!</English>
 				<German>Sie haben Antibiotika genommen!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Вы приняли антибиотики!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_ANTIBIOTIC_EMPTY">
 				<English>You don't have any antibiotics left!</English>
 				<German>Sie haben keine Antibiotika mehr übrig!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>У вас нет антибиотиков!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BANDAGE">
 				<English>You've bandaged yourself!</English>
 				<German>Sie haben sich bandagiert!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Вы перебинтовались!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BANDAGE_EMPTY">
 				<English>You don't have any bandages left!</English>
 				<German>Sie haben keine Bandagen mehr übrig!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>У вас нет бинтов!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_DELAY">
@@ -274,49 +274,49 @@
 				<English>You've performed a blood transfusiuon on yourself!</English>
 				<German>Die Bluttransfusion wurde erfolgreich durchgeführt!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Вы перелили себе кровь!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_CANCELD">
 				<English>The blood transfusion has been cancelled!</English>
 				<German>Die Bluttransfusion wurde abgebrochen!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Переливание крови прервано!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_BLOODBAG_EMPTY">
 				<English>You don't have any blood bags left!</English>
 				<German>Sie haben keine Blutkonserven mehr übrig!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>У вас нет пакетов с кровью!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_MORPHINE">
 				<English>You've injected some morphine!</English>
 				<German>Sie haben sich Morphin injiziert!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Вы укололи себе морфий!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_MORPHINE_EMPTY">
 				<English>You don't have any morphine left!</English>
 				<German>Sie haben kein Morphin mehr übrig!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>У вас нет морфия!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER">
 				<English>You've taken some painkillers!</English>
 				<German>Sie haben Schwerzmittel eingenommen!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>Вы приняли болеутоляющее!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 			<Key ID="STR_RLNT_WH_NOTIFY_ACTION_PAINKILLER_EMPTY">
 				<English>You don't have any painkillers left!</English>
 				<German>Sie haben keine Schwerzmittel mehr übrig!</German>
 				<!--<French></French>-->
-				<!--<Russian></Russian>-->
+				<Russian>У вас нет болеутоляющего!</Russian>
 				<!--<Spanish></Spanish>-->
 			</Key>
 		</Container>
