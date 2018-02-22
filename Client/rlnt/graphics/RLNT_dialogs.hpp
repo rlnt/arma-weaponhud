@@ -1,5 +1,5 @@
 /*
 File:			RLNT_dialogs.hpp
-Author:			Relentless
-Description:	Dialogs for RLNT-Additions
+Author:			RLNT
+Description:	dialogs for RLNT-Additions
 */

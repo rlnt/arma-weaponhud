@@ -1,27 +1,27 @@
 /*
 File:			morphine.sqf
-Author:			Relentless
-Description:	Quick-Item morphine for Weapon HUD
+Author:			RLNT
+Description:	morphine action for Weapon HUD
 Credits:		DayZ Epoch Mod Team
 */
 private ["_item","_hasItem"];
 
 
-/*  DEBUG  */
-["action","WH",name player,"is trying to inject morphine (Quick-Item)"] call RLNT_wh_postDebug;
+/* DEBUG */
+["action","WH",name player,"is trying to inject morphine (Quick-Slot-Item)"] call RLNT_wh_postDebug;
 
 
-/*  ERROR-PREVENTION  */
+/* ERROR-PREVENTION */
 "morphine" call RLNT_wh_errorCheck;
 if (rlnt_wh_errorsFound) exitWith {};
 
 
-/*  VARIABLES  */
+/* VARIABLES */
 _item 		= "ItemMorphine";
 _hasItem 	= _item in magazines player;
 
 
-/*  ACTION  */
+/* ACTION */
 if (_hasItem) then {
 	dayz_actionInProgress = true;
 
@@ -45,9 +45,11 @@ if (_hasItem) then {
 	PVDZ_send = [player,"Morphine",[player,player]];
 	publicVariableServer "PVDZ_send";
 
+	["action","WH",name player,"injected morphine (successful)"] call RLNT_wh_postDebug;
 	["action","morphine",true] call RLNT_wh_notifyUser;
 
 	dayz_actionInProgress = false;
 } else {
+	["action","WH",name player,"failed injecting morphine (no item left)"] call RLNT_wh_postDebug;
 	["action","morphine",false] call RLNT_wh_notifyUser;
 };

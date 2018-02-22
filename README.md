@@ -1,12 +1,13 @@
 # RLNT Weapon HUD
 **DayZ-Epoch 1.0.6.2**<br>
-*Last update: 21.01.2018* | *v1.1.0*
+*Last update: 07.02.2018* | *v1.2.0*<br>
+[![Work table](https://badge.waffle.io/RLNT/RLNT_WeaponHUD.svg?columns=all)](https://waffle.io/RLNT/RLNT_WeaponHUD)
 
 ---
 
 [Epoch-Forum thread][epochforum]<br>
-[Report issues/bugs/problems][issues]<br>
-[Suggest features/ideas][suggestions]<br>
+[Report bugs][bugs]<br>
+[Request features][requests]<br>
 
 [Releases][releases]
 
@@ -22,6 +23,13 @@
 + **Iben:** often helps with issues, also got the GitHub design from him ([his GitHub][iben])
 + **LordGolias:** made an awesome Atom SQF-linter ([his GitHub][golias])
 + **Epoch-Discord:** filled with nice guys that often help ([join the Discord][discord])
+
++ **Bug Reporters:**
+	+ **kingpapawawa:** active tester and bug reporter
+	+ **WLF:** reported weapon and item names bug
++ **Requesters:**
+	+ **BigEgg:** requested old weapon hud style
+	+ **gelo534:** requested resizable weapon hud
 
 ---
 
@@ -66,6 +74,7 @@
 	- It also detects the amount of boxes that are needed to display everything you set up.
 	- The Weapon HUD has a huge config you can adjust to fit your personal preferences. Everything you need to know is explained in there.
 	- It also supports custom weapons and items.
+	- Since v1.2.0 you are finally able to adjust the size of the whole display and to use key combos!
 
 <a name="picture"></a>
 **That's not enough explanation for you and you want some graphical information? Here you go:**
@@ -123,15 +132,19 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 | 21.01.2018 | v1.0.0  | - Initial release |
 | 21.01.2018 | v1.0.1  | - Updated references |
 | 21.01.2018 | v1.0.2  | - Updated formatting |
-| 21.01.2018 | v1.0.3  | - Fixed stringable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit af9338c][update1]* |
-| 21.01.2018 | v1.0.4  | - Fixed undefined error variable<br>*Thanks: @kingpapawawa*<br>*Changes: [commit 3bf67d][update2]* |
-| 21.01.2018 | v1.1.0  | - Fixed item notifications, error spam, localization<br>- Localized missing strings<br>*Thanks: @kingpapawawa*<br>*Changes: [commit e3e105][update3] [commit 7e8168][update4] [commit eec26a][update5] [commit 71fab4][update6]* |
+| 21.01.2018 | v1.0.3  | - Fixed stringable<br>*Changes: [commit af9338c][update1]* |
+| 21.01.2018 | v1.0.4  | - Fixed undefined error variable<br>*Changes: [commit 3bf67d][update2]* |
+| 21.01.2018 | v1.1.0  | - Fixed item notifications, error spam, localization<br>- Localized missing strings<br>*Changes: [commit e3e105][update3] [commit 7e8168][update4] [commit eec26a][update5] [commit 71fab4][update6]* |
+| 22.01.2018 | v1.1.1  | - Fixed weapon and item names<br>*Changes: [commit c3c980][update7]* |
+| 24.01.2018 | v1.1.2  | - Fixed bloodbag action<br>*Changes: [commit 8f9683][update8]* |
+| 26.01.2018 | v1.1.3  | - Added key combo support<br>*Changes: [commit 3dda2f][update9]* |
+| 07.02.2018 | v1.2.0  | - Added resizable display<br>- Fixed handgun being not removed when dropped<br>- Reworked Stringtable<br>- Improved error prevention system<br>*Changes: [commit 962b37][update10] [commit 8abf4d][update11] [commit 06fb8b][update12] [commit 0db7f3][update13]* |
 
 
 <!-- Links  -->
 [epochforum]: https://epochmod.com/forum/topic/44851-uploading-rlnt-weapon-hud-21012018-v100 "Go to source"
-[issues]: https://github.com/RLNT/RLNT_WeaponHUD/issues/1 "Go to source"
-[suggestions]: https://github.com/RLNT/RLNT_WeaponHUD/issues/2 "Go to source"
+[bugs]: https://github.com/RLNT/RLNT_WeaponHUD/blob/master/ISSUE_TEMPLATE.md "Go to source"
+[requests]: https://epochmod.com/forum/topic/44851-uploading-rlnt-weapon-hud-21012018-v100 "Go to source"
 [releases]: https://github.com/RLNT/RLNT_WeaponHUD/releases "Go to source"
 [relentless]: https://github.com/DAmNRelentless "Go to source"
 [thonikum]: https://github.com/Thonikum "Go to source"
@@ -152,3 +165,10 @@ The function automatically detects whether the Weapon HUD is activated or deacti
 [update4]: https://github.com/RLNT/RLNT_WeaponHUD/commit/7e816888972df33bee799a9b5650a9e39741340f "Go to source"
 [update5]: https://github.com/RLNT/RLNT_WeaponHUD/commit/eec26ab46e73527c5ffa2919f056e57fa214f5fb "Go to source"
 [update6]: https://github.com/RLNT/RLNT_WeaponHUD/commit/71fab4ac76ec20eed18b95896ece3b1fbf0150dd "Go to source"
+[update7]: https://github.com/RLNT/RLNT_WeaponHUD/commit/c3c980ba60a577551f8f7eff00a6137088b0dc77 "Go to source"
+[update8]: https://github.com/RLNT/RLNT_WeaponHUD/commit/8f96831c81578d8c6ba10265de63e70735664477 "Go to source"
+[update9]: https://github.com/RLNT/RLNT_WeaponHUD/commit/3dda2f7594c3f2563e0c121ddbcc920d8ff83b9f "Go to source"
+[update10]: https://github.com/RLNT/RLNT_WeaponHUD/commit/962b373d6caa764b225733c61d73390c9e1c61ea "Go to source"
+[update11]: https://github.com/RLNT/RLNT_WeaponHUD/commit/8abf4d6ea0d66ac545d4190dcf8d961e51ab7728 "Go to source"
+[update12]: https://github.com/RLNT/RLNT_WeaponHUD/commit/06fb8b7a607549c3d6def83d26f41d0bb74ce0b8 "Go to source"
+[update13]: https://github.com/RLNT/RLNT_WeaponHUD/commit/0db7f326fe089a3ae6d74d6b2e2723ca58ebad67 "Go to source"

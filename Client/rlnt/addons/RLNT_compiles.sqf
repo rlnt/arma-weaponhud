@@ -1,20 +1,20 @@
 /*
 File:			RLNT_compiles.sqf
-Author:			Relentless
-Description:	Compiles for all RLNT-Additions
+Author:			RLNT
+Description:	compiles for RLNT-Additions
 */
 
 
-/*  BOTH  */
+/* BOTH */
 RLNT_postDebug = compile preprocessFileLineNumbers "rlnt\functions\RLNT_debug.sqf";
 
 
-/*  SERVER  */
+/* SERVER */
 if (isServer) then {
 };
 
 
-/*  CLIENT  */
+/* CLIENT */
 if (!isDedicated && hasInterface) then {
 
 	//Weapon HUD
@@ -29,5 +29,5 @@ if (!isDedicated && hasInterface) then {
 };
 
 
-/*  DEBUG  */
+/* DEBUG */
 ["file","MAIN","Compiles"] call RLNT_postDebug;
