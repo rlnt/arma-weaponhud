@@ -8,16 +8,16 @@ Before you post this issue, make sure the bug isn't already fixed in the newest 
 
 <br>
 
-**Which version of the Weapon HUD do you use?**
+**Which version of the Weapon HUD do you use?**<br>
 e.g: v1.2.0
 
-**Next up, we need your server and client log!**
+**Next up, we need your server and client log!**<br>
 We recommend uploading them on [pastebin](https://pastebin.com/) and copying the link in here.
 
-**To avoid mistakes in your config, we would like to see it as well!**
+**To avoid mistakes in your config, we would like to see it as well!**<br>
 Again, we recommend uploading it on [pastebin](https://pastebin.com/) and copying the link in here.
 
-**Now describe your issue as detailed as possible!**
+**Now describe your issue as detailed as possible!**<br>
 
 <br>
 
