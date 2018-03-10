@@ -4,7 +4,7 @@ Author:			RLNT
 Description:	setup function for Weapon HUD
 */
 disableSerialization;
-private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_frames","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_display"];
+private ["_layer","_smallWeapons","_itemList","_isListedItem1","_amountItem1","_nameItem1","_isListedItem2","_amountItem2","_nameItem2","_frames","_namePrimary","_nameSecondary","_nameHandgun","_style","_ftArray","_bgArray","_hkArray","_doubleBG","_display"];
 
 
 /* SKIP SETUP IF DEFAULT STATE IS FALSE */
@@ -129,58 +129,66 @@ switch (_style) do {
 
 	//Style 1 - 2 Boxes
 	case 1: {
-		_ftArray = [1033,1037];
-		_bgArray = [1031,1035];
-		_hkArray = [1034,1038];
+		_ftArray	= [1033,1037];
+		_bgArray	= [1031,1035];
+		_hkArray	= [1034,1038];
+		_doubleBG	= [1032,1036];
 	};
 
 	//Style 2 - 3 Boxes
 	case 2: {
-		_ftArray = [1033,1037,1041,1042];
-		_bgArray = [1031,1035,1039];
-		_hkArray = [1034,1038,1043];
+		_ftArray	= [1033,1037,1041,1042];
+		_bgArray	= [1031,1035,1039];
+		_hkArray	= [1034,1038,1043];
+		_doubleBG	= [1032,1036,1040];
 	};
 
 	//Style 3 - 4 Boxes
 	case 3: {
-		_ftArray = [1033,1037,1041,1042,1046,1047];
-		_bgArray = [1031,1035,1039,1044];
-		_hkArray = [1034,1038,1043,1048];
+		_ftArray	= [1033,1037,1041,1042,1046,1047];
+		_bgArray	= [1031,1035,1039,1044];
+		_hkArray	= [1034,1038,1043,1048];
+		_doubleBG	= [1032,1036,1040,1045];
 	};
 
 	//Style 4 - 5 Boxes
 	case 4: {
-		_ftArray = [1033,1037,1041,1045,1046,1050,1051];
-		_bgArray = [1031,1035,1039,1043,1048];
-		_hkArray = [1034,1038,1042,1047,1052];
+		_ftArray	= [1033,1037,1041,1045,1046,1050,1051];
+		_bgArray	= [1031,1035,1039,1043,1048];
+		_hkArray	= [1034,1038,1042,1047,1052];
+		_doubleBG	= [1032,1036,1040,1044,1049];
 	};
 
 	//Style 5 - 2 Boxes
 	case 5: {
-		_ftArray = [1034,1039];
-		_bgArray = [1031,1036];
-		_hkArray = [1035,1040];
+		_ftArray	= [1034,1039];
+		_bgArray	= [1031,1036];
+		_hkArray	= [1035,1040];
+		_doubleBG	= [1032,1037];
 	};
 
 	//Style 6 - 3 Boxes
 	case 6: {
-		_ftArray = [1034,1039,1044,1045];
-		_bgArray = [1031,1036,1041];
-		_hkArray = [1035,1040,1046];
+		_ftArray	= [1034,1039,1044,1045];
+		_bgArray	= [1031,1036,1041];
+		_hkArray	= [1035,1040,1046];
+		_doubleBG	= [1032,1037,1042];
 	};
 
 	//Style 7 - 4 Boxes
 	case 7: {
-		_ftArray = [1034,1039,1044,1045,1050,1051];
-		_bgArray = [1031,1036,1041,1047];
-		_hkArray = [1035,1040,1046,1052];
+		_ftArray	= [1034,1039,1044,1045,1050,1051];
+		_bgArray	= [1031,1036,1041,1047];
+		_hkArray	= [1035,1040,1046,1052];
+		_doubleBG	= [1032,1037,1042,1048];
 	};
 
 	//Style 8 - 5 Boxes
 	case 8: {
-		_ftArray = [1034,1039,1044,1049,1050,1055,1056];
-		_bgArray = [1031,1036,1041,1046,1052];
-		_hkArray = [1035,1040,1045,1051,1057];
+		_ftArray	= [1034,1039,1044,1049,1050,1055,1056];
+		_bgArray	= [1031,1036,1041,1046,1052];
+		_hkArray	= [1035,1040,1045,1051,1057];
+		_doubleBG	= [1032,1037,1042,1047,1053];
 	};
 };
 
@@ -195,6 +203,12 @@ switch (_style) do {
 {
 	(_display displayCtrl _x) ctrlSetTextColor rlnt_wh_hkColor;
 } forEach _hkArray;
+
+if (!rlnt_wh_doubleBG) then {
+	{
+		(_display displayCtrl _x) ctrlSetBackgroundColor [0,0,0,0];
+	} forEach _doubleBG;
+};
 
 ["other","WH",format["Font: %1; Background: %2; Hotkey: %3", str(_ftArray), str(_bgArray), str(_hkArray)]] call RLNT_wh_postDebug;
 
