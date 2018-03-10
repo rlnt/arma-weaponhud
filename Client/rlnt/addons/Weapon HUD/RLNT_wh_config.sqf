@@ -104,6 +104,19 @@ rlnt_wh_nfcStyle = 4;  /* default: 4 */
 rlnt_wh_oldHotkeys = false;  /* default: false */
 
 /*
+		This option toggles the double background.
+		As you have seen in the preview image there are
+		two backgrounds behind each image. One is a colored
+		and the other one is always black and quite
+		transparent. If you want to remove the second
+		background (the black one) so you only have one frame
+		around each image you can toggle it here.
+		true	-> both backgrounds
+		false	-> only the colored background
+*/
+rlnt_wh_doubleBG = true;  /* default: true */
+
+/*
 		This is the font color of the Weapon HUD.
 		All texts that are displayed except the hotkey text
 		on the Weapon HUD will have this color!
