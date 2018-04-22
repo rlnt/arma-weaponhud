@@ -147,7 +147,7 @@ rlnt_wh_oldHotkeys = false;
 
 		default -> [1,1,1,1] (white)
 */
-rlnt_wh_fontColor = [1,1,1,1];
+rlnt_wh_txColor = [1,1,1,1];
 
 /*
 		This is the hotkey text color of the Weapon HUD.
