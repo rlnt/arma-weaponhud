@@ -193,7 +193,7 @@ switch (_style) do {
 };
 
 {
-	(_display displayCtrl _x) ctrlSetTextColor rlnt_wh_fontColor;
+	(_display displayCtrl _x) ctrlSetTextColor rlnt_wh_txColor;
 } forEach _ftArray;
 
 {
