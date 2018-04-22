@@ -7,7 +7,7 @@ Description:	config file for Weapon HUD
 
 
 /*
-Explanation for this script:
+Explanation of the script:
 I often saw people requesting something like this on the forum
 so I decided to make a Weapon HUD. Simply said, it displays
 your current weapons with given hotkeys. But this is already the
@@ -15,10 +15,12 @@ second version of my script, that's why there are a ton of more
 options you can customize in this file.
 Read more on the Epoch-Forum-Topic:
 http://bit.ly/2r6yDeH
+I suggest deleting all the comments after setting up the config
+file to your likings since it increases the file size.
 */
 
 /*
-Explanation for the config:
+Explanation of the config:
 In this config, you can customize the Weapon HUD to your liking.
 Options such as colors, texts and more are all configurable
 and made to fit your personal preferences. Currently all options
@@ -41,11 +43,13 @@ included so you will get notified if you have to edit something.
 ////////////////////////////////////////////////////////////
 /*
 		This is the default state of the Weapon HUD.
+		You can also set a toggle hotkey later.
+
 		true	-> Weapon HUD is activated by default
 		false	-> Weapon HUD is deactivated by default
-		You can also set a hotkey to toggle the Weapon HUD.
+		default -> true
 */
-rlnt_wh_defaultState = true;  /* default: true */
+rlnt_wh_defaultState = true;
 
 /*
 		This is the hotkey you can toggle the Weapon HUD with.
@@ -55,11 +59,12 @@ rlnt_wh_defaultState = true;  /* default: true */
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
 
-		1 hotkey:	rlnt_wh_toggleKey = [DIK_TAB];
-		key combo:	rlnt_wh_toggleKey = [DIK_TAB,DIK_LSHIFT];
-		disabled:	rlnt_wh_toggleKey = nil;
+		single hotkey:		[DIK_TAB]
+		key combination:	[DIK_TAB,DIK_LSHIFT]
+		disabled:			nil <- no [] on this
+		default -> [DIK_TAB]
 */
-rlnt_wh_toggleKey = [DIK_TAB];  /* default: [DIK_TAB] */
+rlnt_wh_toggleKey = [DIK_TAB];
 
 /*
 		This is the refresh rate of the Weapon HUD.
@@ -69,20 +74,46 @@ rlnt_wh_toggleKey = [DIK_TAB];  /* default: [DIK_TAB] */
 		look because the weapon images are always up-to-date but
 		also cost the clients more performance.
 		If you are not sure, keep it default.
+
+		default -> 3
 */
-rlnt_wh_refreshRate = 3;  /* default: 3 */
+rlnt_wh_refreshRate = 3;
 
 /*
 		This is the notification style of the Weapon HUD.
+		Notifications will be shown everytime you toggle
+		the Weapon HUD or you use any of the quick-slot-items.
+
 		0	-> disabled, no notifications will appear
 		1	-> RLNT Update Panel (only if you have it installed)
 		2	-> Systemchat (looks like chat messages)
 		3	-> cutText (looks like mission messages)
 		4	-> DayZ Rolling Message (Epoch-Default-System)
-		Notifications will be shown everytime you toggle
-		the Weapon HUD or you use any of the quick-slot-items.
+		default -> 4
 */
-rlnt_wh_nfcStyle = 4;  /* default: 4 */
+rlnt_wh_nfcStyle = 4;
+
+/*
+	These are the position and resizing options for the Wepaon HUD.
+	As this script depends on a display which is stored in hpp files,
+	I can't control these options with sqf variables. That's why
+	I just mention it here and you have to adjust the values manually.
+	You can find the values in this file:
+	rlnt/graphics/displays/defines/RLNT_WH_macros.hpp
+
+	SIZE -> This value controls the size of the whole Weapon HUD.
+			Default is size 1. If you want to make the Weapon HUD
+			smaller you can set it to 0.5 or whatever you like.
+			Of course you can also increase the size.
+	OFFSET ->	This value controls the position of the Weapon HUD.
+				Since there are guys having other displays in the
+				bottom corners, we added this value to move the HUD
+				to the left or to the right.
+				Dafault is offset 0. By decreasing the value, the
+				Weapon HUD will move to the left and by increasing
+				it will move to the right. We suggest keeping this
+				value between -1 and 1.
+*/
 
 
 ////////////////////////////////////////////////////////////
@@ -98,42 +129,49 @@ rlnt_wh_nfcStyle = 4;  /* default: 4 */
 		since many users liked the old design with seperated
 		hotkeys you have an option to choose your favorite
 		style.
+
 		true	-> old style
 		false	-> new style
+		default -> false
 */
-rlnt_wh_oldHotkeys = false;  /* default: false */
+rlnt_wh_oldHotkeys = false;
 
 /*
-		This is the font color of the Weapon HUD.
+		This is the text color of the Weapon HUD.
 		All texts that are displayed except the hotkey text
 		on the Weapon HUD will have this color!
 		It has to be in a RGBA color array!
 		I recommend using any html color picker and then
 		convert it on this site: http://bit.ly/2f543cr
 		The format is [red,green,blue,alpha]!
+
+		default -> [1,1,1,1] (white)
 */
-rlnt_wh_fontColor = [1,1,1,1];  /* default: 1,1,1,1 (white) */
+rlnt_wh_fontColor = [1,1,1,1];
 
 /*
-		This is the background color of the Weapon HUD.
-		All boxes that are displayed on the Weapon HUD
-		will have this color!
-		It has to be in a RGBA color array!
-		I recommend using any html color picker and then
-		convert it on this site: http://bit.ly/2f543cr
-		The format is [red,green,blue,alpha]!
-*/
-rlnt_wh_bgColor = [0,0,0,0.5];  /* default: 0,0,0,0.5 (half-transparent black) */
-
-/*
-		This is the hotkey font color of the Weapon HUD.
+		This is the hotkey text color of the Weapon HUD.
 		All hotkey texts in the boxes will have this color!
 		It has to be in a RGBA color array!
 		I recommend using any html color picker and then
 		convert it on this site: http://bit.ly/2f543cr
 		The format is [red,green,blue,alpha]!
+
+		default -> [1,1,1,0.7] (slightly-transparent white)
 */
-rlnt_wh_hkColor = [1,1,1,0.7];  /* default: 1,1,1,0.7 (quite-transparent white) */
+rlnt_wh_hkColor = [1,1,1,0.7];
+
+/*
+		This is the background color of the Weapon HUD.
+		All boxes that are displayed will have this color!
+		It has to be in a RGBA color array!
+		I recommend using any html color picker and then
+		convert it on this site: http://bit.ly/2f543cr
+		The format is [red,green,blue,alpha]!
+
+		default -> [0,0,0,0.5] (half-transparent black)
+*/
+rlnt_wh_bgColor = [0,0,0,0.5];
 
 
 ////////////////////////////////////////////////////////////
@@ -150,8 +188,10 @@ rlnt_wh_hkColor = [1,1,1,0.7];  /* default: 1,1,1,0.7 (quite-transparent white) 
 		This is the style of the Update Panel.
 		For more information, watch the Update Panel Epoch
 		Forum Topic or the Github Repository!
+
+		default -> 1
 */
-rlnt_whup_style = 1;  /* default: 1 */
+rlnt_whup_style = 1;
 
 /*
 		This is the tag of the Update Panel.
@@ -160,21 +200,25 @@ rlnt_whup_style = 1;  /* default: 1 */
 		like your server name.
 		Max. characters are 12!
 */
-rlnt_whup_tag = "Weapon HUD:";  /* default: Weapon HUD: */
+rlnt_whup_tag = "Weapon HUD:";
 
 /*
 		This is the text color of the Update Panel.
 		For more information, watch the Update Panel Epoch
 		Forum Topic or the Github Repository!
+
+		default -> [1,1,1,1] (white)
 */
-rlnt_whup_fColor = [1,1,1,1];  /* default: 1,1,1,1 (white) */
+rlnt_whup_fColor = [1,1,1,1];
 
 /*
 		This is the background color of the Update Panel.
 		For more information, watch the Update Panel Epoch
 		Forum Topic or the Github Repository!
+
+		default -> [0,0.2,0,0.7] (dark green)
 */
-rlnt_whup_bgColor = [0,0.2,0,0.7];  /* default: 0,0.2,0,0.7 (dark green) */
+rlnt_whup_bgColor = [0,0.2,0,0.7];
 
 
 ////////////////////////////////////////////////////////////
@@ -186,11 +230,13 @@ rlnt_whup_bgColor = [0,0.2,0,0.7];  /* default: 0,0.2,0,0.7 (dark green) */
 ////////////////////////////////////////////////////////////
 /*
 		This is the text of the weapons above the boxes.
+		They are automatically localized and self-resizing.
+
 		true	-> Show weapon names above the boxes
 		false	-> Hide weapon names above the boxes
-		They are automatically localized and self-resizing.
+		default -> true
 */
-rlnt_wh_showWeaponNames = true;  /* default: true */
+rlnt_wh_showWeaponNames = true;
 
 /*
 		This is the first quick-slot-item.
@@ -201,10 +247,11 @@ rlnt_wh_showWeaponNames = true;  /* default: true */
 		supported by the script.
 		To disable item 1, write nil.
 
-		any item:	rlnt_wh_item1 = "ItemClassname";
-		disabled:	rlnt_wh_item1 = nil;
+		any item:	"ItemClassname"
+		disabled:	nil <- no "" on this
+		default -> "ItemBandage"
 */
-rlnt_wh_item1 = "ItemBandage";  /* default: ItemBandage */
+rlnt_wh_item1 = "ItemBandage";
 
 /*
 		This is the second quick-slot-item.
@@ -215,10 +262,11 @@ rlnt_wh_item1 = "ItemBandage";  /* default: ItemBandage */
 		supported by the script.
 		To disable item 2, write nil.
 
-		any item:	rlnt_wh_item2 = "ItemClassname";
-		disabled:	rlnt_wh_item2 = nil;
+		any item:	"ItemClassname"
+		disabled:	nil <- no "" on this
+		default -> "ItemPainkiller"
 */
-rlnt_wh_item2 = "ItemPainkiller";  /* default: ItemPainkiller */
+rlnt_wh_item2 = "ItemPainkiller";
 
 /*
 		This is the hotkey for Quick-Slot-Item 1.
@@ -228,11 +276,12 @@ rlnt_wh_item2 = "ItemPainkiller";  /* default: ItemPainkiller */
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
 
-		1 hotkey:	rlnt_wh_item1_key = [DIK_4];
-		key combo:	rlnt_wh_item1_key = [DIK_4,DIK_LSHIFT];
-		disabled:	rlnt_wh_item1_key = nil;
+		single hotkey:		[DIK_4]
+		key combination:	[DIK_4,DIK_LSHIFT]
+		disabled:			nil <- no [] on this
+		default -> [DIK_4]
 */
-rlnt_wh_item1_key = [DIK_4];  /* default: DIK_4 */
+rlnt_wh_item1_key = [DIK_4];
 
 /*
 		This is the hotkey for Quick-Slot-Item 2.
@@ -242,11 +291,12 @@ rlnt_wh_item1_key = [DIK_4];  /* default: DIK_4 */
 		To disable the key, write nil.
 		Here you can find the Key-Codes: http://bit.ly/2mxDcd4
 
-		1 hotkey:	rlnt_wh_item2_key = [DIK_5];
-		key combo:	rlnt_wh_item2_key = [DIK_4,DIK_LSHIFT];
-		disabled:	rlnt_wh_item2_key = nil;
+		single hotkey:		[DIK_5]
+		key combination:	[DIK_5,DIK_LSHIFT]
+		disabled:			nil <- no [] on this
+		default -> [DIK_5]
 */
-rlnt_wh_item2_key = [DIK_5];  /* default: DIK_5 */
+rlnt_wh_item2_key = [DIK_5];
 
 /*
 		This is the name of the first hotkey.
@@ -254,8 +304,10 @@ rlnt_wh_item2_key = [DIK_5];  /* default: DIK_5 */
 		key you chose so you have to enter it manually.
 		Each hotkey is shown over the corresponding box
 		so keep it short!
+
+		default -> "4"
 */
-rlnt_wh_item1_keyName = "4";  /* default: 4 */
+rlnt_wh_item1_keyName = "4";
 
 /*
 		This is the name of the second hotkey.
@@ -263,23 +315,29 @@ rlnt_wh_item1_keyName = "4";  /* default: 4 */
 		key you chose so you have to enter it manually.
 		Each hotkey is shown over the corresponding box
 		so keep it short!
+
+		default -> "5"
 */
-rlnt_wh_item2_keyName = "5";  /* default: 5 */
+rlnt_wh_item2_keyName = "5";
 
 /*
 		This is the name of the items above the boxes.
+		They are automatically localized and self-resizing.
+
 		true	-> Show item names above the boxes
 		false	-> Hide item names above the boxes
-		They are automatically localized and self-resizing.
+		default -> true
 */
-rlnt_wh_showItemNames = true;  /* default: true */
+rlnt_wh_showItemNames = true;
 
 /*
 		This is the item amount in the boxes.
-		true	-> Show item amount in the boxes
-		false	-> Hide item amount in the boxes
 		If you have none of the items left, the counter
 		automatically shows a 0.
+
+		true	-> Show item amount in the boxes
+		false	-> Hide item amount in the boxes
+		default -> true
 */
 rlnt_wh_showItemAmount = true;  /* default: true */
 
@@ -296,7 +354,7 @@ rlnt_wh_showItemAmount = true;  /* default: true */
 		that's no wonder. You can also set an equal option
 		in the Epoch-Configs. This option is only
 		necessary for you if you have the bloodbag as
-		one of your quick-slot-items. The script I made
+		one of your quick-slot-items. The script we made
 		for the blood bags is pretty smart but needs some
 		values to work properly. If you don't know what
 		to choose after reading, leave it default.
@@ -321,9 +379,11 @@ rlnt_wh_showItemAmount = true;  /* default: true */
 
 		The only value the script takes from Epoch is the
 		cooldown between blood bags (Don't beg for this
-		option, I will not include it!).
+		option. I will not include it!).
+
+		default -> [4,-1]
 */
-rlnt_wh_bloodSettings = [4,-1];  /* default: 4,-1 */
+rlnt_wh_bloodSettings = [4,-1];
 
 /*
 		This is the small weapon array.
@@ -379,7 +439,7 @@ rlnt_wh_itemList = [
 		Same as the small weapon array, just for items.
 		That means that if you have a custom item
 		added to the itemList that is NOT squarish
-		don't add it here!
+		add it here!
 */
 rlnt_wh_smallItems = [
 	"ItemAntibiotic",
@@ -391,7 +451,7 @@ rlnt_wh_smallItems = [
 
 /*
 		This is the debug option for devs.
-		The option lets you enable the debug mode of my
+		The option lets you enable the debug mode of the
 		script which I would highly recommend for
 		only those of you who know what they are
 		doing. Enabling this will cause a lot of
@@ -403,8 +463,10 @@ rlnt_wh_smallItems = [
 		Don't enable this unless you know what
 		you are doing or someone of the more experienced
 		guys asked you to do so.
+
+		default -> false
 */
-rlnt_wh_debug = false;  /* default: false */
+rlnt_wh_debug = false;
 
 
 /*	########################################
