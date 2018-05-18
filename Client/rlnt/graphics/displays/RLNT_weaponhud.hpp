@@ -1,7 +1,7 @@
 /*
 File:			RLNT_weaponhud.hpp
 Author:			RLNT
-Description:	Display for Weapon HUD
+Description:	display for Weapon HUD
 */
 
 #include "defines\RLNT_WH_defines.hpp"

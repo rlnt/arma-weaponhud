@@ -1,7 +1,7 @@
 /*
 File:			RLNT_WH_macros.hpp
 Author:			RLNT
-Description:	Macros for Weapon HUD
+Description:	macros for Weapon HUD
 */
 
 #define SCALE 			1
