@@ -1,7 +1,7 @@
 /*
 File:			RLNT_defines.hpp
 Author:			RLNT
-Description:	Defines for RLNT-Additions
+Description:	defines for RLNT-Additions
 */
 
 #include "RLNT_macros.hpp"

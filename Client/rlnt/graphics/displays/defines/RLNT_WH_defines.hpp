@@ -1,11 +1,11 @@
 /*
 File:			RLNT_WH_defines.hpp
 Author:			RLNT
-Description:	Defines for Weapon HUD
+Description:	defines for Weapon HUD
 */
 
-#include "RLNT_WH_macros.hpp"
 #include "RLNT_macros.hpp"
+#include "RLNT_WH_macros.hpp"
 
 class RLNT_WH_Bg1 : RLNT_Background {
 	y = WINDOW_BOTTOM - PXHEIGHT * 15 * SCALE - PXHEIGHT * 2;

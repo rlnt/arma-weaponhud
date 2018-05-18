@@ -66,7 +66,7 @@ if !(DZE_TwoPrimaries == 2) then {
 } else {
 	["other","WH","Weapon amount is 2."] call RLNT_wh_postDebug;
 
-	_frames 			= 3 + rlnt_wh_itemAmount;
+	_frames 		= 3 + rlnt_wh_itemAmount;
 	_namePrimary	= getText(configFile >> 'CfgWeapons' >> (primaryWeapon player) >> 'displayName');
 	_nameSecondary	= getText(configFile >> 'CfgWeapons' >> dayz_onBack >> 'displayName');
 	{
