@@ -8,7 +8,7 @@
  ## CUSTOM INSTALL INSTRUCTIONS
  You should only follow these instructions if you **have any other of our scripts** installed!<br>
  In case you don't have addons/scripts that start with RLNT please follow these instructions instead: [fresh install instructions][freshinstallation]!<br>
- This instructions are noob-friendly; read everything carefully! There are many links to guide you through the right steps. Sometimes you also skip some steps to match the right oder again. Don't be confused about that.
+ This instructions are noob-friendly; read everything carefully! It's like a guide so you might skip some steps, don't be confused about that.
 
 
 <a name="customclient"></a>
